@@ -1,13 +1,13 @@
 import React from 'react';
-import Navbar from '../navbar/Navbar';
 import Footer from '../footer/Footer';
-import Header from '../header/Header';
+import Navbar from '../Navbar';
+
 
 const Layout = ({children}) => {
   return (
     <>
-    <Header/>
     <Navbar/>
+    
     <div className="min-h-screen">
         {children}
     </div>
