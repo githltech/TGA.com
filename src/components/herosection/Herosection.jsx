@@ -10,9 +10,6 @@ import { MdArrowForwardIos } from "react-icons/md";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
 
-
-
-
 const HeroSection = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -40,7 +37,7 @@ const HeroSection = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    // pauseOnHover: false,
+    pauseOnHover: false,
   };
 
   const nestedsettings = {

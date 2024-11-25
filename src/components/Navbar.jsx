@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Tgalogo from '../images/logo TGA.png';
+import tgalogo from '../images/tganewlogo.png'
 import { IoMdLogIn } from "react-icons/io";
 
 import {
@@ -30,11 +30,11 @@ const Navbar = () => {
       {/* Top Navigation Bar */}
       <div className="flex justify-between py-2 px-4 border-b-[1px] border-white border-opacity-20">
         {/* Logo */}
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-2">
           <img
-            src={Tgalogo}
+            src={tgalogo}
             alt="TGA Logo"
-            className="h-6 bg-white rounded-full p-1"
+            className="h-6"
           />
           <h1 className="text-white font-semibold">TGA</h1>
         </div>

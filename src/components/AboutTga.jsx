@@ -1,93 +1,78 @@
 import React from "react";
 import "tailwindcss/tailwind.css";
-import img from '../images/tgaheroimg1.png'
+import { FaHandshake, FaBullseye, FaRocket, FaGlobe } from "react-icons/fa";
+
 
 const AboutTGA = () => {
   return (
-    <div className="w-full min-h-screen bg-gray-100 py-12 px-4">
+    <div className="w-full pt-10">
       {/* Marquee Headline */}
-      <div className="relative overflow-hidden">
+      {/* <div className="relative overflow-hidden py-4">
         <div className="whitespace-nowrap animate-marquee text-3xl md:text-5xl font-bold text-orange-500 uppercase">
           Your Gateway to Off-Beat Adventures &nbsp;&nbsp;|&nbsp;&nbsp;
           Your Gateway to Off-Beat Adventures &nbsp;&nbsp;|&nbsp;&nbsp;
         </div>
+      </div> */}
+
+      {/* About Section */}
+      <div  style={{
+          backgroundImage: `url('https://media1.thrillophilia.com/filestore/2e49mhdw009iol3wzy1jk6s7b58l_sikkim%20couple.jpg?w=340&dpr=2')`,
+        }}
+       className="relative bg-cover bg-center">
+      <div className="absolute inset-0 bg-white opacity-90"></div>
+      <div className="lg:px-24 px-4 relative z-10">
+        <h1 className=" text-black font-bold">ABOUT TGA</h1>
+        <h2 className="text-xl sm:text-3xl font-bold text-orange-500 mb-2">GETS HOLIDAYS</h2>
+        <p className="text-gray-700 font-serif text-sm">
+          At GeTS Holidays, we are passionate about making your voyage a lifetime experience. 
+          From riding a rickshaw through the bustling streets of Chandni Chowk in Delhi to a thrilling Tiger Safari in Ranthambore, exploring the UNESCO World Heritage Site of Elephanta Caves, 
+          to cruising in a houseboat along the backwaters of Kerala, finding the perfect amalgamation of the sun, sea, and sand in Goa to gazing at the iconic Taj Mahal in Agra, 
+          GeTS Holidays is here to make each day of your stay in India a memory worth relishing.
+        </p>
+        <p className="text-gray-700 mt-4 font-serif text-sm">
+          Operating since 1987, GeTS Holidays is a leading travel company dedicated to Leisure Travel, Meetings, Events, and Conferences. 
+          With headquarters in New Delhi, Team GeTS comprises travel experts from not only India but other nationalities who speak major global languages - French, Spanish, Italian, and Portuguese.
+        </p>
+        <button className="mt-4 px-3 py-2 text-sm text-black border border-orange-500 hover:bg-orange-500 hover:text-white">
+          Read More &rarr;
+        </button>
       </div>
+      
 
-      {/* Introduction Section */}
-      <section className="mt-12 text-center">
-        <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
-          About TGA
-        </h2>
-        <p className="text-gray-600 md:text-lg">
-          At TGA, we are passionate about redefining travel with our mission to 
-          promote sustainable tourism and unique adventures. Our vision is to 
-          create memorable experiences that leave a positive impact on both travelers 
-          and destinations.
-        </p>
-      </section>
-
-      {/* Recognition Section */}
-      <section className="mt-14 text-center">
-        <h3 className="text-xl md:text-3xl font-semibold text-gray-800 mb-4">
-          Recognized by Madhya Pradesh Tourism Board
-        </h3>
-        <p className="text-gray-600 md:text-lg">
-          We are proud partners of the Madhya Pradesh Tourism Board, showcasing 
-          our commitment to authentic and sustainable travel experiences.
-        </p>
-      </section>
-
-      {/* Unique Selling Points */}
-      <section className="mt-14">
-        <h3 className="text-xl md:text-3xl font-semibold text-center text-gray-800 mb-6">
-          Why Choose TGA?
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-6 bg-white shadow-md rounded-md flex items-center gap-4 hover:scale-105 transition-transform duration-300">
-            <span className="text-orange-500 text-3xl">🌱</span>
-            <div>
-              <h4 className="text-lg font-semibold">Eco-Friendly Tourism</h4>
-              <p className="text-gray-600 text-sm">
-                Our tours are designed with sustainability in mind to preserve the beauty of our planet.
-              </p>
+      {/* Why Us Section */}
+      <div
+        className="py-10 text-center">
+        <div className="relative z-10">
+          <h2 className="text-xl sm:text-3xl font-bold text-orange-500 mb-6 border-b-2 border-black m-auto w-fit">WHY US</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-black">
+            {/* Card 1 */}
+            <div className="flex flex-col items-center">
+              <FaHandshake className="text-4xl text-red-500 mb-4" />
+              <h3 className="font-semibold text-lg">Trust Maintained</h3>
+              <p className="text-gray-800 text-sm">32+ Years of trust maintained</p>
             </div>
-          </div>
-          <div className="p-6 bg-white shadow-md rounded-md flex items-center gap-4 hover:scale-105 transition-transform duration-300">
-            <span className="text-orange-500 text-3xl">🌍</span>
-            <div>
-              <h4 className="text-lg font-semibold">Exclusive Destinations</h4>
-              <p className="text-gray-600 text-sm">
-                Discover hidden gems and off-the-beaten-path locations for a unique experience.
-              </p>
+            {/* Card 2 */}
+            <div className="flex flex-col items-center">
+              <FaBullseye className="text-4xl text-green-500 mb-4" />
+              <h3 className="font-semibold text-lg">One Stop Solution</h3>
+              <p className="text-gray-800 text-sm">One stop solution for all your travel needs</p>
             </div>
-          </div>
-          <div className="p-6 bg-white shadow-md rounded-md flex items-center gap-4 hover:scale-105 transition-transform duration-300">
-            <span className="text-orange-500 text-3xl">✨</span>
-            <div>
-              <h4 className="text-lg font-semibold">Personalized Experiences</h4>
-              <p className="text-gray-600 text-sm">
-                Tailored travel plans that cater to your preferences and needs.
-              </p>
+            {/* Card 3 */}
+            <div className="flex flex-col items-center">
+              <FaRocket className="text-4xl text-orange-500 mb-4" />
+              <h3 className="font-semibold text-lg">Quick Response</h3>
+              <p className="text-gray-800 text-sm">Quick response time and reachable</p>
+            </div>
+            {/* Card 4 */}
+            <div className="flex flex-col items-center">
+              <FaGlobe className="text-4xl text-blue-500 mb-4" />
+              <h3 className="font-semibold text-lg">Served Globally</h3>
+              <p className="text-gray-800 text-sm">Served travelers from all over the world</p>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Animated Image Section */}
-      <section className="mt-10 flex justify-center items-center">
-        <div className="relative group">
-          <img
-            src={img} // Replace with a suitable image URL
-            alt="Travel Adventure"
-            className="rounded-lg shadow-lg hover:scale-110 transition-transform duration-500"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-            <h4 className="text-white text-lg md:text-2xl font-semibold">
-              Adventure Awaits!
-            </h4>
-          </div>
-        </div>
-      </section>
+      </div>
+    </div>
     </div>
   );
 };
