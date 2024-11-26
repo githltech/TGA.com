@@ -5,5 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/TGA.com/',
+  build: {
+    outDir: 'dist', // Vite's default build output folder
+  },
   
 })
