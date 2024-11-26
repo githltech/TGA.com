@@ -6,7 +6,11 @@ export default defineConfig({
   plugins: [react()],
   base: '/TGA.com/',
   build: {
-    outDir: 'dist', // Vite's default build output folder
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+      },
+    },
   },
   
 })
