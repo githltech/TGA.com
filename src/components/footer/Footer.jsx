@@ -41,55 +41,181 @@ function Footer() {
   ];
 
   return (
-    <footer className="bg-gray-800 mt-36">
-      <div className="p-16">
+    <footer className="bg-gray-800 mt-52 lg:mt-36">
+      <div className="p-4 lg:p-24">
         {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 bg-white p-4 rounded-md border border-gray-600 -mt-32">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white p-4 rounded-md border border-gray-600 -mt-48">
           {/* Column 1 */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">About Thrillophilia</h3>
-            <ul className="space-y-2 text-sm">
-              <li>About Us</li>
-              <li>We Are Hiring</li>
-              <li>Terms & Conditions</li>
-              <li>Privacy Policies</li>
-              <li>Copyright Policies</li>
-              <li>Support</li>
-              <li className="text-red-500 font-semibold">Beware of Frauds</li>
+            <h3 className="text-sm font-semibold mb-4 uppercase">About TGA</h3>
+            <ul className="space-y-2 text-xs uppercase font-semibold text-gray-700">
+            <li>
+    <a
+      href="#about-us"
+      className="hover:underline hover:text-orange-500 transition duration-300"
+    >
+      About Us
+    </a>
+  </li>
+  <li>
+    <a
+      href="#our-team"
+      className="hover:underline hover:text-orange-500 transition duration-300"
+    >
+      Our Team
+    </a>
+  </li>
+  <li>
+    <a
+      href="#why-choose-us"
+      className="hover:underline hover:text-orange-500 transition duration-300"
+    >
+      Why Choose Us
+    </a>
+  </li>
+  <li>
+    <a
+      href="#testimonials"
+      className="hover:underline hover:text-orange-500 transition duration-300"
+    >
+      Testimonials
+    </a>
+  </li>
+  <li>
+    <a
+      href="#careers"
+      className="hover:underline hover:text-orange-500 transition duration-300"
+    >
+      Careers
+    </a>
+  </li>
+  <li>
+    <a
+      href="#support"
+      className="hover:underline hover:text-orange-500 transition duration-300"
+    >
+      Support
+    </a>
+  </li>
             </ul>
           </div>
 
           {/* Column 2 */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">For Suppliers</h3>
-            <ul className="space-y-2 text-sm">
-              <li>List Your Activities</li>
-            </ul>
-            <h3 className="text-lg font-semibold mt-6 mb-4">For Brands</h3>
-            <ul className="space-y-2 text-sm">
-              <li>Partner With Us</li>
-              <li>Destination Marketing</li>
-            </ul>
-          </div>
+            <h3 className="text-sm font-semibold mb-4 uppercase">Information & Policies</h3>
+            <ul className="space-y-2 text-xs uppercase font-semibold text-gray-700">
+            <li>
+    <a
+      href="#about-us"
+      className="hover:underline hover:text-orange-500 transition duration-300"
+    >
+      FAQs
+    </a>
+  </li>
+  <li>
+    <a
+      href="#our-team"
+      className="hover:underline hover:text-orange-500 transition duration-300"
+    >
+      Partner With Us
+    </a>
+  </li>
+  <li>
+    <a
+      href="#why-choose-us"
+      className="hover:underline hover:text-orange-500 transition duration-300"
+    >
+      Destination Marketing
+    </a>
+  </li>
+  <li>
+    <a
+      href="#testimonials"
+      className="hover:underline hover:text-orange-500 transition duration-300"
+    >
+      Travel Insurance
+    </a>
+  </li>
+  <li>
+    <a
+      href="#careers"
+      className="hover:underline hover:text-orange-500 transition duration-300"
+    >
+      Privacy Policy
+    </a>
+  </li>
+  <li>
+    <a
+      href="#support"
+      className="hover:underline hover:text-orange-500 transition duration-300"
+    >
+      Cancellation Policy
+    </a>
+  </li>
+    </ul>
+  </div>
 
           {/* Column 3 */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">For Travellers</h3>
-            <ul className="space-y-2 text-sm">
-              <li>Gift an Experience</li>
+            <h3 className="text-sm font-semibold mb-4 uppercase">For Travellers</h3>
+            <ul className="space-y-2 text-xs uppercase font-semibold text-gray-700">
+        <li>
+        <a
+      href="#support"
+      className="hover:underline hover:text-orange-500 transition duration-300"
+    >
+     Gift an Experience
+    </a>
+        </li>
+   <li>
+   <a
+      href="#support"
+      className="hover:underline hover:text-orange-500 transition duration-300"
+    >
+      Travel Blog
+    </a>
+   </li>
+
+    <li>
+    <a
+      href="#support"
+      className="hover:underline hover:text-orange-500 transition duration-300"
+    >
+      Travel Guides
+    </a>
+    </li>
+
+    <li>
+    <a
+      href="#support"
+      className="hover:underline hover:text-orange-500 transition duration-300"
+    >
+      Packing Tips
+    </a>
+    </li>
+
+    <li>
+    <a
+      href="#support"
+      className="hover:underline hover:text-orange-500 transition duration-300"
+    >
+      Seasonal Discounts
+
+    </a>
+    </li>
             </ul>
           </div>
 
           {/* Column 4 (Travel Destinations with Images) */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Travel Destinations</h3>
+            <h3 className="text-sm font-semibold mb-4 uppercase">Travel Destinations</h3>
             <div className="grid grid-cols-3 gap-2">
               {destinations.map((dest, index) => (
                 <div key={index} className="group relative">
                   <img
                     src={dest.img}
                     alt={dest.name}
-                    className="w-full h-16 object-cover rounded-md"
+                    className="w-full h-14 object-cover rounded-sm"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                     <span className="text-white text-xs">{dest.name}</span>
@@ -101,19 +227,15 @@ function Footer() {
         </div>
 
         {/* Divider Line */}
-        <hr className="my-8 border-gray-600" />
-
+       
+       <hr className="my-8 border-gray-600" />
+  
         {/* Bottom Section */}
         <div className="flex flex-col items-center space-y-4 md:space-y-0">
-          {/* Logo and Copyright */}
+        <div className="flex mb-2">
+        <img src={tgalogo} alt="TGA Logo" className="h-10 mx-4" />
+        </div>
 
-            <div className="flex mb-2">
-              <img
-                src={tgalogo}
-                alt="TGA Logo"
-                className="h-10"
-              />
-               </div>
               {/* Social Icons */}
           <div className="flex space-x-4">
             <a href="#" className="text-gray-400 hover:text-white">

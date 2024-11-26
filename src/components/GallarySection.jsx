@@ -119,7 +119,7 @@ function GallarySection() {
 
   return (
     <div className="px-4 lg:px-24">
-      <h2 className="text-xl sm:text-3xl font-bold text-orange-500 text-center mb-4 uppercase">
+      <h2 className="text-xl sm:text-3xl font-bold text-center mb-4 uppercase">
         Our favourite reasons to travel
       </h2>
       <p className="text-center text-gray-600 mb-6">
@@ -168,7 +168,7 @@ function GallarySection() {
         <div className="text-center mt-6">
           <button
             onClick={loadMore}
-            className="px-6 py-2 bg-orange-500 text-white font-semibold rounded hover:bg-orange-600 transition duration-300"
+            className="px-6 py-2 bg-orange-500 text-white font-semibold hover:bg-orange-600 transition duration-300"
           >
             Load More
           </button>

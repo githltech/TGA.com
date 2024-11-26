@@ -6,6 +6,7 @@ import AboutTGA from '../../components/AboutTga';
 import StatusSection from '../../components/StatusSection';
 import GallarySection from '../../components/GallarySection';
 import Testimonials from '../../components/Testimonials';
+import PerfectDestinations from '../../components/PerfectDestinations';
 
 const Home = () =>
 {
@@ -16,6 +17,7 @@ const Home = () =>
         <BookingSlider/>
         <GallarySection/>
         <AboutTGA/>
+        <PerfectDestinations/>
         <StatusSection/>
         <Testimonials/>
         

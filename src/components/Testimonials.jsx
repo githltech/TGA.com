@@ -2,7 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaStar, FaGoogle } from "react-icons/fa";
+//import { FcGoogle } from "react-icons/fc";
+import { IoStar } from "react-icons/io5";
 import { MdVerified } from "react-icons/md";
 
 const Testimonials = () => {
@@ -37,10 +38,16 @@ const Testimonials = () => {
     slidesToScroll: 1,
     arrows: false,
     pauseOnHover: false,
-
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768, // md breakpoint
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -50,39 +57,40 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="bg-white py-10 px-4 md:px-20">
-      <div className="flex flex-col md:flex-row items-center gap-8">
+    <div className="bg-white py-10 px-4 lg:px-24">
+      <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
         {/* Left Section */}
         <div className="text-center md:text-left">
+          <hr className="border-t-4 border-orange-500 w-16" />
           <h2 className="text-3xl font-bold mb-2">EXCELLENT</h2>
           <div className="flex justify-center md:justify-start items-center gap-1 mb-3">
             {Array(5)
               .fill(0)
               .map((_, index) => (
-                <FaStar key={index} className="text-yellow-500 text-xl" />
+                <IoStar key={index} className="text-yellow-500 text-xl" />
               ))}
           </div>
-          <p className="text-gray-600 text-lg mb-4">Based on 73 reviews</p>
+          <p className="text-gray-600 text-sm mb-2">Based on <span className="text-black font-semibold">73 Reviews</span></p>
           <div className="flex items-center justify-center md:justify-start gap-2">
-            <FaGoogle className="text-blue-600 text-4xl" />
+            <img src="https://cdn.vox-cdn.com/thumbor/ln4IHgPYpvNoIWpJ2Y1_c9msxXA=/0x0:2012x1341/2000x1333/filters:focal(1006x670:1007x671)/cdn.vox-cdn.com/uploads/chorus_asset/file/15483559/google2.0.0.1441125613.jpg" alt="" className="h-12"/>
           </div>
         </div>
 
         {/* Right Section: Testimonial Slider */}
-        <div className="w-full md:w-3/4">
+        <div className="w-full lg:w-3/4">
           <Slider {...sliderSettings}>
             {reviews.map((review, index) => (
               <div
                 key={index}
-                className="border rounded-lg shadow-lg p-5 bg-white flex flex-col gap-4"
-                style={{ minHeight: "200px", display: "flex" }}
+                className="border sm:border-hidden border-gray-400 rounded-lg sm:rounded-none shadow-lg p-5 bg-white flex flex-col gap-4 h-44"
+                style={{ width: "350px", height: "2500px" }}
               >
                 {/* Review Header */}
                 <div className="flex items-center gap-3">
                   <img
                     src={review.img}
                     alt={review.name}
-                    className="w-12 h-12 rounded-full"
+                    className="w-10 h-10 rounded-full object-cover object-center"
                   />
                   <div>
                     <h4 className="text-sm font-semibold">{review.name}</h4>
@@ -92,7 +100,7 @@ const Testimonials = () => {
                    {Array(5)
                     .fill(0)
                    .map((_, index) => (
-                  <FaStar key={index} className="text-yellow-500 text-xs" />
+                  <IoStar key={index} className="text-yellow-500 text-xs" />
                       ))}
                    </div>
                     <MdVerified className="text-blue-500 text-xs" />
@@ -101,7 +109,7 @@ const Testimonials = () => {
                 </div>
 
                 {/* Review Text */}
-                <p className="text-gray-600">{review.text}</p>
+                <p className="text-gray-600 text-sm line-clamp-3 overflow-hidden">{review.text}</p>
               </div>
             ))}
           </Slider>

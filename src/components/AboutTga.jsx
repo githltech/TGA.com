@@ -22,7 +22,7 @@ const AboutTGA = () => {
       <div className="absolute inset-0 bg-white opacity-90"></div>
       <div className="lg:px-24 px-4 relative z-10">
         <h1 className=" text-black font-bold">ABOUT TGA</h1>
-        <h2 className="text-xl sm:text-3xl font-bold text-orange-500 mb-2">GETS HOLIDAYS</h2>
+        <h2 className="text-xl sm:text-3xl font-bold text-black mb-2">GETS HOLIDAYS</h2>
         <p className="text-gray-700 font-serif text-sm">
           At GeTS Holidays, we are passionate about making your voyage a lifetime experience. 
           From riding a rickshaw through the bustling streets of Chandni Chowk in Delhi to a thrilling Tiger Safari in Ranthambore, exploring the UNESCO World Heritage Site of Elephanta Caves, 
@@ -41,9 +41,9 @@ const AboutTGA = () => {
 
       {/* Why Us Section */}
       <div
-        className="py-10 text-center">
+        className="py-10 text-center px-4">
         <div className="relative z-10">
-          <h2 className="text-xl sm:text-3xl font-bold text-orange-500 mb-6 border-b-2 border-black m-auto w-fit">WHY US</h2>
+          <h2 className="text-xl sm:text-3xl font-bold text-black mb-6 border-b-2 border-orange-500 m-auto w-fit">WHY US</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-black">
             {/* Card 1 */}
             <div className="flex flex-col items-center">
