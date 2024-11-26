@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home/Home';
 import Explore from './pages/Explore';
 
@@ -8,7 +8,7 @@ const App = () =>
  {
   return (
     <>
-    <Router basename='/TGA.com'>
+    <Router>
       <Routes>
         <Route path='/' element = {<Home/>}/>
         <Route path='/explore' element = {<Explore/>}/>
