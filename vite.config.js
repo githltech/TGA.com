@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/TGA.com/',
+  base: '/',
   build: {
     outDir: 'dist', // Default folder for build output
     emptyOutDir: true, // Clears the output directory before building
