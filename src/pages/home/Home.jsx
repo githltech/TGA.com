@@ -1,8 +1,12 @@
 import React from 'react'
 import Layout from '../../components/layout/Layout';
 import Herosection from '../../components/herosection/Herosection';
-import BookingSlider from '../../components/BookingSlider';
-import AboutTGA from '../../components/AboutTga';
+import PackagesCart from '../../components/PackagesCart';
+import WhyTga from '../../components/WhyTga';
+import AccomodationCart from '../../components/AccomodationCart';
+import ExpPackagesCart from '../../components/ExpPackagesCart';
+import TreksCart from '../../components/TreksCart';
+import EventsCart from '../../components/EventsCart';
 import StatusSection from '../../components/StatusSection';
 import GallarySection from '../../components/GallarySection';
 import Testimonials from '../../components/Testimonials';
@@ -14,9 +18,13 @@ const Home = () =>
     <>
     <Layout>
         <Herosection/>
-        <BookingSlider/>
+        <PackagesCart/>
+        <WhyTga/>
+        <AccomodationCart/>
+        <ExpPackagesCart/>
+        <TreksCart/>
+        <EventsCart/>
         <GallarySection/>
-        <AboutTGA/>
         <PerfectDestinations/>
         <StatusSection/>
         <Testimonials/>
