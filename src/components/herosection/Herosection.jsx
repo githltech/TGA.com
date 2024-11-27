@@ -37,13 +37,13 @@ const HeroSection = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    pauseOnHover: false,
+    //pauseOnHover: false,
   };
 
   const nestedsettings = {
     infinite: true,
     speed: 600,
-    slidesToShow: 3, // Show 3 slides at a time
+    slidesToShow: 3, 
     slidesToScroll: 1,
     centerMode: true, // Center current slide
     centerPadding: "0px", // No padding around the centered slide
