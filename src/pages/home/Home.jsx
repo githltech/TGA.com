@@ -11,6 +11,8 @@ import StatusSection from '../../components/StatusSection';
 import GallarySection from '../../components/GallarySection';
 import Testimonials from '../../components/Testimonials';
 import PerfectDestinations from '../../components/PerfectDestinations';
+import AboutTga from '../../components/AboutTga';
+import BlogTga from '../../components/BlogTga';
 
 const Home = () =>
 {
@@ -18,14 +20,16 @@ const Home = () =>
     <>
     <Layout>
         <Herosection/>
+        <AboutTga/>
         <PackagesCart/>
         <WhyTga/>
         <AccomodationCart/>
         <ExpPackagesCart/>
         <TreksCart/>
         <EventsCart/>
-        <GallarySection/>
         <PerfectDestinations/>
+        <GallarySection/>
+        <BlogTga/>
         <StatusSection/>
         <Testimonials/>
         

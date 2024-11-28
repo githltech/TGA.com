@@ -52,3 +52,7 @@
   color: #202020;
   font-weight: 400;
 }
+
+.footer_shadow{
+  box-shadow: 5px 5px 20px 0px gray;
+}

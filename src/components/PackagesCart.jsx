@@ -149,19 +149,21 @@ const PackagesCart = () => {
   };
 
   return (
-    <div className="relative w-full py-6 md:px-6">
+    <div className="relative w-full py-6 px-4 lg:px-20">
       {/* Parent Slider Navigation */}
       {!isSmallScreen && (
         <button
-          className="absolute top-80 left-4 transform -translate-y-1/2 z-10 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-600 focus:outline-none"
+          className="hidden lg:block absolute top-80 left-16 transform -translate-y-1/2 z-10 bg-black opacity-60 text-white p-2 rounded-full shadow-lg hover:bg-gray-600 focus:outline-none"
           onClick={handleLeftClick}
         >
-          <IoIosArrowBack size={30} />
+          <IoIosArrowBack size={25} />
         </button>
       )}
      <div className="flex items-center justify-between px-4 py-4">
-     <h1 className="text-xl font-bold">Packages</h1>
-     <a href="" className="text-orange-500 border-b-[1px] border-orange-500 font-medium">View All</a>
+     <h1 className="text-xl font-bold uppercase">Packages</h1>
+     <a href="/" className="text-orange-500 border-b-[1px] border-orange-500 font-medium flex items-center gap-2">View All
+     <IoIosArrowForward className='text-white bg-orange-500 rounded-full' size={18}/>
+     </a>
      </div>
       <Slider ref={sliderRef} {...parentSliderSettings}>
         {cardData.map((card,index) => (
@@ -169,28 +171,28 @@ const PackagesCart = () => {
             <div className="bg-white rounded-lg shadow-xl border transition duration-300 cursor-pointer">
               {/* Nested Slider */}
               <div className="relative">
-              <h1 className="text-sm text-center text-white bg-orange-500 py-1 rounded-t-lg">{card.imgtext}</h1>
+              <h1 className="text-sm text-center text-white font-semibold bg-orange-500 py-1 rounded-t-lg">{card.imgtext}</h1>
                 <Slider  ref={(el) => (nestedSlidersRef.current[index] = el)} {...nestedSliderSettings}>
                   {card.images.map((image, imgIndex) => (
                     <img
                       key={imgIndex}
                       src={image}
                       alt={`Slide ${imgIndex + 1}`}
-                      className="w-full h-80 object-cover"
+                      className="w-full h-96 sm:h-[30rem] md:h-80 lg:h-72 object-cover"
                     />
                   ))}
                 </Slider>
                  <button
-                  className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg focus:outline-none"
+                  className=" absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg focus:outline-none"
                   onClick={() => handleNestedLeftClick(index)}
                 >
-                  <IoIosArrowBack size={20} />
+                  <IoIosArrowBack size={10} />
                 </button>
                 <button
                   className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg  focus:outline-none"
                   onClick={() => handleNestedRightClick(index)}
                 >
-                  <IoIosArrowForward size={20} />
+                  <IoIosArrowForward size={10} />
                 </button>
               </div>
 
@@ -215,12 +217,12 @@ const PackagesCart = () => {
                 </div>
                 <div className="flex justify-between items-center mt-2 gap-4">
                   <a
-                    href="/"
+                    href="tel:91 92055 15652"
                     className="text-orange-500 px-4 py-2 rounded-md border border-orange-500"
                   >
                     <IoMdCall />
                   </a>
-                  <a className="bg-orange-500 text-white px-4 py-2 rounded-md text-sm w-full m-auto text-center">
+                  <a href='/' className="bg-orange-500 text-white px-4 py-2 rounded-md text-sm w-full m-auto text-center">
                     Avail This Offer
                   </a>
                 </div>
@@ -232,10 +234,10 @@ const PackagesCart = () => {
 
       {!isSmallScreen && (
         <button
-          className="absolute top-80 right-4 transform -translate-y-1/2 z-10 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-600 focus:outline-none"
+          className="hidden lg:block absolute top-80 right-16 transform -translate-y-1/2 z-10 bg-black opacity-60 text-white p-2 rounded-full shadow-lg hover:bg-gray-600 focus:outline-none"
           onClick={handleRightClick}
         >
-          <IoIosArrowForward size={30} />
+          <IoIosArrowForward size={25} />
         </button>
       )}
     </div>

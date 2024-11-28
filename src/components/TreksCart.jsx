@@ -149,96 +149,98 @@ const TreksCart = () => {
   };
 
   return (
-    <div className="relative w-full py-6 md:px-6">
-      {/* Parent Slider Navigation */}
-      {!isSmallScreen && (
-        <button
-          className="absolute top-64 left-4 transform -translate-y-1/2 z-10 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-600 focus:outline-none"
-          onClick={handleLeftClick}
-        >
-          <IoIosArrowBack size={30} />
-        </button>
-      )}
-     <div className="flex items-center justify-between px-4 py-4">
-     <h1 className="text-xl font-bold">Trecks</h1>
-     <a href="/" className="text-orange-500 border-b-[1px] border-orange-500 font-medium">View All</a>
-     </div>
-      <Slider ref={sliderRef} {...parentSliderSettings}>
-        {cardData.map((card,index) => (
-          <div key={card.id} className="px-4">
-            <div className="bg-white rounded-lg shadow-xl border transition duration-300 cursor-pointer">
-              {/* Nested Slider */}
-              <div className="relative">
-              <h1 className="text-sm text-center text-white bg-orange-500 py-1 rounded-t-lg">{card.imgtext}</h1>
-                <Slider  ref={(el) => (nestedSlidersRef.current[index] = el)} {...nestedSliderSettings}>
-                  {card.images.map((image, imgIndex) => (
-                    <img
-                      key={imgIndex}
-                      src={image}
-                      alt={`Slide ${imgIndex + 1}`}
-                      className="w-full h-80 object-cover"
-                    />
-                  ))}
-                </Slider>
-                 <button
-                  className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg focus:outline-none"
-                  onClick={() => handleNestedLeftClick(index)}
-                >
-                  <IoIosArrowBack size={20} />
-                </button>
-                <button
-                  className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg  focus:outline-none"
-                  onClick={() => handleNestedRightClick(index)}
-                >
-                  <IoIosArrowForward size={20} />
-                </button>
-              </div>
+    <div className="relative w-full py-6 px-4 lg:px-20">
+    {/* Parent Slider Navigation */}
+    {!isSmallScreen && (
+      <button
+        className="hidden lg:block absolute top-80 left-16 transform -translate-y-1/2 z-10 bg-black opacity-60 text-white p-2 rounded-full shadow-lg hover:bg-gray-600 focus:outline-none"
+        onClick={handleLeftClick}
+      >
+        <IoIosArrowBack size={25} />
+      </button>
+    )}
+   <div className="flex items-center justify-between px-4 py-4">
+   <h1 className="text-xl font-bold uppercase">Trecks</h1>
+   <a href="/" className="text-orange-500 border-b-[1px] border-orange-500 font-medium flex items-center gap-2">View All
+   <IoIosArrowForward className='text-white bg-orange-500 rounded-full' size={18}/>
+   </a>
+   </div>
+    <Slider ref={sliderRef} {...parentSliderSettings}>
+      {cardData.map((card,index) => (
+        <div key={card.id} className="px-4">
+          <div className="bg-white rounded-lg shadow-xl border transition duration-300 cursor-pointer">
+            {/* Nested Slider */}
+            <div className="relative">
+            <h1 className="text-sm text-center text-white font-semibold bg-orange-500 py-1 rounded-t-lg">{card.imgtext}</h1>
+              <Slider  ref={(el) => (nestedSlidersRef.current[index] = el)} {...nestedSliderSettings}>
+                {card.images.map((image, imgIndex) => (
+                  <img
+                    key={imgIndex}
+                    src={image}
+                    alt={`Slide ${imgIndex + 1}`}
+                    className="w-full h-96 sm:h-[30rem] md:h-80 lg:h-72 object-cover"
+                  />
+                ))}
+              </Slider>
+               <button
+                className=" absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg focus:outline-none"
+                onClick={() => handleNestedLeftClick(index)}
+              >
+                <IoIosArrowBack size={10} />
+              </button>
+              <button
+                className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg  focus:outline-none"
+                onClick={() => handleNestedRightClick(index)}
+              >
+                <IoIosArrowForward size={10} />
+              </button>
+            </div>
 
-              {/* Card Content */}
-              <div className="p-6">
-                <h3 className="cardtitle h-10">{card.title}</h3>
-                <div className="flex items-center mt-2 text-xs">
-                  <span className="text-yellow-500">{card.rating}</span>
-                  <span className="text-sm text-gray-500">({card.reviews})</span>
-                </div>
-                <p className="mt-2 text-gray-600 text-sm">{card.days}</p>
-                <div className="flex justify-between items-center mt-2">
-                  <span className="text-sm font-bold text-gray-800">
-                    INR {card.price.toLocaleString()}{' '}
-                    <span className="line-through text-red-500 text-sm ml-2">
-                      INR {card.originalPrice.toLocaleString()}
-                    </span>
+            {/* Card Content */}
+            <div className="p-6">
+              <h3 className="cardtitle h-10">{card.title}</h3>
+              <div className="flex items-center mt-2 text-xs">
+                <span className="text-yellow-500">{card.rating}</span>
+                <span className="text-sm text-gray-500">({card.reviews})</span>
+              </div>
+              <p className="mt-2 text-gray-600 text-sm">{card.days}</p>
+              <div className="flex justify-between items-center mt-2">
+                <span className="text-sm font-bold text-gray-800">
+                  INR {card.price.toLocaleString()}{' '}
+                  <span className="line-through text-red-500 text-sm ml-2">
+                    INR {card.originalPrice.toLocaleString()}
                   </span>
-                  <span className="bg-blue-100 text-green-700 text-[10px] px-2">
-                    save INR {card.saveprice}
-                  </span>
-                </div>
-                <div className="flex justify-between items-center mt-2 gap-4">
-                  <a
-                    href="/"
-                    className="text-orange-500 px-4 py-2 rounded-md border border-orange-500"
-                  >
-                    <IoMdCall />
-                  </a>
-                  <a className="bg-orange-500 text-white px-4 py-2 rounded-md text-sm w-full m-auto text-center">
-                    Avail This Offer
-                  </a>
-                </div>
+                </span>
+                <span className="bg-blue-100 text-green-700 text-[10px] px-2">
+                  save INR {card.saveprice}
+                </span>
+              </div>
+              <div className="flex justify-between items-center mt-2 gap-4">
+                <a
+                  href="tel:91 92055 15652"
+                  className="text-orange-500 px-4 py-2 rounded-md border border-orange-500"
+                >
+                  <IoMdCall />
+                </a>
+                <a href='/' className="bg-orange-500 text-white px-4 py-2 rounded-md text-sm w-full m-auto text-center">
+                  Avail This Offer
+                </a>
               </div>
             </div>
           </div>
-        ))}
-      </Slider>
+        </div>
+      ))}
+    </Slider>
 
-      {!isSmallScreen && (
-        <button
-          className="absolute top-64 right-4 transform -translate-y-1/2 z-10 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-600 focus:outline-none"
-          onClick={handleRightClick}
-        >
-          <IoIosArrowForward size={30} />
-        </button>
-      )}
-    </div>
+    {!isSmallScreen && (
+      <button
+        className="hidden lg:block absolute top-80 right-16 transform -translate-y-1/2 z-10 bg-black opacity-60 text-white p-2 rounded-full shadow-lg hover:bg-gray-600 focus:outline-none"
+        onClick={handleRightClick}
+      >
+        <IoIosArrowForward size={25} />
+      </button>
+    )}
+  </div>
   );
 };
 

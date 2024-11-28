@@ -44,11 +44,11 @@ function Footer() {
     <footer className="bg-gray-800 mt-52 lg:mt-36">
       <div className="p-4 lg:p-24">
         {/* Top Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white p-4 rounded-md border border-gray-600 -mt-48">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white p-4 footer_shadow border rounded-xl border-gray-300 -mt-48">
           {/* Column 1 */}
           <div>
             <h3 className="text-sm font-semibold mb-4 uppercase">About TGA</h3>
-            <ul className="space-y-2 text-xs uppercase font-semibold text-gray-700">
+            <ul className="space-y-2 text-[10px] uppercase font-semibold text-gray-600">
             <li>
     <a
       href="#about-us"
@@ -103,7 +103,7 @@ function Footer() {
           {/* Column 2 */}
           <div>
             <h3 className="text-sm font-semibold mb-4 uppercase">Information & Policies</h3>
-            <ul className="space-y-2 text-xs uppercase font-semibold text-gray-700">
+            <ul className="space-y-2 text-[10px] uppercase font-semibold text-gray-600">
             <li>
     <a
       href="#about-us"
@@ -158,7 +158,7 @@ function Footer() {
           {/* Column 3 */}
           <div>
             <h3 className="text-sm font-semibold mb-4 uppercase">For Travellers</h3>
-            <ul className="space-y-2 text-xs uppercase font-semibold text-gray-700">
+            <ul className="space-y-2 text-[10px] uppercase font-semibold text-gray-600">
         <li>
         <a
       href="#support"
@@ -237,27 +237,32 @@ function Footer() {
         </div>
 
               {/* Social Icons */}
-          <div className="flex space-x-4">
-            <a href="#" className="text-gray-400 hover:text-white">
+          <div className="flex space-x-4 md:py-6 py-2">
+            <a href="#" className="text-black rounded-full px-4 py-2 text-xl bg-white hover:text-orange-500">
               <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="#" className="text-gray-400 hover:text-white">
+            <a href="#" className="text-black rounded-full px-3 py-2 text-xl bg-white hover:text-orange-500">
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="#" className="text-gray-400 hover:text-white">
+            <a href="#" className="text-black rounded-full px-3 py-2 text-xl bg-white hover:text-orange-500">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="#" className="text-gray-400 hover:text-white">
+            <a href="#" className="text-black rounded-full px-3 py-2 text-xl bg-white hover:text-orange-500">
               <i className="fab fa-linkedin-in"></i>
             </a>
-            <a href="#" className="text-gray-400 hover:text-white">
+            <a href="#" className="text-black rounded-full px-3 py-2 text-xl bg-white hover:text-orange-500">
               <i className="fab fa-youtube"></i>
             </a>
           </div>
 
-            <p className="text-sm text-gray-400">
+            <div className="flex flex-col text-xs sm:text-lg items-center gap-2">
+            <p className=" text-gray-400 font-semibold">
               © 2024 TGA.com All rights reserved.
             </p>
+            <p className=" text-gray-400 font-semibold">
+              © Developed And Managed By <a href="/https://hltechindia.com/" className="border-b-[1px] text-red-200 hover:text-red-400">HL Tech Pvt.Ltd</a> .
+            </p>
+            </div>
           </div>
        
       </div>

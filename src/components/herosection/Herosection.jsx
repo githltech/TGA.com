@@ -7,7 +7,6 @@ import tgaimg2 from "../../images/tgaheroimg2.png";
 import tgaimg3 from "../../images/tgaheroimg3.png";
 import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
-import { FaMapMarkerAlt } from "react-icons/fa";
 
 
 const HeroSection = () => {
@@ -33,7 +32,7 @@ const HeroSection = () => {
     infinite: true,
     speed: 2000,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,

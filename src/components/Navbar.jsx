@@ -87,7 +87,7 @@ const Navbar = () => {
 <div className="flex items-center gap-3">
   <div className="flex items-center gap-1 text-white px-3 rounded-md  duration-500 text-xs">
   <a
-    href="tel:9245678234"
+    href="tel:91 92055 15652"
     className="flex items-center gap-1 text-white duration-500 text-sm hover:border-b-[1px]"
   >
     <div className="flex items-center cursor-pointer mt-[2px] text-sm">
