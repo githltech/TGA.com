@@ -82,10 +82,9 @@ const Navbar = () => {
           />     
         </div>
 
-        {/* Currency and Login */}
        {/* Currency, Mobile Number, and Login */}
 <div className="flex items-center gap-3">
-  <div className="flex items-center gap-1 text-white px-3 rounded-md  duration-500 text-xs">
+  <div className="flex items-center gap-1 animate-bounce text-white px-3 rounded-md  duration-500 text-xs">
   <a
     href="tel:91 92055 15652"
     className="flex items-center gap-1 text-white duration-500 text-sm hover:border-b-[1px]"

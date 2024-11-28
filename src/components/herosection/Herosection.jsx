@@ -37,8 +37,22 @@ const HeroSection = () => {
     slidesToScroll: 1,
     arrows: false,
     pauseOnHover: false,
-    
+    beforeChange: (current, next) => {
+      const slides = document.querySelectorAll(".slick-slide");
+      slides.forEach((slide) => {
+        slide.classList.remove("animate-zoom");
+        slide.classList.remove("animate-scroll");
+      });
+      setTimeout(() => {
+        const nextSlide = slides[next + 1]; // `next + 1` ensures target slide
+        if (nextSlide) {
+          nextSlide.classList.add("animate-zoom");
+          nextSlide.classList.add("animate-scroll");
+        }
+      }, 50);
+    },
   };
+  
 
   const nestedsettings = {
     infinite: true,

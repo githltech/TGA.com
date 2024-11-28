@@ -220,7 +220,7 @@ const TreksCart = () => {
                   href="tel:91 92055 15652"
                   className="text-orange-500 px-4 py-2 rounded-md border border-orange-500"
                 >
-                  <IoMdCall />
+                  <IoMdCall className="animate-bounce" />
                 </a>
                 <a href='/' className="bg-orange-500 text-white px-4 py-2 rounded-md text-sm w-full m-auto text-center">
                   Avail This Offer
