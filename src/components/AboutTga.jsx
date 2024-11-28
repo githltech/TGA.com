@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutTga = () => {
   return (
-    <div className="flex flex-col md:flex-row items-start justify-between px-6 lg:px-24 bg-white my-10">
+    <div className="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-24 bg-white my-10">
       {/* Text Content */}
       <div className="flex-1 md:mr-6">
         <h2 className="text-2xl md:text-3xl font-semibold text-black mb-4 uppercase">
@@ -12,9 +12,7 @@ const AboutTga = () => {
         <strong>Committed to the Land and Community</strong><br />
           from the Indian subcontinent, owner-hosts of{" "}
           <strong>palaces, forts, retreats, and lodges</strong>, dedicated to
-          preserving heritage and conserving nature. For world travelers, these
-          are destinations and experiences across the subcontinent alive,
-          authentic, stylish, set in restful, earth-happy spaces.
+          preserving heritage and conserving nature.
         </p>
 
         {/* Committed to the Land */}
@@ -42,15 +40,13 @@ const AboutTga = () => {
           <p className="text-gray-700 leading-7">
             <strong>A Journey with Purpose</strong> <br />
             As you visit these RARE destinations, your mindful interactions with
-            people, culture, nature, wildlife, crafts, and traditions will
-            nudge you to live consciously and build value for the planet and
-            its communities.
+            people, culture, nature, wildlife, crafts.
           </p>
         </div>
       </div>
 
       {/* Image Content */}
-      <div className="flex-1 mt-6 md:mt-0">
+      <div className="flex-1 mt-6 lg:mt-0">
         <img
           src="https://media1.thrillophilia.com/filestore/m21dqlu4lf2ekp42vrofmxeqklpl_shutterstock_1118600486.jpg?w=340&dpr=2"
           alt="Scenic Destination"

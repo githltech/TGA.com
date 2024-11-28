@@ -96,7 +96,7 @@ const HeroSection = () => {
           <img
             src={tgaimg3}
             alt="Slide 1"
-            className="w-full h-[75vh] sm:max-h-fit lg:min-h-screen object-cover"
+            className="w-full h-[80vh] sm:max-h-fit lg:min-h-screen object-cover"
           />
           <div className="absolute inset-0 flex items-center sm:justify-between flex-col sm:flex-row gap-5 sm:gap-0 pt-44 sm:pt-40 bg-black bg-opacity-50 px-4">
             <div className="text-left">
@@ -154,7 +154,7 @@ const HeroSection = () => {
           <img
             src={tgaimg2}
             alt="Slide 1"
-            className="w-full h-[75vh] sm:max-h-fit lg:min-h-screen object-cover"
+            className="w-full h-[80vh] sm:max-h-fit lg:min-h-screen object-cover"
           />
           <div className="absolute inset-0 flex items-center sm:justify-between flex-col sm:flex-row gap-5 sm:gap-0 pt-44 bg-black bg-opacity-50 px-4">
             <div className="text-left">
@@ -212,7 +212,7 @@ const HeroSection = () => {
           <img
             src={tgaimg1}
             alt="Slide 1"
-            className="w-full h-[75vh] sm:max-h-fit lg:min-h-screen object-cover"
+            className="w-full h-[80vh] sm:max-h-fit lg:min-h-screen object-cover"
           />
           <div className="absolute inset-0 flex items-center sm:justify-between flex-col sm:flex-row gap-5 sm:gap-0 pt-44 bg-black bg-opacity-50 px-4">
             <div className="text-left">

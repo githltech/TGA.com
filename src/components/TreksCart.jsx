@@ -178,7 +178,7 @@ const TreksCart = () => {
                     key={imgIndex}
                     src={image}
                     alt={`Slide ${imgIndex + 1}`}
-                    className="w-full h-96 sm:h-[30rem] md:h-80 lg:h-72 object-cover"
+                    className="w-full h-80 sm:h-[30rem] md:h-80 lg:h-72 object-cover"
                   />
                 ))}
               </Slider>
