@@ -66,16 +66,16 @@ const BlogTga = () => {
                   </div>
                 </div>
               </div>
-              <div className="p-4 bg-red-50">
-                <h3 className="text-lg font-semibold text-black mb-2">
+              <div className="p-4">
+                <h3 className="text-lg font-bold text-black uppercase h-14 mb-2">
                   {blog.title}
                 </h3>
-                <p className="text-gray-600 text-sm font-medium mb-4 h-16">{blog.description}</p>
+                <p className="text-[#424241] font-museo font-light text-xxs mb-4 h-16">{blog.description}</p>
                 <a
                   href={blog.buttonLink}
-                  className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600"
+                  className="bg-orange-500 text-sm font-semibold text-white px-4 py-2 rounded hover:bg-orange-600"
                 >
-                  {blog.buttonLabel}
+                  {blog.buttonLabel} 
                 </a>
               </div>
             </div>

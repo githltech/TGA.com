@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
 import { IoIosArrowBack, IoIosArrowForward, IoMdCall } from 'react-icons/io';
+import { IoStar } from "react-icons/io5";
+
 
 const EventsCart = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -53,8 +55,9 @@ const EventsCart = () => {
         'https://media1.thrillophilia.com/filestore/3olu266q85xcvi788yawu7fji10c_dl.beatsnoop.com-3000-HSMA1tjOPa.jpg?w=340&dpr=2',
         'https://media1.thrillophilia.com/filestore/l9eo0e0yn5eu58zpb9nxgfazhc08_shutterstock_1215376537.jpg?w=340&dpr=2',
       ],
-      reviews: '1.6k reviews',
-      rating: '⭐⭐⭐⭐',
+      reviews: '1.6k',
+      rating: <IoStar/>,
+      outofrating:"4,5",
       days: '5 days & 4 nights',
       price: 45000,
       originalPrice: 74002,
@@ -69,8 +72,9 @@ const EventsCart = () => {
         'https://media1.thrillophilia.com/filestore/0hdjtmduamliielzcvdsepune779_dubai%20skyline.jpg?w=340&dpr=2',
         'https://media1.thrillophilia.com/filestore/mp4pf1xwonv6hklph4ktqmt5bnej_shutterstock_2261215111.jpg?w=340&dpr=2',
       ],
-      reviews: '1.2k reviews',
-      rating: '⭐⭐⭐⭐⭐',
+      reviews: '1.2k',
+      rating: <IoStar/>,
+      outofrating:"4,5",
       days: '7 days & 6 nights',
       price: 68550,
       originalPrice: 124761,
@@ -85,8 +89,9 @@ const EventsCart = () => {
         'https://media1.thrillophilia.com/filestore/fcfvegglkeiuyjxdt9r18pxapf67_shutterstock_2386280701%20(1).jpg?w=340&dpr=2',
         'https://media1.thrillophilia.com/filestore/n35qyh6yu8dr5dzqtmv48kze6wib_shutterstock_2338754375.jpg?w=340&dpr=2',
       ],
-      reviews: '1.8k reviews',
-      rating: '⭐⭐⭐⭐',
+      reviews: '1.8k',
+      rating: <IoStar/>,
+      outofrating:"4,5",
       days: '7 days & 6 nights',
       price: 86000,
       originalPrice: 111836,
@@ -102,8 +107,9 @@ const EventsCart = () => {
           'https://media1.thrillophilia.com/filestore/jo81ugbjxtme6npfzvlbxsq5jaqp_AYA%20Family%2010%20(1).jpg?w=340&dpr=2',
           'https://media1.thrillophilia.com/filestore/hs37gc38mryythrm842o5a0aslcb_shutterstock_2042237531.jpg?w=340&dpr=2',
         ],
-        reviews: '1.3k reviews',
-        rating: '⭐⭐⭐⭐',
+        reviews: '1.3k',
+        rating: <IoStar/>,
+        outofrating:"4,5",
         days: '7 days & 6 nights',
         price: 96000,
         originalPrice: 11836,
@@ -160,7 +166,7 @@ const EventsCart = () => {
       </button>
     )}
    <div className="flex items-center justify-between px-4 py-4">
-   <h1 className="text-xl font-bold uppercase">Events</h1>
+   <h1 className="text-lg font-bold uppercase">Events <span className='flex flex-col border-b-2 border-orange-500 w-10'></span> </h1>
    <a href="/" className="text-orange-500 border-b-[1px] border-orange-500 font-medium flex items-center gap-2">View All
    <IoIosArrowForward className='text-white bg-orange-500 rounded-full' size={18}/>
    </a>
@@ -178,7 +184,7 @@ const EventsCart = () => {
                     key={imgIndex}
                     src={image}
                     alt={`Slide ${imgIndex + 1}`}
-                    className="w-full h-80 sm:h-[30rem] md:h-80 lg:h-72 object-cover"
+                    className="w-full h-80 object-cover"
                   />
                 ))}
               </Slider>
@@ -198,12 +204,14 @@ const EventsCart = () => {
 
             {/* Card Content */}
             <div className="p-6">
-              <h3 className="cardtitle h-10">{card.title}</h3>
-              <div className="flex items-center mt-2 text-xs">
-                <span className="text-yellow-500">{card.rating}</span>
-                <span className="text-sm text-gray-500">({card.reviews})</span>
-              </div>
-              <p className="mt-2 text-gray-600 text-sm">{card.days}</p>
+            <div className="flex items-center text-xs justify-between h-8">
+              <p className=" text-gray-500 text-sm font-medium">{card.days}</p>
+                  <p className="flex items-center gap-2 text-green-500 text-lg font-semibold">{card.rating}
+                  <span className='text-green-600 text-sm font-bold'>{card.outofrating}</span>
+                   <span className="text-sm text-gray-500">({card.reviews})</span>
+                    </p>
+                </div>
+              <h3 className="text-[#424241] font-museo font-light text-xxs h-10">{card.title}</h3>
               <div className="flex justify-between items-center mt-2">
                 <span className="text-sm font-bold text-gray-800">
                   INR {card.price.toLocaleString()}{' '}
@@ -222,7 +230,7 @@ const EventsCart = () => {
                 >
                   <IoMdCall  className="animate-bounce"/>
                 </a>
-                <a href='/' className="bg-orange-500 text-white px-4 py-2 rounded-md text-sm w-full m-auto text-center">
+                <a href='/' className="bg-orange-500 hover:bg-orange-600 font-semibold text-white px-4 py-2 rounded-md text-sm w-full m-auto text-center">
                   Avail This Offer
                 </a>
               </div>

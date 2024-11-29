@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { RiArrowDropDownLine } from "react-icons/ri";
+
+
 
 function GallarySection() {
   const allImages = [
@@ -41,21 +44,21 @@ function GallarySection() {
         src: "https://www.andbeyond.com/wp-content/uploads/sites/5/INDIA-Ladakh-Leh-Dolkhar-Resort-3-768x432.jpg",
         title: "Shel Ladakh",
         buttonLabel: "View Partner",
-        colSpan: "col-span-1",
+          colSpan: "col-span-1",
         rowSpan: "row-span-1",
       },
       {
         src: "https://www.andbeyond.com/wp-content/uploads/sites/5/India-Delhi-Hyatt-Andaz-15-1024x576.png",
         title: "Essence of Nepal and Sri Lanka",
         buttonLabel: "View Offer",
-        colSpan: "col-span-1 sm:col-span-2",
+          colSpan: "col-span-1 sm:col-span-2",
         rowSpan: "row-span-1",
       },
       {
         src: "https://www.andbeyond.com/wp-content/uploads/sites/5/INDIA-Ladakh-Pangong-Lake-Hotel-Merak-Pangong-Main-Building-Night-1-JPEG-2.15-MB-Website-1920x1080-fill-gravityauto-Q_AutoBest-768x432.jpg",
         title: "Trees N Tigers",
         buttonLabel: "View Partner",
-        colSpan: "col-span-1",
+          colSpan: "col-span-1",
         rowSpan: "row-span-1",
       },
       {
@@ -122,7 +125,7 @@ function GallarySection() {
       <h2 className="text-xl sm:text-3xl font-bold text-center mb-4 uppercase">
         Our favourite reasons to travel
       </h2>
-      <p className="text-center text-gray-600 mb-6">
+      <p className="text-center text-[#424241] font-museo font-light text-xxs mb-6">
         From exceptional offers to not-to-be-missed tours and experiences,{" "}
         <br className="hidden lg:block" /> here are our favourite reasons to explore Asia
       </p>
@@ -133,9 +136,10 @@ function GallarySection() {
           (label, index) => (
             <button
               key={index}
-              className="px-4 py-2 border border-gray-500 text-gray-700 hover:bg-orange-500 hover:text-white transition duration-500"
+              className="px-6  border flex items-center font-semibold uppercase text-xs border-gray-500 text-gray-500 hover:bg-orange-500 hover:text-white transition duration-500"
             >
               {label}
+              <RiArrowDropDownLine className="" size={30} />
             </button>
           )
         )}

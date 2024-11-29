@@ -30,27 +30,14 @@ const HeroSection = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 2000,
+    speed: 600,
     autoplay: true,
     autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     pauseOnHover: false,
-    beforeChange: (current, next) => {
-      const slides = document.querySelectorAll(".slick-slide");
-      slides.forEach((slide) => {
-        slide.classList.remove("animate-zoom");
-        slide.classList.remove("animate-scroll");
-      });
-      setTimeout(() => {
-        const nextSlide = slides[next + 1]; // `next + 1` ensures target slide
-        if (nextSlide) {
-          nextSlide.classList.add("animate-zoom");
-          nextSlide.classList.add("animate-scroll");
-        }
-      }, 50);
-    },
+   
   };
   
 
@@ -98,11 +85,11 @@ const HeroSection = () => {
             alt="Slide 1"
             className="w-full h-[80vh] sm:max-h-fit lg:min-h-screen object-cover"
           />
-          <div className="absolute inset-0 flex items-center sm:justify-between flex-col sm:flex-row gap-5 sm:gap-0 pt-44 sm:pt-40 bg-black bg-opacity-50 px-4">
+          <div className="absolute inset-0 flex items-center sm:justify-between flex-col sm:flex-row gap-5 sm:gap-0 pt-32 md:pt-40 bg-black bg-opacity-50 px-4">
             <div className="text-left">
               <hr className="border-t-2 border-orange-500 w-24 py-1" />
               <p className="text-white">Embark on unforgettable journeys</p>
-              <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-7xl text-white font-bold my-2">
+              <h1 className="text-4xl lg:text-7xl text-white font-bold my-2">
                 TRAVELLFAR <br /> FIND YOURSELF
               </h1>
               <p className="text-white mb-4 text-xs sm:text-sm font-semibold">
@@ -156,11 +143,11 @@ const HeroSection = () => {
             alt="Slide 1"
             className="w-full h-[80vh] sm:max-h-fit lg:min-h-screen object-cover"
           />
-          <div className="absolute inset-0 flex items-center sm:justify-between flex-col sm:flex-row gap-5 sm:gap-0 pt-44 bg-black bg-opacity-50 px-4">
+          <div className="absolute inset-0 flex items-center sm:justify-between flex-col sm:flex-row gap-5 sm:gap-0 pt-32 md:pt-40 bg-black bg-opacity-50 px-4">
             <div className="text-left">
               <hr className="border-t-2 border-orange-500 w-24 py-1" />
               <p className="text-white">Embark on unforgettable journeys</p>
-              <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-7xl text-white font-bold my-2">
+              <h1 className="text-4xl lg:text-7xl text-white font-bold my-2">
                 TRAVELLFAR <br /> FIND YOURSELF
               </h1>
               <p className="text-white mb-4 text-xs sm:text-sm font-semibold">
@@ -214,11 +201,11 @@ const HeroSection = () => {
             alt="Slide 1"
             className="w-full h-[80vh] sm:max-h-fit lg:min-h-screen object-cover"
           />
-          <div className="absolute inset-0 flex items-center sm:justify-between flex-col sm:flex-row gap-5 sm:gap-0 pt-44 bg-black bg-opacity-50 px-4">
+          <div className="absolute inset-0 flex items-center sm:justify-between flex-col sm:flex-row gap-5 sm:gap-0 pt-32 md:pt-40 bg-black bg-opacity-50 px-4">
             <div className="text-left">
               <hr className="border-t-2 border-orange-500 w-24 py-1" />
               <p className="text-white">Embark on unforgettable journeys</p>
-              <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-7xl text-white font-bold my-2">
+              <h1 className="text-4xl lg:text-7xl text-white font-bold my-2">
                 TRAVELLFAR <br /> FIND YOURSELF
               </h1>
               <p className="text-white mb-4 text-xs sm:text-sm font-semibold">

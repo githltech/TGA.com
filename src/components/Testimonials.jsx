@@ -109,7 +109,7 @@ const Testimonials = () => {
                 </div>
 
                 {/* Review Text */}
-                <p className="text-gray-600 text-sm line-clamp-3 overflow-hidden">{review.text}</p>
+                <p className="text-[#424241] font-museo font-light text-xxs overflow-hidden">{review.text}</p>
               </div>
             ))}
           </Slider>

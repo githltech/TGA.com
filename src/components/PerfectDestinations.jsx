@@ -51,7 +51,7 @@ const PerfectDestination = () => {
         <div className="">
           <hr className="border-t-4 border-orange-500 w-16" />
           <h2 className="text-3xl font-bold mb-2 uppercase">Perfect destinations</h2>
-          <p className="text-gray-600 text-sm mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quisquam tempore esse eligendi, vitae ipsa amet impedit odio provident nulla dolorum, excepturi velit id modi rem. Aperiam reiciendis repellat odio.</p>
+          <p className="text-[#424241] font-museo font-light text-xxs mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quisquam tempore esse eligendi, vitae ipsa amet impedit odio provident nulla dolorum, excepturi velit id modi rem. Aperiam reiciendis repellat odio.</p>
          
         </div>
 
