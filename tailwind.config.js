@@ -31,7 +31,8 @@ export default {
           textwhite: "#fff",
         },
         fontWeight: {
-          light1: 200, // Define custom font-weights
+          light1: 400,
+          h3fontwgt:400,  // Define custom font-weights
           regular1: 400,
           bold1: 700,
           extrabold1: 800,
@@ -39,7 +40,7 @@ export default {
 
         fontSize: {
           xxs: '0.938rem', // Extra small font-size (10px)
-          xs: '0.75rem',   // Small font-size (12px)
+          h3size: '1.125rem',   // Small font-size (12px)
           sm: '0.875rem',  // Regular small (14px)
           base: '1rem',    // Default (16px)
           lg: '1.125rem',  // Large (18px)

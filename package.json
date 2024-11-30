@@ -18,6 +18,8 @@
     "@fortawesome/fontawesome-free": "^6.7.1",
     "@mui/icons-material": "^6.1.7",
     "@mui/material": "^6.1.7",
+    "gsap": "^3.12.5",
+    "jquery": "^3.7.1",
     "react": "^18.3.1",
     "react-countup": "^6.5.3",
     "react-dom": "^18.3.1",

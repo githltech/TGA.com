@@ -26,10 +26,10 @@ const StatusSection = () => {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white">
         {/* Heading */}
-        <h2 className="text-xl sm:text-3xl font-bold mb-4 text-center">
+        <h1 className="text-xl sm:text-2xl font-bold text-center">
           WE'VE GOT NUMBERS
-        </h2>
-        <div className="w-16 h-1 bg-white mb-8"></div>
+        </h1>
+        <hr className="border-b-2 border-primary w-32 mb-8"></hr>
 
         {/* Statistics Section */}
         <div
@@ -43,7 +43,7 @@ const StatusSection = () => {
                 <CountUp start={0} end={32} duration={2} suffix="+" />
               )}
             </div>
-            <p className="text-sm sm:text-lg">Years Of Excellence</p>
+            <p className="font-museo font-light text-xxs">Years Of Excellence</p>
           </div>
 
           {/* Item 2 */}
@@ -53,7 +53,7 @@ const StatusSection = () => {
                 <CountUp start={0} end={100} duration={2} suffix="+" />
               )}
             </div>
-            <p className="text-sm sm:text-lg">Destinations</p>
+            <p className="font-museo font-light text-xxs">Destinations</p>
           </div>
 
           {/* Item 3 */}
@@ -63,7 +63,7 @@ const StatusSection = () => {
                 <CountUp start={0} end={11} duration={2} suffix="+" />
               )}
             </div>
-            <p className="text-sm sm:text-lg">Offices</p>
+            <p className="font-museo font-light text-xxs">Offices</p>
           </div>
 
           {/* Item 4 */}
@@ -73,7 +73,7 @@ const StatusSection = () => {
                 <CountUp start={0} end={200} duration={2} suffix="+" />
               )}
             </div>
-            <p className="text-sm sm:text-lg">Employees</p>
+            <p className="font-museo font-light text-xxs">Employees</p>
           </div>
 
           {/* Item 5 */}
@@ -83,7 +83,7 @@ const StatusSection = () => {
                 <CountUp start={0} end={20000} duration={2} suffix="+" />
               )}
             </div>
-            <p className="text-sm sm:text-lg">Happy Customers</p>
+            <p className="font-museo font-light text-xxs">Happy Customers</p>
           </div>
         </div>
       </div>

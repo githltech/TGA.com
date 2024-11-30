@@ -122,9 +122,10 @@ function GallarySection() {
 
   return (
     <div className="px-4 lg:px-24">
-      <h2 className="text-xl sm:text-3xl font-bold text-center mb-4 uppercase">
+      <h1 className="text-xl sm:text-2xl font-bold text-black text-center uppercase">
         Our favourite reasons to travel
-      </h2>
+      </h1>
+      <hr className="border-b-2 border-primary w-60 m-auto mb-4" />
       <p className="text-center text-[#424241] font-museo font-light text-xxs mb-6">
         From exceptional offers to not-to-be-missed tours and experiences,{" "}
         <br className="hidden lg:block" /> here are our favourite reasons to explore Asia
@@ -136,7 +137,7 @@ function GallarySection() {
           (label, index) => (
             <button
               key={index}
-              className="px-6  border flex items-center font-semibold uppercase text-xs border-gray-500 text-gray-500 hover:bg-orange-500 hover:text-white transition duration-500"
+              className="px-6  border flex items-center font-semibold uppercase text-xs border-gray-500 text-gray-500 hover:bg-secordary hover:text-white transition duration-500"
             >
               {label}
               <RiArrowDropDownLine className="" size={30} />
@@ -158,8 +159,8 @@ function GallarySection() {
             />
             <div className="absolute inset-0 bg-black bg-opacity-30 flex items-end p-4 text-white rounded-md transition duration-500 group-hover:bg-opacity-50">
               <div>
-                <h3 className="text-xl">{image.title}</h3>
-                <button className="mt-2 px-3 py-1 text-white border transition duration-300 hover:bg-orange-500">
+                <h3 className="text-lg font-bold">{image.title}</h3>
+                <button className="mt-2 px-3 py-1 text-white border transition duration-300 hover:bg-secordary text-xs font-semibold">
                   {image.buttonLabel}
                 </button>
               </div>
@@ -172,7 +173,7 @@ function GallarySection() {
         <div className="text-center mt-6">
           <button
             onClick={loadMore}
-            className="px-6 py-2 bg-orange-500 text-white font-semibold hover:bg-orange-600 transition duration-300"
+            className="px-6 py-2 bg-primary text-white font-semibold hover:bg-secordary transition duration-300"
           >
             Load More
           </button>

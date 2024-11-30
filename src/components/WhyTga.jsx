@@ -22,26 +22,26 @@ const WhyTga = () => {
             {/* Card 1 */}
             <div className="flex flex-col items-center">
               <img src="https://www.andbeyond.com/wp-content/uploads/sites/5/TravelWithHeart-01.svg" alt="" className="h-16" />
-              <h3 className="text-sm font-bold uppercase">Responsible Travel</h3>
-              <p className="text-[#424241] font-museo font-light text-xxs">We hava been making a difference for 30 years thanks to you u owr guest </p>
+              <h3 className="text-lg font-bold uppercase">Responsible Travel</h3>
+              <p className="text-[#424241] font-museo font-light1 text-xxs">We hava been making a difference for 30 years thanks to you u owr guest </p>
             </div>
             {/* Card 2 */}
             <div className="flex flex-col items-center">
               <img src="https://www.andbeyond.com/wp-content/uploads/sites/5/Philanthropy-01.svg" alt="" className="h-16" />
-              <h3 className="text-sm font-bold uppercase">In Our hands</h3>
-              <p className="text-[#424241] font-museo font-light text-xxs">You will have access to our unique Global Concierge service 24/7 while travelling</p>
+              <h3 className="text-lg font-bold uppercase">In Our hands</h3>
+              <p className="text-[#424241] font-museo font-light1 text-xxs">You will have access to our unique Global Concierge service 24/7 while travelling</p>
             </div>
             {/* Card 3 */}
             <div className="flex flex-col items-center">
               <img src="https://www.andbeyond.com/wp-content/uploads/sites/5/TravelExperts-01.svg" alt="" className="h-16" />
-              <h3 className="text-sm font-bold uppercase">Travel Experts</h3>
-              <p className="text-[#424241] font-museo font-light text-xxs">Our Travel Specialists never send a guest anywhere they haven’t been themselves</p>
+              <h3 className="text-lg font-bold uppercase">Travel Experts</h3>
+              <p className="text-[#424241] font-museo font-light1 text-xxs">Our Travel Specialists never send a guest anywhere they haven’t been themselves</p>
             </div>
             {/* Card 4 */}
             <div className="flex flex-col items-center">
               <img src="https://www.andbeyond.com/wp-content/uploads/sites/5/Guide_02-01.svg" alt="" className="h-16" />
-              <h3 className="text-sm font-bold uppercase">Finest Guides</h3>
-              <p className="text-[#424241] font-museo font-light text-xxs">Finest interpretive experience from our incredible private and specialist guides</p>
+              <h3 className="text-lg font-bold uppercase">Finest Guides</h3>
+              <p className="text-[#424241] font-museo font-light1 text-xxs">Finest interpretive experience from our incredible private and specialist guides</p>
             </div>
           </div>
         </div>

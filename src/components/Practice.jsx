@@ -1,30 +1,71 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react';
+import { gsap } from 'gsap';
+import $ from 'jquery'; // Use jQuery only when absolutely necessary
 
-function Practice() {
+const Practice = () => {
+  const slideshowRef = useRef(null); // Ref for slideshow element
+  const [activeSlide, setActiveSlide] = useState(0); // State to keep track of active slide
+  const totalSlides = 3; // Example: total number of slides (adjust as needed)
+
+  useEffect(() => {
+    // Initial setup for slideshow parallax effect
+    const homeSlideshowParallax = () => {
+      const scrollTop = $(window).scrollTop();
+      if (scrollTop > window.innerHeight) return;
+
+      const slideshow = $(slideshowRef.current);
+      const inner = slideshow.find('.slideshow-inner');
+      const newHeight = window.innerHeight - scrollTop / 2;
+      const newTop = scrollTop * 0.8;
+
+      inner.css({
+        transform: `translateY(${newTop}px)`,
+        height: newHeight,
+      });
+    };
+
+    // Set the parallax effect on scroll
+    $(window).on('scroll', homeSlideshowParallax);
+
+    // Cleanup scroll listener when component unmounts
+    return () => {
+      $(window).off('scroll', homeSlideshowParallax);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Update the slideshow (e.g., switching slides) using GSAP
+    const slideshowSwitch = (index) => {
+      const slideshow = $(slideshowRef.current);
+      const slides = slideshow.find('.slides');
+      slides.removeClass('is-active');
+      slides.eq(index).addClass('is-active');
+
+      // Use GSAP for animation
+      gsap.to(slides.eq(index), { opacity: 1, duration: 1 });
+    };
+
+    // Switch to the active slide
+    slideshowSwitch(activeSlide);
+  }, [activeSlide]);
+
+  const slideshowNext = () => {
+    setActiveSlide((prev) => (prev + 1) % totalSlides); // Example: cycling through total slides
+  };
+
   return (
-    <div className="flex overflow-hidden h-64 relative">
-  {[
-    { src: "https://via.placeholder.com/600x400?text=Slide+1", text: "Discover Adventures" },
-    { src: "https://via.placeholder.com/600x400?text=Slide+2", text: "Experience Luxury" },
-    { src: "https://via.placeholder.com/600x400?text=Slide+3", text: "Unwind in Nature" },
-  ].map((slide, index) => (
-    <div
-      key={index}
-      className="flex-shrink-0 w-full h-full flex items-center justify-center animation-zoom relative"
-    >
-      <img
-        src={slide.src}
-        alt={`Slide ${index + 1}`}
-        className="w-full h-full object-cover rounded-md"
-      />
-      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white animation-text">
-        <h2 className="text-2xl sm:text-4xl font-bold">{slide.text}</h2>
+    <div ref={slideshowRef} className="main-content">
+      <div className="slideshow">
+        <div className="slideshow-inner">
+          {/* Your slideshow slides go here */}
+          <div className={`slides ${activeSlide === 0 ? 'is-active' : ''}`}>Slide 1</div>
+          <div className={`slides ${activeSlide === 1 ? 'is-active' : ''}`}>Slide 2</div>
+          <div className={`slides ${activeSlide === 2 ? 'is-active' : ''}`}>Slide 3</div>
+        </div>
       </div>
+      <button onClick={slideshowNext}>Next Slide</button>
     </div>
-  ))}
-</div>
-
-  )
-}
+  );
+};
 
 export default Practice;

@@ -44,7 +44,7 @@ function Footer() {
     <footer className="bg-gray-800 mt-52 lg:mt-36">
       <div className="p-4 lg:p-24">
         {/* Top Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white p-4 footer_shadow border rounded-xl border-gray-300 -mt-48">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white p-4 footer_shadow border rounded-xl border-gray-300 -mt-48 pb-16">
           {/* Column 1 */}
           <div>
             <h3 className="text-sm font-semibold mb-4 uppercase">About TGA</h3>
@@ -52,7 +52,7 @@ function Footer() {
             <li>
     <a
       href="#about-us"
-      className="hover:underline hover:text-orange-500 transition duration-300"
+      className="hover:underline hover:text-secordary transition duration-300"
     >
       About Us
     </a>
@@ -60,7 +60,7 @@ function Footer() {
   <li>
     <a
       href="#our-team"
-      className="hover:underline hover:text-orange-500 transition duration-300"
+      className="hover:underline hover:text-secordary transition duration-300"
     >
       Our Team
     </a>
@@ -68,7 +68,7 @@ function Footer() {
   <li>
     <a
       href="#why-choose-us"
-      className="hover:underline hover:text-orange-500 transition duration-300"
+      className="hover:underline hover:text-secordary transition duration-300"
     >
       Why Choose Us
     </a>
@@ -76,7 +76,7 @@ function Footer() {
   <li>
     <a
       href="#testimonials"
-      className="hover:underline hover:text-orange-500 transition duration-300"
+      className="hover:underline hover:text-secordary transition duration-300"
     >
       Testimonials
     </a>
@@ -84,7 +84,7 @@ function Footer() {
   <li>
     <a
       href="#careers"
-      className="hover:underline hover:text-orange-500 transition duration-300"
+      className="hover:underline hover:text-secordary transition duration-300"
     >
       Careers
     </a>
@@ -92,7 +92,7 @@ function Footer() {
   <li>
     <a
       href="#support"
-      className="hover:underline hover:text-orange-500 transition duration-300"
+      className="hover:underline hover:text-secordary transition duration-300"
     >
       Support
     </a>
@@ -107,7 +107,7 @@ function Footer() {
             <li>
     <a
       href="#about-us"
-      className="hover:underline hover:text-orange-500 transition duration-300"
+      className="hover:underline hover:text-secordary transition duration-300"
     >
       FAQs
     </a>
@@ -115,7 +115,7 @@ function Footer() {
   <li>
     <a
       href="#our-team"
-      className="hover:underline hover:text-orange-500 transition duration-300"
+      className="hover:underline hover:text-secordary transition duration-300"
     >
       Partner With Us
     </a>
@@ -123,7 +123,7 @@ function Footer() {
   <li>
     <a
       href="#why-choose-us"
-      className="hover:underline hover:text-orange-500 transition duration-300"
+      className="hover:underline hover:text-secordary transition duration-300"
     >
       Destination Marketing
     </a>
@@ -131,7 +131,7 @@ function Footer() {
   <li>
     <a
       href="#testimonials"
-      className="hover:underline hover:text-orange-500 transition duration-300"
+      className="hover:underline hover:text-secordary transition duration-300"
     >
       Travel Insurance
     </a>
@@ -139,7 +139,7 @@ function Footer() {
   <li>
     <a
       href="#careers"
-      className="hover:underline hover:text-orange-500 transition duration-300"
+      className="hover:underline hover:text-secordary transition duration-300"
     >
       Privacy Policy
     </a>
@@ -147,7 +147,7 @@ function Footer() {
   <li>
     <a
       href="#support"
-      className="hover:underline hover:text-orange-500 transition duration-300"
+      className="hover:underline hover:text-secordary transition duration-300"
     >
       Cancellation Policy
     </a>
@@ -162,7 +162,7 @@ function Footer() {
         <li>
         <a
       href="#support"
-      className="hover:underline hover:text-orange-500 transition duration-300"
+      className="hover:underline hover:text-secordary transition duration-300"
     >
      Gift an Experience
     </a>
@@ -170,7 +170,7 @@ function Footer() {
    <li>
    <a
       href="#support"
-      className="hover:underline hover:text-orange-500 transition duration-300"
+      className="hover:underline hover:text-secordary transition duration-300"
     >
       Travel Blog
     </a>
@@ -179,7 +179,7 @@ function Footer() {
     <li>
     <a
       href="#support"
-      className="hover:underline hover:text-orange-500 transition duration-300"
+      className="hover:underline hover:text-secordary transition duration-300"
     >
       Travel Guides
     </a>
@@ -188,7 +188,7 @@ function Footer() {
     <li>
     <a
       href="#support"
-      className="hover:underline hover:text-orange-500 transition duration-300"
+      className="hover:underline hover:text-secordary transition duration-300"
     >
       Packing Tips
     </a>
@@ -197,7 +197,7 @@ function Footer() {
     <li>
     <a
       href="#support"
-      className="hover:underline hover:text-orange-500 transition duration-300"
+      className="hover:underline hover:text-secordary transition duration-300"
     >
       Seasonal Discounts
 
@@ -238,30 +238,30 @@ function Footer() {
 
               {/* Social Icons */}
           <div className="flex space-x-4 md:py-6 py-2">
-            <a href="#" className="text-black rounded-full px-4 py-2 text-xl bg-white hover:text-orange-500">
+            <a href="#" className="text-black rounded-full px-[17px] py-2 text-xl bg-white hover:text-secordary">
               <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="#" className="text-black rounded-full px-3 py-2 text-xl bg-white hover:text-orange-500">
+            <a href="#" className="text-black rounded-full px-[14px] py-2 text-xl bg-white hover:text-secordary">
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="#" className="text-black rounded-full px-3 py-2 text-xl bg-white hover:text-orange-500">
+            <a href="#" className="text-black rounded-full px-[13px] py-2 text-xl bg-white hover:text-secordary">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="#" className="text-black rounded-full px-3 py-2 text-xl bg-white hover:text-orange-500">
+            <a href="#" className="text-black rounded-full px-[14px] py-2 text-xl bg-white hover:text-secordary">
               <i className="fab fa-linkedin-in"></i>
             </a>
-            <a href="#" className="text-black rounded-full px-3 py-2 text-xl bg-white hover:text-orange-500">
+            <a href="#" className="text-black rounded-full px-3 py-2 text-xl bg-white hover:text-secordary">
               <i className="fab fa-youtube"></i>
             </a>
           </div>
 
-            <div className="flex flex-col text-xs sm:text-lg items-center gap-2">
+            <div className="flex flex-col text-[#424241] font-museo font-light text-xxs items-center gap-2">
             <p className=" text-gray-400 font-semibold">
               © 2024 TGA.com All rights reserved.
             </p>
-            <p className=" text-gray-400 font-semibold">
+            {/* <p className=" text-gray-400 font-semibold">
               © Developed And Managed By <a href="/https://hltechindia.com/" className="border-b-[1px] text-red-200 hover:text-red-400">HL Tech Pvt.Ltd</a> .
-            </p>
+            </p> */}
             </div>
           </div>
        

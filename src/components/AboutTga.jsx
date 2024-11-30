@@ -5,17 +5,16 @@ const AboutTga = () => {
     <div className="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-24 bg-white my-10">
       {/* Text Content */}
       <div className="flex-1 md:mr-6">
-        <h1 className="text-sm font-bold uppercase">About Tga</h1>
-        <hr className="border-b-2 border-orange-500 w-10" />
-        <h2 className="text-2xl font-bold text-black my-2 uppercase">
+        <h3 className="text-lg font-bold uppercase">About Tga</h3>
+        <hr className="border-b-2 border-primary w-10" />
+        <h1 className="text-xl sm:text-2xl font-bold my-2 uppercase">
           Conscious Luxury Travel
-        </h2>
-        <p className="text-gray-700 text-base  leading-7">
-          <strong className="">Committed to the Land and Community</strong> <br />
-          from the Indian subcontinent, owner-hosts of
+        </h1>
+        <h2 className="text-sm font-bold uppercase mb-2">Committed to the Land and Community</h2>
+         <p className="text-[#424241] font-museo font-light text-xxs"> from the Indian subcontinent, owner-hosts of
           palaces, forts, retreats, and lodges, dedicated to
-          preserving heritage and conserving nature.
-        </p>
+          preserving heritage and conserving nature.</p>
+        
 
         {/* Committed to the Land */}
         <div className="flex items-start my-4">
@@ -24,12 +23,15 @@ const AboutTga = () => {
             alt="Committed Icon"
             className="w-6 h-6 mt-1 mr-3"
           />
-          <p className="text-gray-700 leading-7">
-            <strong className="text-sm font-bold uppercase">Committed to the Land and Community</strong> <br />
-            Our hotels are conscious of their impact on the environment,
+         <div className="flex flex-col">
+         <h2 className="text-sm font-bold uppercase mb-2">Committed to the Land and Community</h2>
+          <p className="text-[#424241] font-museo font-light text-xxs">
+          Our hotels are conscious of their impact on the environment,
             dedicated to sustainable practices that nurture both the planet and
             its people.
           </p>
+         </div>
+        
         </div>
 
         {/* Journey with Purpose */}
@@ -39,11 +41,13 @@ const AboutTga = () => {
             alt="Journey Icon"
             className="w-6 h-6 mt-1 mr-3"
           />
-          <p className="text-gray-700 leading-7">
-            <strong className="text-sm font-bold uppercase">A Journey with Purpose</strong> <br />
+          <div className="flex flex-col">
+            <h2 className="text-sm font-bold uppercase mb-2">A Journey with Purpose</h2>
+            <p className="text-[#424241] font-museo font-light text-xxs">
             As you visit these RARE destinations, your mindful interactions with
             people, culture, nature, wildlife, crafts.
-          </p>
+            </p>
+          </div>
         </div>
       </div>
 

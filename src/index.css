@@ -104,3 +104,14 @@
   font-weight: 500;
   color: white;
 }
+
+
+
+.slides {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slides.is-active {
+  opacity: 1;
+}

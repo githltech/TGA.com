@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-//import { FcGoogle } from "react-icons/fc";
+import { FcGoogle } from "react-icons/fc";
 import { IoStar } from "react-icons/io5";
 import { MdVerified } from "react-icons/md";
 
@@ -61,8 +61,8 @@ const Testimonials = () => {
       <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
         {/* Left Section */}
         <div className="text-center md:text-left">
-          <hr className="border-t-4 border-orange-500 w-16" />
-          <h2 className="text-3xl font-bold mb-2">EXCELLENT</h2>
+          <hr className="border-t-4 border-primary w-16" />
+          <h1 className="text-xl sm:text-2xl font-bold text-black mb-2">EXCELLENT</h1>
           <div className="flex justify-center md:justify-start items-center gap-1 mb-3">
             {Array(5)
               .fill(0)
@@ -70,7 +70,7 @@ const Testimonials = () => {
                 <IoStar key={index} className="text-yellow-500 text-xl" />
               ))}
           </div>
-          <p className="text-gray-600 text-sm mb-2">Based on <span className="text-black font-semibold">73 Reviews</span></p>
+          <p className="text-[#424241] font-museo font-light text-xxs mb-2">Based on <span className="text-black font-semibold">73 Reviews</span></p>
           <div className="flex items-center justify-center md:justify-start gap-2">
             <img src="https://cdn.vox-cdn.com/thumbor/ln4IHgPYpvNoIWpJ2Y1_c9msxXA=/0x0:2012x1341/2000x1333/filters:focal(1006x670:1007x671)/cdn.vox-cdn.com/uploads/chorus_asset/file/15483559/google2.0.0.1441125613.jpg" alt="" className="h-12"/>
           </div>
@@ -86,17 +86,18 @@ const Testimonials = () => {
                 style={{ width: "350px", height: "2500px" }}
               >
                 {/* Review Header */}
-                <div className="flex items-center gap-3">
+                <div className="flex justify-start gap-3">
                   <img
                     src={review.img}
                     alt={review.name}
-                    className="w-10 h-10 rounded-full object-cover object-center"
+                    className="w-12 h-12 rounded-full object-cover object-center"
                   />
                   <div>
-                    <h4 className="text-sm font-semibold">{review.name}</h4>
+                    <h4 className="text-lg font-semibild">{review.name}</h4>
                     <span className="text-xs">{review.date}</span>
                     <div className="flex items-center gap-1 text-gray-500 mb-2">
                     <div className="flex justify-center md:justify-start items-center gap-1">
+
                    {Array(5)
                     .fill(0)
                    .map((_, index) => (
@@ -106,7 +107,11 @@ const Testimonials = () => {
                     <MdVerified className="text-blue-500 text-xs" />
                     </div>
                   </div>
+                  <div className="text-2xl mt-1">
+                  <FcGoogle/>
+                  </div>
                 </div>
+                
 
                 {/* Review Text */}
                 <p className="text-[#424241] font-museo font-light text-xxs overflow-hidden">{review.text}</p>

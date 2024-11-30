@@ -57,7 +57,7 @@ const HeroSection = () => {
   
   const CustomPrevArrow = ({ onClick }) => (
     <button
-      className="absolute border -bottom-12 left-[4%] transform translate-x-[-50%] z-10 text-white p-2 rounded-full shadow-md hover:bg-orange-500 duration-500"
+      className="absolute border -bottom-12 left-[4%] transform translate-x-[-50%] z-10 text-white p-2 rounded-full shadow-md hover:bg-secordary duration-500"
       onClick={onClick}
     >
       <MdArrowBackIos/> {/* Left arrow */}
@@ -66,7 +66,7 @@ const HeroSection = () => {
 
   const CustomNextArrow = ({ onClick }) => (
     <button
-      className="absolute border -bottom-12 right-[4%] transform translate-x-[50%] z-10 text-white p-2 rounded-full shadow-md hover:bg-orange-500 duration-500"
+      className="absolute border -bottom-12 right-[4%] transform translate-x-[50%] z-10 text-white p-2 rounded-full shadow-md hover:bg-secordary duration-500"
       onClick={onClick}
     >
       <MdArrowForwardIos/> {/* Right arrow */}
@@ -87,22 +87,22 @@ const HeroSection = () => {
           />
           <div className="absolute inset-0 flex items-center sm:justify-between flex-col sm:flex-row gap-5 sm:gap-0 pt-32 md:pt-40 bg-black bg-opacity-50 px-4">
             <div className="text-left">
-              <hr className="border-t-2 border-orange-500 w-24 py-1" />
-              <p className="text-white">Embark on unforgettable journeys</p>
+              <hr className="border-t-2 border-primary w-24 py-1" />
+              <p className="text-white font-museo font-light text-xxs">Embark on unforgettable journeys</p>
               <h1 className="text-4xl lg:text-7xl text-white font-bold my-2">
                 TRAVELLFAR <br /> FIND YOURSELF
               </h1>
-              <p className="text-white mb-4 text-xs sm:text-sm font-semibold">
+              <p className="text-white mb-4 font-museo font-light text-xxs">
                 Discover amazing places with exclusive deals. Lorem ipsum <br />
                 dolor sit amet, consectetur adipisicing elit.
               </p>
               <div className="relative inline-block">
                 <a
                   href="/"
-                  className="relative border border-orange-500 text-white px-3 py-2 text-xs font-semibold focus:outline-none overflow-hidden group"
+                  className="relative border border-primary text-white px-3 py-2 text-xs font-semibold focus:outline-none overflow-hidden group"
                 >
-                  <span className="absolute inset-0 bg-orange-500 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></span>
-                  <span className="absolute inset-0 bg-orange-500 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-bottom"></span>
+                  <span className="absolute inset-0 bg-primary transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></span>
+                  <span className="absolute inset-0 bg-primary transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-bottom"></span>
                   <span className="relative z-10">
                     Start Your Adventure &rarr;
                   </span>
@@ -127,7 +127,7 @@ const HeroSection = () => {
      {/* Bottom Navigation */}
      <div className="flex flex-col items-center mt-5">
         {/* Horizontal Line */}
-        <hr className="w-56 border-t-2 border-orange-500 mb-2" />
+        <hr className="w-56 border-t-2 border-primary mb-2" />
         {/* Slide Indicator */}
         <div className="text-white font-bold text-lg">
           {String(currentSlide + 1).padStart(2, "0")}
@@ -145,22 +145,22 @@ const HeroSection = () => {
           />
           <div className="absolute inset-0 flex items-center sm:justify-between flex-col sm:flex-row gap-5 sm:gap-0 pt-32 md:pt-40 bg-black bg-opacity-50 px-4">
             <div className="text-left">
-              <hr className="border-t-2 border-orange-500 w-24 py-1" />
-              <p className="text-white">Embark on unforgettable journeys</p>
+              <hr className="border-t-2 border-primary w-24 py-1" />
+              <p className="text-white font-museo font-light text-xxs">Embark on unforgettable journeys</p>
               <h1 className="text-4xl lg:text-7xl text-white font-bold my-2">
                 TRAVELLFAR <br /> FIND YOURSELF
               </h1>
-              <p className="text-white mb-4 text-xs sm:text-sm font-semibold">
+              <p className="text-white mb-4 font-museo font-light text-xxs">
                 Discover amazing places with exclusive deals. Lorem ipsum <br />
                 dolor sit amet, consectetur adipisicing elit.
               </p>
               <div className="relative inline-block">
                 <a
                   href="/"
-                  className="relative border border-orange-500 text-white px-3 py-2 text-xs font-semibold focus:outline-none overflow-hidden group"
+                  className="relative border border-primary text-white px-3 py-2 text-xs font-semibold focus:outline-none overflow-hidden group"
                 >
-                  <span className="absolute inset-0 bg-orange-500 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></span>
-                  <span className="absolute inset-0 bg-orange-500 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-bottom"></span>
+                  <span className="absolute inset-0 bg-primary transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></span>
+                  <span className="absolute inset-0 bg-primary transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-bottom"></span>
                   <span className="relative z-10">
                     Explore More &rarr;
                   </span>
@@ -185,7 +185,7 @@ const HeroSection = () => {
      {/* Bottom Navigation */}
      <div className="flex flex-col items-center mt-5">
         {/* Horizontal Line */}
-        <hr className="w-56 border-t-2 border-orange-500 mb-2" />
+        <hr className="w-56 border-t-2 border-primary mb-2" />
         {/* Slide Indicator */}
         <div className="text-white font-bold text-lg">
           {String(currentSlide + 1).padStart(2, "0")}
@@ -203,22 +203,22 @@ const HeroSection = () => {
           />
           <div className="absolute inset-0 flex items-center sm:justify-between flex-col sm:flex-row gap-5 sm:gap-0 pt-32 md:pt-40 bg-black bg-opacity-50 px-4">
             <div className="text-left">
-              <hr className="border-t-2 border-orange-500 w-24 py-1" />
-              <p className="text-white">Embark on unforgettable journeys</p>
+              <hr className="border-t-2 border-primary w-24 py-1" />
+              <p className="text-white font-museo font-light text-xxs">Embark on unforgettable journeys</p>
               <h1 className="text-4xl lg:text-7xl text-white font-bold my-2">
                 TRAVELLFAR <br /> FIND YOURSELF
               </h1>
-              <p className="text-white mb-4 text-xs sm:text-sm font-semibold">
+              <p className="text-white mb-4 font-museo font-light text-xxs">
                 Discover amazing places with exclusive deals. Lorem ipsum <br />
                 dolor sit amet, consectetur adipisicing elit.
               </p>
               <div className="relative inline-block">
                 <a
                   href="/"
-                  className="relative border border-orange-500 text-white px-3 py-2 text-xs font-semibold focus:outline-none overflow-hidden group"
+                  className="relative border border-primary text-white px-3 py-2 text-xs font-semibold focus:outline-none overflow-hidden group"
                 >
-                  <span className="absolute inset-0 bg-orange-500 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></span>
-                  <span className="absolute inset-0 bg-orange-500 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-bottom"></span>
+                  <span className="absolute inset-0 bg-primary transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></span>
+                  <span className="absolute inset-0 bg-primary transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-bottom"></span>
                   <span className="relative z-10">
                     Start Your Adventure &rarr;
                   </span>
@@ -243,7 +243,7 @@ const HeroSection = () => {
      {/* Bottom Navigation */}
      <div className="flex flex-col items-center mt-5">
         {/* Horizontal Line */}
-        <hr className="w-56 border-t-2 border-orange-500 mb-2" />
+        <hr className="w-56 border-t-2 border-primary mb-2" />
         {/* Slide Indicator */}
         <div className="text-white font-bold text-lg">
           {String(currentSlide + 1).padStart(2, "0")}

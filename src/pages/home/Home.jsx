@@ -13,7 +13,7 @@ import Testimonials from '../../components/Testimonials';
 import PerfectDestinations from '../../components/PerfectDestinations';
 import AboutTga from '../../components/AboutTga';
 import BlogTga from '../../components/BlogTga';
-import Practice from '../../components/practice';
+//import Practice from '../../components/practice';
 
 const Home = () =>
 {
@@ -33,7 +33,6 @@ const Home = () =>
         <BlogTga/>
         <StatusSection/>
         <Testimonials/>
-      
         
     </Layout>
     </>

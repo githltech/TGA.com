@@ -4,14 +4,17 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const PerfectDestination = () => {
-  const reviews = [
+  const arraydata = [
     {
+      imgtitle:"bali",
       img: "https://media1.thrillophilia.com/filestore/nmngta32hg5ivwo6lhhu5ykdb646_shutterstock_115227475.jpg?w=240&dpr=2", 
     },
     {
+      imgtitle:"India",
       img: "https://media1.thrillophilia.com/filestore/ecp976q3go5n0242q1plaiiqjfyv_Daallake.jpg?w=1080&h=auto&dpr=2",
     },
     {
+      imgtitle:"Singapore",
       img: "https://media1.thrillophilia.com/filestore/yf4syy949b13jaogsavwzpr69skb_Krishnasar%20Lake%201.jpg?w=1080&h=auto&dpr=2", 
     },
   ];
@@ -49,8 +52,8 @@ const PerfectDestination = () => {
       <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
         {/* Left Section */}
         <div className="">
-          <hr className="border-t-4 border-orange-500 w-16" />
-          <h2 className="text-3xl font-bold mb-2 uppercase">Perfect destinations</h2>
+          <hr className="border-t-4 border-primary w-16" />
+          <h1 className="text-xl sm:text-2xl font-bold text-black mb-2 uppercase">Perfect destinations</h1>
           <p className="text-[#424241] font-museo font-light text-xxs mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quisquam tempore esse eligendi, vitae ipsa amet impedit odio provident nulla dolorum, excepturi velit id modi rem. Aperiam reiciendis repellat odio.</p>
          
         </div>
@@ -58,18 +61,21 @@ const PerfectDestination = () => {
         {/* Right Section: Testimonial Slider */}
         <div className="w-full lg:w-3/4">
           <Slider {...sliderSettings}>
-            {reviews.map((review, index) => (
+            {arraydata.map((data, index) => (
               <div
                 key={index}
                 className=" p-2"
               >
                 {/* Review Header */}
-                <div className="flex items-center">
+                <div className="flex items-center group relative">
                   <img
-                    src={review.img}
-                    alt={review.name}
+                    src={data.img}
+                    alt={data.name}
                     className="w-full h-80 object-cover object-center rounded-md"
                   />
+                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                    <span className="text-white text-xs uppercase font-semibold">{data.imgtitle}</span>
+                  </div>
                 </div>
               </div>
             ))}

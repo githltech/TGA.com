@@ -71,25 +71,25 @@ const Navbar = () => {
       {/* Top Navigation Bar */}
       <div className={`flex justify-between py-2 lg:border-b-[1px] ${scrolling ? "lg:hidden block" : "border-white"} border-opacity-20`}>
         {/* Logo */}
-        <div className={`flex items-center gap-2 ${scrolling ? "text-black" : "text-white"}`}>
+        <div className={`flex items-center gap-2 ${scrolling ? "text-black" : "text-textwhite"}`}>
           <img src={logoSrc} alt="TGA Logo" className="h-8" />
           <h1 className=" font-semibold">TGA</h1>
         </div>
 
         {/* Search Bar */}
-        <div className={`hidden sm:block relative sm:w-48 lg:w-80 rounded-full ${scrolling ? "bg-black opacity-90 text-white":"bg-black opacity-55"}`}>
-          <div className="absolute left-3 top-[10px] text-white">
+        <div className={`hidden sm:block relative sm:w-48 lg:w-80 rounded-full ${scrolling ? "bg-black opacity-90 text-textwhite":"bg-black opacity-55"}`}>
+          <div className="absolute left-3 top-[10px] text-textwhite">
             <IoMdSearch className="text-sm" />
           </div>
           <input
             type="text"
             placeholder={displayedText}
-            className="w-full pl-8 pr-4 py-2 border border-gray-400 text-white rounded-full text-xs font-medium bg-transparent focus:outline-none"
+            className="w-full pl-8 pr-4 py-2 border border-gray-400 text-textwhite rounded-full text-xs font-medium bg-transparent focus:outline-none"
           />
         </div>
 
         {/* Currency, Mobile Number, and Login */}
-        <div className={`flex items-center gap-3 ${scrolling ? "text-black" :"text-white" }`}>
+        <div className={`flex items-center gap-3 ${scrolling ? "text-black" :"text-textwhite" }`}>
           {/* Call Icon */}
           <a
             href="tel:91 92055 15652"
@@ -110,7 +110,7 @@ className={`text-xs font-semibold mt-2 uppercase transition-colors ${
 </p> */}
 
           {/* Login Button */}
-          <div className="flex items-center gap-1 bg-orange-500 text-white px-3 py-2 rounded-md hover:bg-orange-600 duration-500 text-xs">
+          <div className="flex items-center gap-1 bg-primary px-3 py-2 rounded-md hover:bg-secordary duration-500 text-xs">
             <div className="flex items-center cursor-pointer mt-[2px] text-xs">
               <IoMdLogIn />
             </div>
@@ -121,7 +121,7 @@ className={`text-xs font-semibold mt-2 uppercase transition-colors ${
            {/* Menu Icon */}
            <button
             onClick={() => setMenuOpen(!isMenuOpen)}
-            className={`text-2xl focus:outline-none lg:hidden ${scrolling ? "text-black" : "text-white"}`}
+            className={`text-2xl focus:outline-none lg:hidden ${scrolling ? "text-black" : "text-textwhite"}`}
           >
             {isMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
@@ -129,7 +129,7 @@ className={`text-xs font-semibold mt-2 uppercase transition-colors ${
       </div>
 
       {/* Tabs and Buttons Section for Large Screens */}
-      <div className="hidden lg:flex items-center justify-center py-2 px-4 border-b-[1px] border-white border-opacity-20">
+      <div className="hidden lg lg:flex items-center justify-center py-2 px-4 border-b-[1px] border-white border-opacity-20">
         <div className="flex items-center gap-4 lg:gap-10 flex-wrap">
           {[
             { label: "Home", icon: <FaHome />, path: "/explore" },
@@ -146,8 +146,8 @@ className={`text-xs font-semibold mt-2 uppercase transition-colors ${
               className="flex items-center space-x-2 whitespace-nowrap cursor-pointer"
               onClick={() => handleNavigation(tab.path)}
             >
-              <div className="flex flex-col items-center hover:border-b-[1px] border-orange-500">
-                <h1 className="text-orange-500 text-sm md:text-2xl ">{tab.icon}</h1>
+              <div className="flex flex-col items-center hover:border-b-[1px] border-primary">
+                <h1 className="text-primary text-sm md:text-2xl ">{tab.icon}</h1>
                 <p
                   className={` mt-2 ${
                     scrolling ? "navlabel" : "navlabelscroll"
@@ -164,14 +164,14 @@ className={`text-xs font-semibold mt-2 uppercase transition-colors ${
 
       {/* Sliding Menu for Small Screens */}
       <div
-        className={`fixed top-0 left-0 w-full h-screen bg-black text-white  z-40 transform ${
+        className={`fixed top-0 left-0 w-full h-screen bg-black text-textwhite  z-40 transform ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 lg:hidden`}
       >
         <div className="p-4 space-y-6">
         <button
             onClick={() => setMenuOpen(false)}
-            className="text-white text-2xl absolute top-4 right-4"
+            className="text-textwhite text-2xl absolute top-4 right-4"
           >
             <FaTimes />
           </button>

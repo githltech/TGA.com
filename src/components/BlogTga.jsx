@@ -37,9 +37,10 @@ const BlogTga = () => {
   return (
     <section className="py-10 px-4 lg:px-24">
       <div className="">
-        <h2 className="text-3xl font-bold text-center uppercase mb-8">
+        <h1 className="text-xl sm:text-2xl font-bold text-black text-center uppercase">
           Inspiration at Your Fingertips
-        </h2>
+        </h1>
+        <hr className="border-b-2 border-primary w-48 m-auto mb-8" />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {blogs.map((blog, index) => (
             <div
@@ -57,7 +58,7 @@ const BlogTga = () => {
                       "v="
                     )[1]}/0.jpg`}
                     alt={blog.title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-48 object-cover rounded-t-md"
                   />
                   <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
                     <button className="bg-black opacity-70 text-white rounded-full p-4 shadow-lg">
@@ -67,13 +68,13 @@ const BlogTga = () => {
                 </div>
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-bold text-black uppercase h-14 mb-2">
+                <h3 className="text-lg font-bold uppercase h-14 mb-2">
                   {blog.title}
                 </h3>
                 <p className="text-[#424241] font-museo font-light text-xxs mb-4 h-16">{blog.description}</p>
                 <a
                   href={blog.buttonLink}
-                  className="bg-orange-500 text-sm font-semibold text-white px-4 py-2 rounded hover:bg-orange-600"
+                  className="bg-primary text-sm font-semibold text-white px-4 py-2 rounded hover:bg-secordary"
                 >
                   {blog.buttonLabel} 
                 </a>
