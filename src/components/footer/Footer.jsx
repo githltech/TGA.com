@@ -211,14 +211,14 @@ function Footer() {
             <h3 className="text-sm font-semibold mb-4 uppercase">Travel Destinations</h3>
             <div className="grid grid-cols-3 gap-2">
               {destinations.map((dest, index) => (
-                <div key={index} className="group relative">
+                <div key={index} className="group relative overflow-hidden cursor-pointer">
                   <img
                     src={dest.img}
                     alt={dest.name}
-                    className="w-full h-14 object-cover rounded-sm"
+                    className="w-full h-14 object-cover rounded-sm  transition-transform duration-300 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                    <span className="text-white text-xs">{dest.name}</span>
+                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <span className="text-gray-300 text-[10px] text-center sm:text-xs font-semibold">{dest.name}</span>
                   </div>
                 </div>
               ))}
@@ -256,8 +256,8 @@ function Footer() {
           </div>
 
             <div className="flex flex-col text-[#424241] font-museo font-light text-xxs items-center gap-2">
-            <p className=" text-gray-400 font-semibold">
-              © 2024 TGA.com All rights reserved.
+            <p className=" text-gray-400">
+              © 2024 <span className="text-primary">The Gypsy Adventures.com</span> All rights reserved.
             </p>
             {/* <p className=" text-gray-400 font-semibold">
               © Developed And Managed By <a href="/https://hltechindia.com/" className="border-b-[1px] text-red-200 hover:text-red-400">HL Tech Pvt.Ltd</a> .

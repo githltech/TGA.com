@@ -12,7 +12,60 @@ import { MdArrowForwardIos } from "react-icons/md";
 const HeroSection = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = [
+
+    const slides = [
+      { 
+          id: 1,
+          pera:"Embark on unforgettable journeys",
+          title: (
+            <>
+              TRAVELLFAR <br /> FIND YOURSELF
+            </>
+          ),
+          desc: (
+            <>
+            Discover amazing places with exclusive deals. Lorem ipsum <br /> dolor sit amet, consectetur adipisicing elit.
+            </>
+          ),
+          button:"Start Your Adventure",
+          image:tgaimg3, 
+      },
+      { 
+          id: 2,
+          pera:"Embark on unforgettable journeys",
+          title: (
+            <>
+              TRAVELLFAR <br /> FIND YOURSELF
+            </>
+          ),
+          desc: (
+            <>
+            Discover amazing places with exclusive deals. Lorem ipsum <br /> dolor sit amet, consectetur adipisicing elit.
+            </>
+          ),
+          button:"Explore More",
+          image:tgaimg2,
+       },
+      { 
+          id: 3,
+          pera:"Embark on unforgettable journeys",
+          title: (
+            <>
+              TRAVELLFAR <br /> FIND YOURSELF
+            </>
+          ),
+          desc: (
+            <>
+            Discover amazing places with exclusive deals. Lorem ipsum <br /> dolor sit amet, consectetur adipisicing elit.
+            </>
+          ),
+          button:"Start Your Adventure",
+          image:tgaimg1,
+        },
+    ];
+
+
+  const nestedslides = [
     { 
         id: 1,
         image:"https://media1.thrillophilia.com/filestore/0hdjtmduamliielzcvdsepune779_dubai%20skyline.jpg?w=340&dpr=2", 
@@ -30,13 +83,14 @@ const HeroSection = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 600,
+    speed: 2000,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     pauseOnHover: false,
+    afterChange: (current) => setCurrentSlide(current),
    
   };
   
@@ -46,11 +100,11 @@ const HeroSection = () => {
     speed: 600,
     slidesToShow: 3, 
     slidesToScroll: 1,
-    centerMode: true, // Center current slide
-    centerPadding: "0px", // No padding around the centered slide
+    centerMode: true, 
+    centerPadding: "0px", 
     arrows: true, // Show arrows
     dots: false, // Hide dots
-    afterChange: (current) => setCurrentSlide(current), // Track current slide
+    afterChange: (current) => setCurrentSlide(current),
     autoplay: true,
     autoplaySpeed: 3000,
   };
@@ -78,23 +132,25 @@ const HeroSection = () => {
     {/* Image Form Section */}
     <div className="relative">
       <Slider {...settings}>
-        {/* Slide 1 */}
-        <div className="relative">
+       {slides.map((items,index)=>(
+        <>
+         {/* Slides */}
+         <div  key={slides.id} className="relative overflow-hidden">
           <img
-            src={tgaimg3}
-            alt="Slide 1"
-            className="w-full h-[80vh] sm:max-h-fit lg:min-h-screen object-cover"
+            src={items.image}
+            alt={`Slide ${index + 1}`}
+            className={`w-full h-[100vh] sm:max-h-fit lg:min-h-screen object-cover transition-transform duration-700 ease-in-out ${
+              currentSlide === index ? "scale-110" : "scale-100"}`}
           />
           <div className="absolute inset-0 flex items-center sm:justify-between flex-col sm:flex-row gap-5 sm:gap-0 pt-32 md:pt-40 bg-black bg-opacity-50 px-4">
             <div className="text-left">
               <hr className="border-t-2 border-primary w-24 py-1" />
-              <p className="text-white font-museo font-light text-xxs">Embark on unforgettable journeys</p>
-              <h1 className="text-4xl lg:text-7xl text-white font-bold my-2">
-                TRAVELLFAR <br /> FIND YOURSELF
+              <p className="text-white font-museo font-light text-xxs">{items.pera}</p>
+              <h1 className="text-4xl lg:text-7xl text-white font-bold my-2 ">
+                {items.title}
               </h1>
               <p className="text-white mb-4 font-museo font-light text-xxs">
-                Discover amazing places with exclusive deals. Lorem ipsum <br />
-                dolor sit amet, consectetur adipisicing elit.
+                {items.desc}
               </p>
               <div className="relative inline-block">
                 <a
@@ -104,7 +160,7 @@ const HeroSection = () => {
                   <span className="absolute inset-0 bg-primary transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></span>
                   <span className="absolute inset-0 bg-primary transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-bottom"></span>
                   <span className="relative z-10">
-                    Start Your Adventure &rarr;
+                    {items.button} &rarr;
                   </span>
                 </a>
               </div>
@@ -113,7 +169,7 @@ const HeroSection = () => {
             <div className="relative w-full max-w-xs md:max-w-md lg:max-w-lg sm:mt-16 lg:mt-36">
               {/*custom Slider */}
            <Slider {...nestedsettings}  prevArrow={<CustomPrevArrow />} nextArrow={<CustomNextArrow />}>
-            {slides.map((data, index) => (
+            {nestedslides.map((data, index) => (
           <div key={index} className="px-1">
             <img
               src={data.image}
@@ -123,7 +179,6 @@ const HeroSection = () => {
           </div>
         ))}
       </Slider>
-
      {/* Bottom Navigation */}
      <div className="flex flex-col items-center mt-5">
         {/* Horizontal Line */}
@@ -134,124 +189,10 @@ const HeroSection = () => {
         </div>
       </div>
     </div>
-          </div>
         </div>
-         {/* slide 2 */}
-         <div className="relative">
-          <img
-            src={tgaimg2}
-            alt="Slide 1"
-            className="w-full h-[80vh] sm:max-h-fit lg:min-h-screen object-cover"
-          />
-          <div className="absolute inset-0 flex items-center sm:justify-between flex-col sm:flex-row gap-5 sm:gap-0 pt-32 md:pt-40 bg-black bg-opacity-50 px-4">
-            <div className="text-left">
-              <hr className="border-t-2 border-primary w-24 py-1" />
-              <p className="text-white font-museo font-light text-xxs">Embark on unforgettable journeys</p>
-              <h1 className="text-4xl lg:text-7xl text-white font-bold my-2">
-                TRAVELLFAR <br /> FIND YOURSELF
-              </h1>
-              <p className="text-white mb-4 font-museo font-light text-xxs">
-                Discover amazing places with exclusive deals. Lorem ipsum <br />
-                dolor sit amet, consectetur adipisicing elit.
-              </p>
-              <div className="relative inline-block">
-                <a
-                  href="/"
-                  className="relative border border-primary text-white px-3 py-2 text-xs font-semibold focus:outline-none overflow-hidden group"
-                >
-                  <span className="absolute inset-0 bg-primary transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></span>
-                  <span className="absolute inset-0 bg-primary transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-bottom"></span>
-                  <span className="relative z-10">
-                    Explore More &rarr;
-                  </span>
-                </a>
-              </div>
-            </div>
-
-            <div className="relative w-full max-w-xs md:max-w-md lg:max-w-lg sm:mt-16 lg:mt-36">
-              {/*custom Slider */}
-           <Slider {...nestedsettings}  prevArrow={<CustomPrevArrow />} nextArrow={<CustomNextArrow />}>
-            {slides.map((data, index) => (
-          <div key={index} className="px-1">
-            <img
-              src={data.image}
-              alt={`Slide ${index + 1}`}
-              className="w-full rounded-lg object-cover bg-center h-28 md:h-40"
-            />
-          </div>
-        ))}
-      </Slider>
-
-     {/* Bottom Navigation */}
-     <div className="flex flex-col items-center mt-5">
-        {/* Horizontal Line */}
-        <hr className="w-56 border-t-2 border-primary mb-2" />
-        {/* Slide Indicator */}
-        <div className="text-white font-bold text-lg">
-          {String(currentSlide + 1).padStart(2, "0")}
         </div>
-      </div>
-    </div>
-          </div>
-        </div>
-        {/* Slide 3 */}
-        <div className="relative">
-          <img
-            src={tgaimg1}
-            alt="Slide 1"
-            className="w-full h-[80vh] sm:max-h-fit lg:min-h-screen object-cover"
-          />
-          <div className="absolute inset-0 flex items-center sm:justify-between flex-col sm:flex-row gap-5 sm:gap-0 pt-32 md:pt-40 bg-black bg-opacity-50 px-4">
-            <div className="text-left">
-              <hr className="border-t-2 border-primary w-24 py-1" />
-              <p className="text-white font-museo font-light text-xxs">Embark on unforgettable journeys</p>
-              <h1 className="text-4xl lg:text-7xl text-white font-bold my-2">
-                TRAVELLFAR <br /> FIND YOURSELF
-              </h1>
-              <p className="text-white mb-4 font-museo font-light text-xxs">
-                Discover amazing places with exclusive deals. Lorem ipsum <br />
-                dolor sit amet, consectetur adipisicing elit.
-              </p>
-              <div className="relative inline-block">
-                <a
-                  href="/"
-                  className="relative border border-primary text-white px-3 py-2 text-xs font-semibold focus:outline-none overflow-hidden group"
-                >
-                  <span className="absolute inset-0 bg-primary transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></span>
-                  <span className="absolute inset-0 bg-primary transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-bottom"></span>
-                  <span className="relative z-10">
-                    Start Your Adventure &rarr;
-                  </span>
-                </a>
-              </div>
-            </div>
-
-            <div className="relative w-full max-w-xs md:max-w-md lg:max-w-lg sm:mt-16 lg:mt-36">
-              {/*custom Slider */}
-           <Slider {...nestedsettings}  prevArrow={<CustomPrevArrow />} nextArrow={<CustomNextArrow />}>
-            {slides.map((data, index) => (
-          <div key={index} className="px-1">
-            <img
-              src={data.image}
-              alt={`Slide ${index + 1}`}
-              className="w-full rounded-lg object-cover bg-center h-28 md:h-40"
-            />
-          </div>
-        ))}
-      </Slider>
-
-     {/* Bottom Navigation */}
-     <div className="flex flex-col items-center mt-5">
-        {/* Horizontal Line */}
-        <hr className="w-56 border-t-2 border-primary mb-2" />
-        {/* Slide Indicator */}
-        <div className="text-white font-bold text-lg">
-          {String(currentSlide + 1).padStart(2, "0")}
-        </div>
-      </div>
-    </div>
-          </div>
-        </div>
+        </>
+       ))}
       </Slider>
     </div>
   </div>

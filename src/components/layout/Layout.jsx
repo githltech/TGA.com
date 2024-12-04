@@ -3,11 +3,11 @@ import Footer from '../footer/Footer';
 import Navbar from '../Navbar';
 
 
-const Layout = ({children}) => {
+const Layout = ({children,navbarStyle}) => {
   return (
     <>
-    <Navbar/>
-    
+
+    <Navbar navbarStyle={navbarStyle}/>
     <div className="min-h-screen">
         {children}
     </div>

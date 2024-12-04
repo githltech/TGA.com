@@ -61,7 +61,7 @@ const Testimonials = () => {
       <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
         {/* Left Section */}
         <div className="text-center md:text-left">
-          <hr className="border-t-4 border-primary w-16" />
+          <hr className="border-t-4 border-primary w-16 hidden md:block" />
           <h1 className="text-xl sm:text-2xl font-bold text-black mb-2">EXCELLENT</h1>
           <div className="flex justify-center md:justify-start items-center gap-1 mb-3">
             {Array(5)

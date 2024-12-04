@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutTga = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-24 bg-white my-10">
+    <div className="flex flex-col md:flex-row items-center justify-between px-6 lg:px-24 bg-white my-10">
       {/* Text Content */}
       <div className="flex-1 md:mr-6">
         <h3 className="text-lg font-bold uppercase">About Tga</h3>
@@ -56,7 +56,7 @@ const AboutTga = () => {
         <img
           src="https://media1.thrillophilia.com/filestore/m21dqlu4lf2ekp42vrofmxeqklpl_shutterstock_1118600486.jpg?w=340&dpr=2"
           alt="Scenic Destination"
-          className="w-full h-80 rounded-lg object-cover"
+          className="w-full h-72 rounded-lg object-cover"
         />
       </div>
     </div>

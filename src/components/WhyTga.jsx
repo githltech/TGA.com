@@ -17,7 +17,7 @@ const WhyTga = () => {
       {/* Why Us Section */}
         <div className="text-center">
           <h1 className="text-xl sm:text-2xl font-bold text-black">WHY US WITH & BEYOND</h1>
-          <hr className="flex flex-col border-b-2 border-orange-500 w-40 m-auto mb-4" />
+          <hr className="flex flex-col border-b-2 border-orange-500 w-40 m-auto mb-8" />
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-black">
             {/* Card 1 */}
             <div className="flex flex-col items-center">

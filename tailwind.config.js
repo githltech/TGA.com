@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      scrollBehavior: {
+        smooth: "smooth",
+      },
       animation: {
         'fade-in-up': 'fadeInUp 1s ease-in-out',
         'draw-line': 'drawLine 3s ease-in-out infinite',
@@ -29,11 +32,13 @@ export default {
           primary: "#f37002",
           secordary: "#f38021",
           textwhite: "#fff",
+          primaryorange: "#FF8200", // Orange color
+          secondaryblack: "#333333", // Black text color
         },
         fontWeight: {
           light1: 400,
           h3fontwgt:400,  // Define custom font-weights
-          regular1: 400,
+          regular1: 600,
           bold1: 700,
           extrabold1: 800,
         },
@@ -49,6 +54,7 @@ export default {
         },
         fontFamily: {
           museo: ['"Museo Sans"', 'sans-serif'], // Define the Museo Sans font
+          sans: ["Poppins", "sans-serif"],
         },
       
     },

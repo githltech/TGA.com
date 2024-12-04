@@ -53,12 +53,12 @@ const PerfectDestination = () => {
         {/* Left Section */}
         <div className="">
           <hr className="border-t-4 border-primary w-16" />
-          <h1 className="text-xl sm:text-2xl font-bold text-black mb-2 uppercase">Perfect destinations</h1>
+          <h1 className="text-xl sm:text-2xl font-bold text-black mb-2 uppercase">Perfect <br /> destinations</h1>
           <p className="text-[#424241] font-museo font-light text-xxs mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quisquam tempore esse eligendi, vitae ipsa amet impedit odio provident nulla dolorum, excepturi velit id modi rem. Aperiam reiciendis repellat odio.</p>
          
         </div>
 
-        {/* Right Section: Testimonial Slider */}
+        {/* Right Section: image Slider */}
         <div className="w-full lg:w-3/4">
           <Slider {...sliderSettings}>
             {arraydata.map((data, index) => (
@@ -67,17 +67,17 @@ const PerfectDestination = () => {
                 className=" p-2"
               >
                 {/* Review Header */}
-                <div className="flex items-center group relative">
-                  <img
-                    src={data.img}
-                    alt={data.name}
-                    className="w-full h-80 object-cover object-center rounded-md"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                    <span className="text-white text-xs uppercase font-semibold">{data.imgtitle}</span>
-                  </div>
-                </div>
-              </div>
+                <div className="flex items-center relative overflow-hidden group cursor-pointer">
+             <img
+              src={data.img}
+             alt={data.name}
+             className="w-full h-80 object-cover object-center rounded-md transition-transform duration-300 group-hover:scale-110"
+              />
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center transition">
+            <span className="text-gray-200 text-xs uppercase font-semibold">{data.imgtitle}</span>
+            </div>
+          </div>
+        </div>
             ))}
           </Slider>
         </div>

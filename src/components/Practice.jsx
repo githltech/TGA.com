@@ -1,71 +1,84 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { gsap } from 'gsap';
-import $ from 'jquery'; // Use jQuery only when absolutely necessary
+import React, { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
 
-const Practice = () => {
-  const slideshowRef = useRef(null); // Ref for slideshow element
-  const [activeSlide, setActiveSlide] = useState(0); // State to keep track of active slide
-  const totalSlides = 3; // Example: total number of slides (adjust as needed)
+const Practive = () => {
+  const sliderRef = useRef(null);
+  const slidesRef = useRef([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    // Initial setup for slideshow parallax effect
-    const homeSlideshowParallax = () => {
-      const scrollTop = $(window).scrollTop();
-      if (scrollTop > window.innerHeight) return;
-
-      const slideshow = $(slideshowRef.current);
-      const inner = slideshow.find('.slideshow-inner');
-      const newHeight = window.innerHeight - scrollTop / 2;
-      const newTop = scrollTop * 0.8;
-
-      inner.css({
-        transform: `translateY(${newTop}px)`,
-        height: newHeight,
-      });
-    };
-
-    // Set the parallax effect on scroll
-    $(window).on('scroll', homeSlideshowParallax);
-
-    // Cleanup scroll listener when component unmounts
-    return () => {
-      $(window).off('scroll', homeSlideshowParallax);
-    };
-  }, []);
+  const slides = [
+    {
+      image: "https://media1.thrillophilia.com/filestore/0hdjtmduamliielzcvdsepune779_dubai%20skyline.jpg?w=340&dpr=2",
+      title: "Explore Mountains",
+      description: "Experience the serene beauty of the highlands.",
+    },
+    {
+      image: "https://media1.thrillophilia.com/filestore/0hdjtmduamliielzcvdsepune779_dubai%20skyline.jpg?w=340&dpr=2",
+      title: "Discover Beaches",
+      description: "Relax on the world's most beautiful beaches.",
+    },
+    {
+      image: "https://via.placeholder.com/800x600?text=Explore+3",
+      title: "Urban Adventures",
+      description: "Dive into vibrant cityscapes and cultures.",
+    },
+  ];
 
   useEffect(() => {
-    // Update the slideshow (e.g., switching slides) using GSAP
-    const slideshowSwitch = (index) => {
-      const slideshow = $(slideshowRef.current);
-      const slides = slideshow.find('.slides');
-      slides.removeClass('is-active');
-      slides.eq(index).addClass('is-active');
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+    }, 2000); // Auto-slide every 5 seconds
 
-      // Use GSAP for animation
-      gsap.to(slides.eq(index), { opacity: 1, duration: 1 });
-    };
+    return () => clearInterval(interval);
+  }, [slides.length]);
 
-    // Switch to the active slide
-    slideshowSwitch(activeSlide);
-  }, [activeSlide]);
-
-  const slideshowNext = () => {
-    setActiveSlide((prev) => (prev + 1) % totalSlides); // Example: cycling through total slides
-  };
+  useEffect(() => {
+    if (slidesRef.current[currentIndex]) {
+      gsap.fromTo(
+        slidesRef.current[currentIndex],
+        {
+          scale: 1.3, // Start with a slight zoom-in
+          opacity: 0,
+        },
+        {
+          scale: 2, // Zoom-out to normal size
+          opacity: 1,
+          duration: 2, // Slow motion for 2 seconds
+          ease: "power2.inOut",
+        }
+      );
+    }
+  }, [currentIndex]);
 
   return (
-    <div ref={slideshowRef} className="main-content">
-      <div className="slideshow">
-        <div className="slideshow-inner">
-          {/* Your slideshow slides go here */}
-          <div className={`slides ${activeSlide === 0 ? 'is-active' : ''}`}>Slide 1</div>
-          <div className={`slides ${activeSlide === 1 ? 'is-active' : ''}`}>Slide 2</div>
-          <div className={`slides ${activeSlide === 2 ? 'is-active' : ''}`}>Slide 3</div>
-        </div>
+    <div className="w-full h-screen overflow-hidden relative bg-black">
+      <div
+        className="flex transition-transform duration-500 ease-in-out"
+        ref={sliderRef}
+        style={{ width: `${slides.length * 100}%` }}
+      >
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className="flex-shrink-0 w-screen h-screen relative"
+            ref={(el) => (slidesRef.current[index] = el)}
+          >
+            <img
+              src={slide.image}
+              alt={slide.title}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white px-4">
+              <h1 className="text-4xl lg:text-6xl font-bold mb-4">
+                {slide.title}
+              </h1>
+              <p className="text-lg lg:text-xl">{slide.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
-      <button onClick={slideshowNext}>Next Slide</button>
     </div>
   );
 };
 
-export default Practice;
+export default Practive;

@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home/Home';
-import Explore from './pages/Explore';
+import Aboutus from './pages/aboutus/Aboutus';
 
 const App = () =>
  {
@@ -11,7 +11,7 @@ const App = () =>
     <Router>
       <Routes>
         <Route path='/' element = {<Home/>}/>
-        <Route path='/explore' element = {<Explore/>}/>
+        <Route path='/aboutus' element = {<Aboutus/>}/>
       </Routes>
     </Router>
     </>
