@@ -72,7 +72,7 @@ const BlogTga = () => {
                 )}
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-bold uppercase h-14 mb-2">
+                <h3 className="text-sm font-bold uppercase h-14 mb-2">
                   {blog.title}
                 </h3>
                 <p className="text-[#424241] font-museo font-light text-xxs mb-4 h-16">

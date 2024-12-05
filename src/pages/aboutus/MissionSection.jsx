@@ -9,7 +9,7 @@ function MissionSection() {
         {/* Left Text Section */}
         <div className='lg:max-w-[500px]'>
           <h2 className="text-4xl md:text-5xl font-sans font-bold1 text-secondaryblack text-center lg:text-left">
-            Our <span className="text-primaryorange">Mission</span>
+            Our <span className="text-primary">Mission</span>
           </h2>
           <p className="text-gray-600 text-[16px] font-light1 leading-loose mt-4">
             At Thrillophilia, we're on a grand quest to transform the landscape
@@ -54,7 +54,7 @@ function MissionSection() {
           >
             <path
               d="M10 50 C30 10, 70 10, 90 50"
-              stroke="#FF8200"
+              stroke="#1B4D3E"
               fill="none"
               strokeWidth="2"
               markerEnd="url(#arrowhead)"
@@ -68,7 +68,7 @@ function MissionSection() {
                 refY="3.5"
                 orient="auto"
               >
-                <polygon points="0 0, 10 3.5, 0 7" fill="#FF8200" />
+                <polygon points="0 0, 10 3.5, 0 7" fill="#1B4D3E" />
               </marker>
             </defs>
           </svg>
@@ -83,7 +83,7 @@ function MissionSection() {
 >
   <path
     d="M90 50 C70 10, 30 10, 10 50"
-    stroke="#FF8200"
+    stroke="#1B4D3E"
     fill="none"
     strokeWidth="2"
     markerEnd="url(#arrowhead)"
@@ -97,7 +97,7 @@ function MissionSection() {
       refY="3.5"
       orient="auto"
     >
-      <polygon points="10 0, 0 3.5, 10 7" fill="#FF8200" />
+      <polygon points="10 0, 0 3.5, 10 7" fill="#1B4D3E" />
     </marker>
   </defs>
 </svg>

@@ -29,8 +29,8 @@ export default {
         },
       },
         colors: {
-          primary: "#f37002",
-          secordary: "#f38021",
+          primary: "#1B4D3E",
+          secordary: "rgb(64,130,109)",
           textwhite: "#fff",
           primaryorange: "#FF8200", // Orange color
           secondaryblack: "#333333", // Black text color

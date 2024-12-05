@@ -39,13 +39,13 @@ const SpotlightSection = () => {
   };
 
   return (
-    <div className="px-4 md:px-16 lg:px-24 py-10">
+    <div className="px-4 md:px-16 lg:px-24">
       <div className="relative bg-white overflow-hidden">
         {/* Header Section */}
         <div className="flex items-center gap-3 pt-6">
           <div>
           <h2 className="text-4xl font-bold text-secondaryblack">
-          In The <span className="text-primaryorange">Spotlignt</span>
+          In The <span className="text-primary">Spotlignt</span>
         </h2>
           <p className="text-gray-600 font-light1 font-sans">Explore what the world is saying</p>
           </div>
@@ -87,13 +87,13 @@ const SpotlightSection = () => {
           {/* Navigation Buttons */}
           <button
             onClick={handlePrev}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-primaryorange hover:text-white transition"
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-primary hover:text-white transition"
           >
             &#8249;
           </button>
           <button
             onClick={handleNext}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-primaryorange hover:text-white transition"
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-primary hover:text-white transition"
           >
             &#8250;
           </button>

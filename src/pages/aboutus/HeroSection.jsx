@@ -13,7 +13,7 @@ function HeroSection() {
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold1 text-secondaryblack leading-tight">
           Shaping the
         </h1>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold1 text-primaryorange leading-tight mt-3">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold1 text-primary leading-tight mt-3">
           Future Of Travel!
         </h1>
         <p className="text-gray-600 text-[16px] font-light1 font-sans mt-4">

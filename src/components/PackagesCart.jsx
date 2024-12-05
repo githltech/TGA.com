@@ -212,7 +212,7 @@ const PackagesCart = () => {
                    <span className="text-sm text-gray-500">({card.reviews})</span>
                     </p>
                 </div>
-                <h3 className="text-[#202020] font-museo font-light1 text-[15px] h-10">{card.title}</h3>
+                <h3 className="text-[#202020] font-light1 text-[15px] h-10">{card.title}</h3>
                 <p className="mt-6 text-xs font-bold px-2">5D <span className='font-medium text-gray-500'>Dubai</span></p>
                 <div className="flex gap-2 items-center h-10">
                   <span className="text-lg font-bold text-gray-800">

@@ -58,11 +58,11 @@ const TeamSection = () => {
     <div className="px-4 md:px-16 lg:px-24 bg-white py-16">
       <div className="text-left mb-10">
         <h2 className="text-4xl font-bold text-secondaryblack">
-          Meet the <span className="text-primaryorange">Architects of Experiences</span>
+          Meet the <span className="text-primary">Architects of Experiences</span>
         </h2>
         <p className="text-gray-600 font-light1 font-sans mt-2">
           We are a power-packed tribe of{" "}
-          <span className="text-primaryorange">800+</span> extraordinarily talented & passionate professionals
+          <span className="text-primary">800+</span> extraordinarily talented & passionate professionals
         </p>
       </div>
 
@@ -87,11 +87,11 @@ const TeamSection = () => {
           {/* Call to Action */}
       <div className="text-center mx-auto">
         <div className="flex justify-center items-center w-40 h-40">
-          <div className="w-full h-full flex items-center justify-center rounded-full bg-primaryorange">
+          <div className="w-full h-full flex items-center justify-center rounded-full bg-primary">
             <p className="text-[15px] font-sans font-regular1 text-white">See yourself <br /> here?</p>
           </div>
         </div>
-        <button className="mt-4 text-primaryorange py-2 px-8 rounded-lg hover:text-textwhite hover:bg-primaryorange border border-primaryorange">
+        <button className="mt-4 text-primary py-2 px-8 rounded-lg hover:text-textwhite hover:bg-primary border border-primary">
           Join Us!
         </button>
       </div>

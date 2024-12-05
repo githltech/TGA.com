@@ -21,14 +21,14 @@ const Home = () =>
     <Layout>
         <Herosection/>
         <AboutTga/>
-        <PackagesCart/>
+        <ExpPackagesCart/>
         <WhyTga/>
         <AccomodationCart/>
-        <ExpPackagesCart/>
+        <GallarySection/>
         <TreksCart/>
         <EventsCart/>
+        <PackagesCart/>
         <PerfectDestinations/>
-        <GallarySection/>
         <BlogTga/>
         <StatusSection/>
         <Testimonials/>

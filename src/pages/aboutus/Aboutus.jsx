@@ -6,6 +6,8 @@ import TeamSection from './TeamSection'
 import ImageSlider from './ImageSlider'
 import SpotlightSection from './SpotlightSection'
 import OurPresence from './OurPresence'
+import Timeline from './Timeline'
+import PictureGallery from './PictureGallary'
 
 function Aboutus() {
   return (
@@ -14,7 +16,9 @@ function Aboutus() {
     <HeroSection/>
     <MissionSection/>
     <TeamSection/>
+    <Timeline/>
     <ImageSlider/>
+    <PictureGallery/>
     <SpotlightSection/>
     <OurPresence/>
     </Layout>

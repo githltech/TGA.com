@@ -44,12 +44,12 @@ function Footer() {
     <footer className="bg-gray-800 mt-52 lg:mt-36">
       <div className="p-4 lg:p-24">
         {/* Top Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white p-4 footer_shadow border rounded-xl border-gray-300 -mt-48 pb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white p-10 footer_shadow rounded-xl -mt-48 pb-16">
           {/* Column 1 */}
-          <div>
-            <h3 className="text-sm font-semibold mb-4 uppercase">About TGA</h3>
-            <ul className="space-y-2 text-[10px] uppercase font-semibold text-gray-600">
-            <li>
+          <div className="border-0 md:border-r-[1px] border-gray-300 ">
+            <h3 className="text-sm font-regular1 mb-4 uppercase text-secondaryblack">About TGA</h3>
+            <ul className="space-y-2 text-[10px] uppercase text-[#858585] font-medium">
+            <li className="">
     <a
       href="#about-us"
       className="hover:underline hover:text-secordary transition duration-300"
@@ -99,11 +99,11 @@ function Footer() {
   </li>
             </ul>
           </div>
-
+          
           {/* Column 2 */}
-          <div>
-            <h3 className="text-sm font-semibold mb-4 uppercase">Information & Policies</h3>
-            <ul className="space-y-2 text-[10px] uppercase font-semibold text-gray-600">
+          <div className="border-0 md:border-r-[1px] border-gray-300 " >
+            <h3 className="text-sm font-regular1 mb-4 uppercase text-secondaryblack">Information & Policies</h3>
+            <ul className="space-y-2 text-[10px] uppercase text-[#858585] font-medium">
             <li>
     <a
       href="#about-us"
@@ -156,9 +156,9 @@ function Footer() {
   </div>
 
           {/* Column 3 */}
-          <div>
-            <h3 className="text-sm font-semibold mb-4 uppercase">For Travellers</h3>
-            <ul className="space-y-2 text-[10px] uppercase font-semibold text-gray-600">
+          <div className="border-0 md:border-r-[1px] border-gray-300 ">
+            <h3 className="text-sm font-regular1 mb-4 uppercase text-secondaryblack">For Travellers</h3>
+            <ul className="space-y-2 text-[10px] uppercase text-[#858585] font-medium">
         <li>
         <a
       href="#support"
@@ -208,14 +208,14 @@ function Footer() {
 
           {/* Column 4 (Travel Destinations with Images) */}
           <div>
-            <h3 className="text-sm font-semibold mb-4 uppercase">Travel Destinations</h3>
+            <h3 className="text-sm font-regular1 mb-4 uppercase text-secondaryblack">Travel Destinations</h3>
             <div className="grid grid-cols-3 gap-2">
               {destinations.map((dest, index) => (
                 <div key={index} className="group relative overflow-hidden cursor-pointer">
                   <img
                     src={dest.img}
                     alt={dest.name}
-                    className="w-full h-14 object-cover rounded-sm  transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-14 object-cover border  transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                     <span className="text-gray-300 text-[10px] text-center sm:text-xs font-semibold">{dest.name}</span>
@@ -257,7 +257,7 @@ function Footer() {
 
             <div className="flex flex-col text-[#424241] font-museo font-light text-xxs items-center gap-2">
             <p className=" text-gray-400">
-              © 2024 <span className="text-primary">The Gypsy Adventures.com</span> All rights reserved.
+              © 2024 <span className="text-white">The Gypsy Adventures.com</span> All rights reserved.
             </p>
             {/* <p className=" text-gray-400 font-semibold">
               © Developed And Managed By <a href="/https://hltechindia.com/" className="border-b-[1px] text-red-200 hover:text-red-400">HL Tech Pvt.Ltd</a> .

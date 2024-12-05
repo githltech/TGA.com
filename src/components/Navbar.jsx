@@ -85,19 +85,19 @@ const Navbar = () => {
       <div className={`flex justify-between py-2 lg:border-b-[1px] ${ scrolling ? "lg:hidden block" : "border-white"} border-opacity-20`}>
         {/* Logo */}
         <div className={`flex items-center gap-2 w-52 ${isCustomPage ? "text-black" : scrolling ? "text-black" : "text-textwhite"}`}>
-          <img src={isCustomPage ? tgalogoscroll :logoSrc} alt="TGA Logo" className="h-8" />
-          <h1 className=" logotypewrite text-sm font-semibold uppercase">The Gypsy Adventure</h1>
+          <img src={isCustomPage ? tgalogoscroll :logoSrc} alt="TGA Logo" className="h-10" />
+          {/* <h1 className=" logotypewrite text-sm font-semibold uppercase">The Gypsy Adventure</h1> */}
         </div>
 
         {/* Search Bar */}
         <div className={`hidden md:block relative sm:w-48 lg:w-80 rounded-full ${isCustomPage ? "bg-black opacity-90 text-textwhite" : scrolling ? "bg-black opacity-90 text-textwhite" : "bg-black opacity-55"}`}>
           <div className="absolute left-3 top-[10px] text-textwhite">
-            <IoMdSearch className="text-sm" />
+            <IoMdSearch className="text-sm" size={20} />
           </div>
           <input
             type="text"
             placeholder={displayedText}
-            className="w-full pl-8 pr-4 py-2 border border-gray-400 text-textwhite rounded-full text-xs font-medium bg-transparent focus:outline-none"
+            className="w-full pl-10 pr-4 py-3 border border-gray-400 text-textwhite rounded-full text-xs font-medium bg-transparent focus:outline-none"
           />
         </div>
 
@@ -133,12 +133,12 @@ const Navbar = () => {
       </div>
 
       {/* Tabs and Buttons Section for Large Screens */}
-      <div className={`hidden  lg:flex items-center py-2 border-b-[1px] border-white border-opacity-20 ${scrolling ? "justify-between" :"justify-center"}`}>
+      <div className={`hidden  lg:flex items-center py-2 border-b-[1px] border-white border-opacity-20 ${ scrolling ? "justify-between" : "justify-center"}`}>
 
             {/* Logo */}
             <div className={`flex items-center gap-2 ${scrolling ? "text-black": "text-textwhite overscroll-y-auto hidden"}`}>
-          <img src={logoSrc} alt="TGA Logo" className="h-8" />
-          <h1 className=" font-semibold">TGA</h1>          
+          <img src={logoSrc} alt="TGA Logo" className="h-10" />
+          {/* <h1 className=" font-semibold">TGA</h1>           */}
         </div>
         
         <div className="flex items-center gap-4 lg:gap-10">
@@ -158,7 +158,7 @@ const Navbar = () => {
               onClick={() => handleNavigation(tab.path)}
             >
               <div className="flex flex-col items-center hover:border-b-[1px] border-primary">
-                <h1 className="text-primary text-sm md:text-2xl ">{tab.icon}</h1>
+                <h1 className= {`text-sm md:text-2xl ${isCustomPage ? "text-primary" : scrolling ? "text-primary": "text-white"} `}>{tab.icon}</h1>
                 <p
                   className={` mt-2 ${
                     scrolling ? "navlabel" : isCustomPage ? "navlabel": "navlabelscroll"
@@ -198,7 +198,7 @@ const Navbar = () => {
 
       {/* Sliding Menu for Small Screens */}
       <div
-        className={`fixed top-0 left-0 w-full h-screen bg-black text-textwhite  z-40 transform ${
+        className={`fixed top-0 left-0 w-full h-screen bg-primary text-textwhite  z-40 transform ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 lg:hidden`}
       >
@@ -222,7 +222,7 @@ const Navbar = () => {
             <div
               key={index}
               onClick={() => handleNavigation(item.path)}
-              className="cursor-pointer text-xs uppercase font-medium hover:text-orange-500 border-b-[1px] border-gray-200 pb-3 border-opacity-10"
+              className="cursor-pointer text-xs uppercase font-medium hover:text-secordary border-b-[1px] border-gray-200 pb-3 border-opacity-10"
             >
               {item.label}
             </div>

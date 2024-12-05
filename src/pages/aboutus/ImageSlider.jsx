@@ -30,7 +30,7 @@ const ImageSlider = () => {
    <div className=" px-4 md:px-16 lg:px-24">
      <div className="relative bg-white shadow-lg rounded-lg border border-gray-400 overflow-hidden">
       {/* Top Border */}
-      <div className="h-2 bg-primaryorange"></div>
+      <div className="h-2 bg-primary"></div>
 
       {/* Header Section */}
       <div className="flex items-center justify-center gap-3 pt-6">
@@ -74,13 +74,13 @@ const ImageSlider = () => {
         {/* Navigation Buttons */}
         <button
           onClick={handlePrev}
-          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-primaryorange hover:text-white transition"
+          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-primary hover:text-white transition"
         >
           &#8249;
         </button>
         <button
           onClick={handleNext}
-          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-primaryorange hover:text-white transition"
+          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-primary hover:text-white transition"
         >
           &#8250;
         </button>
