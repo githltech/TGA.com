@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import tgalogo from '../../images/tganewlogo.png'
 
 function Footer() {
@@ -50,52 +51,52 @@ function Footer() {
             <h3 className="text-sm font-regular1 mb-4 uppercase text-secondaryblack">About TGA</h3>
             <ul className="space-y-2 text-[10px] uppercase text-[#858585] font-medium">
             <li className="">
-    <a
-      href="#about-us"
+    <Link
+      to="/aboutus"
       className="hover:underline hover:text-secordary transition duration-300"
     >
       About Us
-    </a>
+    </Link>
   </li>
   <li>
-    <a
-      href="#our-team"
+    <Link
+      to="#our-team"
       className="hover:underline hover:text-secordary transition duration-300"
     >
       Our Team
-    </a>
+    </Link>
   </li>
   <li>
-    <a
-      href="#why-choose-us"
+    <Link
+      to="#why-choose-us"
       className="hover:underline hover:text-secordary transition duration-300"
     >
       Why Choose Us
-    </a>
+    </Link>
   </li>
   <li>
-    <a
-      href="#testimonials"
+    <Link
+      to="#testimonials"
       className="hover:underline hover:text-secordary transition duration-300"
     >
       Testimonials
-    </a>
+    </Link>
   </li>
   <li>
-    <a
-      href="#careers"
+    <Link
+      to="#careers"
       className="hover:underline hover:text-secordary transition duration-300"
     >
       Careers
-    </a>
+    </Link>
   </li>
   <li>
-    <a
-      href="#support"
+    <Link
+      to="#support"
       className="hover:underline hover:text-secordary transition duration-300"
     >
       Support
-    </a>
+    </Link>
   </li>
             </ul>
           </div>
@@ -105,52 +106,52 @@ function Footer() {
             <h3 className="text-sm font-regular1 mb-4 uppercase text-secondaryblack">Information & Policies</h3>
             <ul className="space-y-2 text-[10px] uppercase text-[#858585] font-medium">
             <li>
-    <a
-      href="#about-us"
+    <Link
+      to="#about-us"
       className="hover:underline hover:text-secordary transition duration-300"
     >
       FAQs
-    </a>
+    </Link>
   </li>
   <li>
-    <a
-      href="#our-team"
+    <Link
+      to="#our-team"
       className="hover:underline hover:text-secordary transition duration-300"
     >
       Partner With Us
-    </a>
+    </Link>
   </li>
   <li>
-    <a
-      href="#why-choose-us"
+    <Link
+      to="#why-choose-us"
       className="hover:underline hover:text-secordary transition duration-300"
     >
       Destination Marketing
-    </a>
+    </Link>
   </li>
   <li>
-    <a
-      href="#testimonials"
+    <Link
+      to="#testimonials"
       className="hover:underline hover:text-secordary transition duration-300"
     >
       Travel Insurance
-    </a>
+    </Link>
   </li>
   <li>
-    <a
-      href="#careers"
+    <Link
+      to="/termsandconditions"
       className="hover:underline hover:text-secordary transition duration-300"
     >
-      Privacy Policy
-    </a>
+      Terms & Conditions
+    </Link>
   </li>
   <li>
-    <a
-      href="#support"
+    <Link
+      to="#support"
       className="hover:underline hover:text-secordary transition duration-300"
     >
       Cancellation Policy
-    </a>
+    </Link>
   </li>
     </ul>
   </div>
@@ -160,48 +161,48 @@ function Footer() {
             <h3 className="text-sm font-regular1 mb-4 uppercase text-secondaryblack">For Travellers</h3>
             <ul className="space-y-2 text-[10px] uppercase text-[#858585] font-medium">
         <li>
-        <a
-      href="#support"
+        <Link
+      to="#support"
       className="hover:underline hover:text-secordary transition duration-300"
     >
      Gift an Experience
-    </a>
+    </Link>
         </li>
    <li>
-   <a
-      href="#support"
+   <Link
+      to="#support"
       className="hover:underline hover:text-secordary transition duration-300"
     >
       Travel Blog
-    </a>
+    </Link>
    </li>
 
     <li>
-    <a
-      href="#support"
+    <Link
+      to="#support"
       className="hover:underline hover:text-secordary transition duration-300"
     >
       Travel Guides
-    </a>
+    </Link>
     </li>
 
     <li>
-    <a
-      href="#support"
+    <Link
+      to="#support"
       className="hover:underline hover:text-secordary transition duration-300"
     >
       Packing Tips
-    </a>
+    </Link>
     </li>
 
     <li>
-    <a
-      href="#support"
+    <Link
+      to="#support"
       className="hover:underline hover:text-secordary transition duration-300"
     >
       Seasonal Discounts
 
-    </a>
+    </Link>
     </li>
             </ul>
           </div>
@@ -238,21 +239,21 @@ function Footer() {
 
               {/* Social Icons */}
           <div className="flex space-x-4 md:py-6 py-2">
-            <a href="#" className="text-black rounded-full px-[17px] py-2 text-xl bg-white hover:text-secordary">
+            <Link to="#" className="text-black rounded-full px-[17px] py-2 text-xl bg-white hover:text-secordary">
               <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" className="text-black rounded-full px-[14px] py-2 text-xl bg-white hover:text-secordary">
+            </Link>
+            <Link to="#" className="text-black rounded-full px-[14px] py-2 text-xl bg-white hover:text-secordary">
               <i className="fab fa-instagram"></i>
-            </a>
-            <a href="#" className="text-black rounded-full px-[13px] py-2 text-xl bg-white hover:text-secordary">
+            </Link>
+            <Link to="#" className="text-black rounded-full px-[13px] py-2 text-xl bg-white hover:text-secordary">
               <i className="fab fa-twitter"></i>
-            </a>
-            <a href="#" className="text-black rounded-full px-[14px] py-2 text-xl bg-white hover:text-secordary">
+            </Link>
+            <Link to="#" className="text-black rounded-full px-[14px] py-2 text-xl bg-white hover:text-secordary">
               <i className="fab fa-linkedin-in"></i>
-            </a>
-            <a href="#" className="text-black rounded-full px-3 py-2 text-xl bg-white hover:text-secordary">
+            </Link>
+            <Link to="#" className="text-black rounded-full px-3 py-2 text-xl bg-white hover:text-secordary">
               <i className="fab fa-youtube"></i>
-            </a>
+            </Link>
           </div>
 
             <div className="flex flex-col text-[#424241] font-museo font-light text-xxs items-center gap-2">
@@ -260,7 +261,7 @@ function Footer() {
               © 2024 <span className="text-white">The Gypsy Adventures.com</span> All rights reserved.
             </p>
             {/* <p className=" text-gray-400 font-semibold">
-              © Developed And Managed By <a href="/https://hltechindia.com/" className="border-b-[1px] text-red-200 hover:text-red-400">HL Tech Pvt.Ltd</a> .
+              © Developed And Managed By <Link to="/https://hltechindia.com/" className="border-b-[1px] text-red-200 hover:text-red-400">HL Tech Pvt.Ltd</Link> .
             </p> */}
             </div>
           </div>

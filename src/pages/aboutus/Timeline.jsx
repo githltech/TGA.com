@@ -58,7 +58,7 @@ const Timeline = () => {
   ];
 
   return (
-    <div className="relative bg-gray-100 py-16 px-4 md:px-16 lg:px-24">
+    <div className="relative bg-gray-100 py-16 px-16 lg:px-24">
       {/* Heading */}
       <h2 className="text-left text-4xl font-bold">
         Thrillophilia's <span className="text-primary">Journey</span>
@@ -70,7 +70,7 @@ const Timeline = () => {
       <div className="relative flex flex-col items-center">
         {/* Middle Line */}
         <div
-          className="hidden md:block absolute left-1/2 top-0 h-full w-[2px] bg-gray-300 transform -translate-x-1/2"
+          className="absolute -left-8 md:left-1/2 top-0 h-full w-[2px] bg-gray-300 transform -translate-x-1/2"
           style={{
             background: `linear-gradient(to bottom, #1B4D3E ${scrollPercentage}%, #E5E7EB ${scrollPercentage}%)`,
           }}
@@ -86,7 +86,7 @@ const Timeline = () => {
           >
             {/* Circle and Year */}
             <div
-              className="absolute hidden md:block left-1/2 transform -translate-x-1/2 items-center justify-center w-12 h-12 bg-primary text-white rounded-full shadow-md"
+              className="absolute -left-8 md:left-1/2 transform -translate-x-1/2 items-center justify-start md:justify-center w-12 h-12 bg-primary text-white rounded-full shadow-md"
               style={{
                 top: "50%",
                 transform: "translate(-50%, -50%)",
@@ -116,7 +116,7 @@ const Timeline = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-96 md:h-72 object-cover object-center rounded-lg shadow-md"
+                className="w-full h-60 md:h-72 object-cover object-center rounded-lg shadow-md"
               />
             </div>
           </div>

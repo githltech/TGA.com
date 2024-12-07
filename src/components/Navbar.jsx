@@ -21,7 +21,14 @@ const Navbar = () => {
   const [logoSrc, setLogoSrc] = useState(tgalogo); // State for logo source
 
   const location = useLocation(); // Get current route
-  const isCustomPage = location.pathname === "/aboutus" // || location.pathname === "/contact";  Check if it's About or Contact page
+  const isCustomPage = location.pathname === "/aboutus"
+    || location.pathname === "/trecks_tours"  
+    || location.pathname === "/events"
+    || location.pathname === "/packages"
+    || location.pathname === "/hotels"
+    || location.pathname === "/termsandconditions";  //Check if it's About or Contact page
+
+    
 
   const navigate = useNavigate();
 
@@ -145,7 +152,7 @@ const Navbar = () => {
           {[
             { label: "Home", icon: <FaHome />, path: "/" ,blacklogo:tgalogoscroll},
             { label: "About", icon: <FaInfoCircle />, path: "/aboutus" },
-            { label: "Treks & Tours", icon: <FaHiking />, path: "/treks-tours" },
+            { label: "Treks & Tours", icon: <FaHiking />, path: "/trecks_tours" },
             { label: "Events", icon: <FaCalendarAlt />, path: "/events" },
             { label: "Packages", icon: <FaSuitcase />, path: "/packages" },
             { label: "Hotels", icon: <FaHotel />, path: "/hotels" },
@@ -212,7 +219,7 @@ const Navbar = () => {
           {[
             { label: "Home", path: "/" },
             { label: "About", path: "/aboutus" },
-            { label: "Treks & Tours", path: "/treks-tours" },
+            { label: "Treks & Tours", path: "/trecks_tours" },
             { label: "Events", path: "/events" },
             { label: "Packages", path: "/packages" },
             { label: "Hotels", path: "/hotels" },

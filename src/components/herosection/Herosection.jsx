@@ -89,7 +89,7 @@ const HeroSection = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    pauseOnHover: false,
+    //pauseOnHover: false,
     afterChange: (current) => setCurrentSlide(current),
    
   };
