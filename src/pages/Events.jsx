@@ -1,15 +1,275 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import Slider from 'react-slick';
+import { IoIosArrowBack, IoIosArrowForward, IoMdCall } from 'react-icons/io';
+import { IoStar } from "react-icons/io5";
 import Layout from '../components/layout/Layout';
-import EventsCart from '../components/EventsCart';
 
 
 const Events = () => {
+  const nestedSlidersRef = useRef([]);
+
+  const handleNestedLeftClick = (index) => {
+    if (nestedSlidersRef.current[index]) {
+      nestedSlidersRef.current[index].slickPrev();
+    }
+  };
+
+  const handleNestedRightClick = (index) => {
+    if (nestedSlidersRef.current[index]) {
+      nestedSlidersRef.current[index].slickNext();
+    }
+  };
+
+  const cardData = [
+    {
+      id: 1,
+      imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
+      title: 'Dubai Highlights | Skyline And Sandscapes emirates',
+      images: [
+        'https://media1.thrillophilia.com/filestore/94bvlf0n4ndowsznjczdjjtvqpw2_shutterstock_1751658116.jpg?w=340&dpr=2',
+        'https://media1.thrillophilia.com/filestore/3olu266q85xcvi788yawu7fji10c_dl.beatsnoop.com-3000-HSMA1tjOPa.jpg?w=340&dpr=2',
+        'https://media1.thrillophilia.com/filestore/l9eo0e0yn5eu58zpb9nxgfazhc08_shutterstock_1215376537.jpg?w=340&dpr=2',
+      ],
+      reviews: '1.6k',
+      rating: <IoStar/>,
+      outofrating:"4,5",
+      days: '5 days & 4 nights',
+      price: 45000,
+      originalPrice: 74002,
+      saveprice: '6,454',
+    },
+    {
+      id: 2,
+      imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
+      title: 'Escape To Dubai | Flights Inclusive Deal emirates',
+      images: [
+        'https://media1.thrillophilia.com/filestore/a80q5lgmzgf01th4v7ja6li4w9hl_shutterstock_366363635.jpg?w=340&dpr=2',
+        'https://media1.thrillophilia.com/filestore/0hdjtmduamliielzcvdsepune779_dubai%20skyline.jpg?w=340&dpr=2',
+        'https://media1.thrillophilia.com/filestore/mp4pf1xwonv6hklph4ktqmt5bnej_shutterstock_2261215111.jpg?w=340&dpr=2',
+      ],
+      reviews: '1.2k',
+      rating: <IoStar/>,
+      outofrating:"4,5",
+      days: '7 days & 6 nights',
+      price: 68550,
+      originalPrice: 124761,
+      saveprice: '19,454',
+    },
+    {
+      id: 3,
+      imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
+      title: 'Discovering Dubai | A Journey To The Golden Emirates',
+      images: [
+        'https://media1.thrillophilia.com/filestore/mi1hujt87wfa8b41pmxmpy8e713q_shutterstock_2446462209.jpg?w=340&dpr=2',
+        'https://media1.thrillophilia.com/filestore/fcfvegglkeiuyjxdt9r18pxapf67_shutterstock_2386280701%20(1).jpg?w=340&dpr=2',
+        'https://media1.thrillophilia.com/filestore/n35qyh6yu8dr5dzqtmv48kze6wib_shutterstock_2338754375.jpg?w=340&dpr=2',
+      ],
+      reviews: '1.8k',
+      rating: <IoStar/>,
+      outofrating:"4,5",
+      days: '7 days & 6 nights',
+      price: 86000,
+      originalPrice: 111836,
+      saveprice: '12,454',
+    },
+
+    {
+        id: 4,
+        imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
+        title: 'Discovering Dubai | A Journey To The Golden Emirates',
+        images: [
+          'https://media1.thrillophilia.com/filestore/wkmaue5fr7xvy2jqz0yp6fxkuehj_shutterstock_474346684.jpg?w=340&dpr=2',
+          'https://media1.thrillophilia.com/filestore/jo81ugbjxtme6npfzvlbxsq5jaqp_AYA%20Family%2010%20(1).jpg?w=340&dpr=2',
+          'https://media1.thrillophilia.com/filestore/hs37gc38mryythrm842o5a0aslcb_shutterstock_2042237531.jpg?w=340&dpr=2',
+        ],
+        reviews: '1.3k',
+        rating: <IoStar/>,
+        outofrating:"4,5",
+        days: '7 days & 6 nights',
+        price: 96000,
+        originalPrice: 11836,
+        saveprice: '11,494',
+      },
+      {
+        id: 5,
+        imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
+        title: 'Discovering Dubai | A Journey To The Golden Emirates',
+        images: [
+          'https://media1.thrillophilia.com/filestore/wkmaue5fr7xvy2jqz0yp6fxkuehj_shutterstock_474346684.jpg?w=340&dpr=2',
+          'https://media1.thrillophilia.com/filestore/jo81ugbjxtme6npfzvlbxsq5jaqp_AYA%20Family%2010%20(1).jpg?w=340&dpr=2',
+          'https://media1.thrillophilia.com/filestore/hs37gc38mryythrm842o5a0aslcb_shutterstock_2042237531.jpg?w=340&dpr=2',
+        ],
+        reviews: '1.3k',
+        rating: <IoStar/>,
+        outofrating:"4,5",
+        days: '7 days & 6 nights',
+        price: 96000,
+        originalPrice: 11836,
+        saveprice: '11,494',
+      },
+      {
+        id: 6,
+        imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
+        title: 'Discovering Dubai | A Journey To The Golden Emirates',
+        images: [
+          'https://media1.thrillophilia.com/filestore/wkmaue5fr7xvy2jqz0yp6fxkuehj_shutterstock_474346684.jpg?w=340&dpr=2',
+          'https://media1.thrillophilia.com/filestore/jo81ugbjxtme6npfzvlbxsq5jaqp_AYA%20Family%2010%20(1).jpg?w=340&dpr=2',
+          'https://media1.thrillophilia.com/filestore/hs37gc38mryythrm842o5a0aslcb_shutterstock_2042237531.jpg?w=340&dpr=2',
+        ],
+        reviews: '1.3k',
+        rating: <IoStar/>,
+        outofrating:"4,5",
+        days: '7 days & 6 nights',
+        price: 96000,
+        originalPrice: 11836,
+        saveprice: '11,494',
+      },
+      {
+        id: 7,
+        imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
+        title: 'Discovering Dubai | A Journey To The Golden Emirates',
+        images: [
+          'https://media1.thrillophilia.com/filestore/wkmaue5fr7xvy2jqz0yp6fxkuehj_shutterstock_474346684.jpg?w=340&dpr=2',
+          'https://media1.thrillophilia.com/filestore/jo81ugbjxtme6npfzvlbxsq5jaqp_AYA%20Family%2010%20(1).jpg?w=340&dpr=2',
+          'https://media1.thrillophilia.com/filestore/hs37gc38mryythrm842o5a0aslcb_shutterstock_2042237531.jpg?w=340&dpr=2',
+        ],
+        reviews: '1.3k',
+        rating: <IoStar/>,
+        outofrating:"4,5",
+        days: '7 days & 6 nights',
+        price: 96000,
+        originalPrice: 11836,
+        saveprice: '11,494',
+      },
+      {
+        id: 8,
+        imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
+        title: 'Discovering Dubai | A Journey To The Golden Emirates',
+        images: [
+          'https://media1.thrillophilia.com/filestore/wkmaue5fr7xvy2jqz0yp6fxkuehj_shutterstock_474346684.jpg?w=340&dpr=2',
+          'https://media1.thrillophilia.com/filestore/jo81ugbjxtme6npfzvlbxsq5jaqp_AYA%20Family%2010%20(1).jpg?w=340&dpr=2',
+          'https://media1.thrillophilia.com/filestore/hs37gc38mryythrm842o5a0aslcb_shutterstock_2042237531.jpg?w=340&dpr=2',
+        ],
+        reviews: '1.3k',
+        rating: <IoStar/>,
+        outofrating:"4,5",
+        days: '7 days & 6 nights',
+        price: 96000,
+        originalPrice: 11836,
+        saveprice: '11,494',
+      },
+      {
+        id: 9,
+        imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
+        title: 'Discovering Dubai | A Journey To The Golden Emirates',
+        images: [
+          'https://media1.thrillophilia.com/filestore/wkmaue5fr7xvy2jqz0yp6fxkuehj_shutterstock_474346684.jpg?w=340&dpr=2',
+          'https://media1.thrillophilia.com/filestore/jo81ugbjxtme6npfzvlbxsq5jaqp_AYA%20Family%2010%20(1).jpg?w=340&dpr=2',
+          'https://media1.thrillophilia.com/filestore/hs37gc38mryythrm842o5a0aslcb_shutterstock_2042237531.jpg?w=340&dpr=2',
+        ],
+        reviews: '1.3k',
+        rating: <IoStar/>,
+        outofrating:"4,5",
+        days: '7 days & 6 nights',
+        price: 96000,
+        originalPrice: 11836,
+        saveprice: '11,494',
+      },
+  ];
+
+
+  
+
+  const nestedSliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 400,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+   
+  };
 
   return (
    <Layout>
-    <div className="mt-32">
-        <EventsCart/>
-    </div>
+     <div className="relative w-full py-6 px-4 lg:px-24 mt-16 lg:mt-32">
+   <div className="flex items-center justify-between px-4 py-4">
+   <h1 className="text-lg font-bold uppercase">Events <span className='flex flex-col border-b-2 border-primary w-10'></span> </h1>
+   <a href="/" className="text-primary font-normal flex items-center gap-2">View All
+   <IoIosArrowForward className='text-white bg-primary rounded-full p-2' size={26}/>
+   </a>
+   </div>
+   
+   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
+   {cardData.map((card,index) => (
+        <div key={card.id} className="px-4">
+          <div className="bg-white transition duration-300 cursor-pointer">
+            {/* Nested Slider */}
+            <div className="relative">
+            <h1 className="text-[12px]  text-center text-white font-semibold bg-primary py-1 rounded-t-lg">{card.imgtext}</h1>
+              <Slider  ref={(el) => (nestedSlidersRef.current[index] = el)} {...nestedSliderSettings}>
+                {card.images.map((image, imgIndex) => (
+                  <img
+                    key={imgIndex}
+                    src={image}
+                    alt={`Slide ${imgIndex + 1}`}
+                    className="w-full h-80  object-cover bg-center rounded-b-xl"
+                  />
+                ))}
+              </Slider>
+               <button
+                className=" absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg focus:outline-none"
+                onClick={() => handleNestedLeftClick(index)}
+              >
+                <IoIosArrowBack size={10} />
+              </button>
+              <button
+                className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg  focus:outline-none"
+                onClick={() => handleNestedRightClick(index)}
+              >
+                <IoIosArrowForward size={10} />
+              </button>
+            </div>
+
+            {/* Card Content */}
+            <div className="mt-2 bg-gray-50 rounded-t-xl">
+            <div className="flex items-center text-xs justify-between h-10">
+            <p className=" text-gray-500 text-[15px] font-light1">{card.days}</p>
+                <p className="flex items-center gap-2 text-green-500 text-lg font-semibold">{card.rating}
+                <span className='text-green-600 text-sm font-bold'>{card.outofrating}</span>
+                 <span className="text-sm text-gray-500">({card.reviews})</span>
+                  </p>
+              </div>
+              <h3 className="text-[#202020] font-museo font-light1 text-[15px] h-10">{card.title}</h3>
+              <p className="mt-6 text-xs font-bold px-2">5D <span className='font-medium text-gray-500'>Dubai</span></p>
+              <div className="flex gap-2 items-center h-10">
+                <span className="text-lg font-bold text-gray-800">
+                  INR {card.price.toLocaleString()}{' '}
+                  <span className="line-through text-gray-600 text-sm font-normal">
+                    INR {card.originalPrice.toLocaleString()}
+                  </span>
+                </span>
+                <span className="bg-blue-100 text-green-700 text-[10px] font-semibold mt-1">
+                  save INR {card.saveprice}
+                </span>
+              </div>
+              <div className="flex justify-between items-center mt-2 gap-4">
+                <a
+                  href="tel:91 92055 15652"
+                  className="text-primary px-4 py-[15px] rounded-md border border-primary"
+                >
+                  <IoMdCall className="animate-bounce" />
+                </a>
+                <a href='/' className="bg-primary font-semibold hover:bg-secordary text-white px-4 py-[15px] rounded-md text-sm w-full m-auto text-center">
+                  Avail This Offer
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+   </div>
+  </div>
    </Layout>
   );
 };

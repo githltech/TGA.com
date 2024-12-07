@@ -93,7 +93,7 @@ const Testimonials = () => {
                     className="w-12 h-12 rounded-full object-cover object-center"
                   />
                   <div>
-                    <h4 className="text-lg font-semibild">{review.name}</h4>
+                    <h4 className="text-sm font-semibild">{review.name}</h4>
                     <span className="text-xs">{review.date}</span>
                     <div className="flex items-center gap-1 text-gray-500 mb-2">
                     <div className="flex justify-center md:justify-start items-center gap-1">

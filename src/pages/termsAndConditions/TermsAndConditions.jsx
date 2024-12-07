@@ -63,7 +63,7 @@ const TermsAndConditions = () => {
      
     `,
     privacy: `
-    <h1 class='text-[2rem] font-bold text-[#515151]'>Terms & Conditions</h1>
+    <h1 class='text-[2rem] font-bold text-[#515151]'>Privacy policy</h1>
 
     <p class="text-gray-500 font-light1 text-sm mb-4">Last updated: October 27, 2022</p>
 
@@ -110,7 +110,7 @@ const TermsAndConditions = () => {
       <div className=" py-8 px-4 md:px-16 lg:px-24 mt-10 lg:mt-28 ">
       <div className=" bg-white">
         {/* Tabs */}
-        <div className="flex border-b border-t">
+        <div className="flex border-b">
           {tabs.map((tab) => (
             <button
               key={tab.id}

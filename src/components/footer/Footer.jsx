@@ -219,7 +219,7 @@ function Footer() {
                     className="w-full h-14 object-cover border  transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                    <span className="text-gray-300 text-[10px] text-center sm:text-xs font-semibold">{dest.name}</span>
+                    <span className="text-gray-300 text-[6px] text-center sm:text-xs font-semibold">{dest.name}</span>
                   </div>
                 </div>
               ))}

@@ -86,10 +86,10 @@ const Navbar = () => {
        <div
         className={`${
           scrolling ? "bg-white shadow-md" : "bg-transparent"
-        } fixed top-0 left-0 w-full py-2 px-4 transition-colors duration-300`}
+        } fixed top-0 left-0 w-full  px-4 transition-colors duration-300`}
       >
 
-      <div className={`flex justify-between py-2 lg:border-b-[1px] ${ scrolling ? "lg:hidden block" : "border-white"} border-opacity-20`}>
+      <div className={`flex justify-between py-2 lg:border-b-[2px] ${ scrolling ? "lg:hidden block" : "border-secordary"} border-opacity-20`}>
         {/* Logo */}
         <div className={`flex items-center gap-2 w-52 ${isCustomPage ? "text-black" : scrolling ? "text-black" : "text-textwhite"}`}>
           <img src={isCustomPage ? tgalogoscroll :logoSrc} alt="TGA Logo" className="h-10" />
@@ -140,7 +140,7 @@ const Navbar = () => {
       </div>
 
       {/* Tabs and Buttons Section for Large Screens */}
-      <div className={`hidden  lg:flex items-center py-2 border-b-[1px] border-white border-opacity-20 ${ scrolling ? "justify-between" : "justify-center"}`}>
+      <div className={`hidden  lg:flex items-center py-3 border-b-[2px] border-secordary border-opacity-20 ${ scrolling ? "justify-between" : "justify-center"}`}>
 
             {/* Logo */}
             <div className={`flex items-center gap-2 ${scrolling ? "text-black": "text-textwhite overscroll-y-auto hidden"}`}>

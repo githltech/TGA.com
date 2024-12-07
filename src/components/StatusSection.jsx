@@ -15,7 +15,7 @@ const StatusSection = () => {
 
   return (
     <div
-      className="relative w-full py-10 sm:py-20 bg-cover bg-center"
+      className="relative w-full py-10 sm:py-20  bg-cover bg-center"
       style={{
         backgroundImage: "url('https://media1.thrillophilia.com/filestore/2lihqv4wpcc7uquoealydsvkr425_shutterstock_2110928681.jpg?w=340&dpr=2')",
       }}
