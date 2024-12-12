@@ -212,11 +212,11 @@ function Footer() {
             <h3 className="text-sm font-regular1 mb-4 uppercase text-secondaryblack">Travel Destinations</h3>
             <div className="grid grid-cols-3 gap-2">
               {destinations.map((dest, index) => (
-                <div key={index} className="group relative overflow-hidden cursor-pointer">
+                <div key={index} className="group gap-3  relative overflow-hidden cursor-pointer">
                   <img
                     src={dest.img}
                     alt={dest.name}
-                    className="w-full h-14 object-cover border  transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-10 sm:h-20 object-cover border  transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                     <span className="text-gray-300 text-[6px] text-center sm:text-xs font-semibold">{dest.name}</span>

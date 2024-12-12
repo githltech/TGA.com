@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
 import { IoIosArrowBack, IoIosArrowForward, IoMdCall } from 'react-icons/io';
 import { IoStar } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 
 
@@ -232,9 +233,9 @@ const PackagesCart = () => {
                   >
                     <IoMdCall className="animate-bounce" />
                   </a>
-                  <a href='/' className="bg-primary font-semibold hover:bg-secordary text-white px-4 py-[15px] rounded-md text-sm w-full m-auto text-center">
+                  <Link to='/bookingdetails' className="bg-primary font-semibold hover:bg-secordary text-white px-4 py-[15px] rounded-md text-sm w-full m-auto text-center">
                     Avail This Offer
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

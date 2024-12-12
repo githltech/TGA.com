@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate,useLocation } from "react-router-dom";
+import { useNavigate,useLocation, Link } from "react-router-dom";
 import tgalogo from "../images/tganewlogo.png";
 import tgalogoscroll from "../images/logo TGA.png";
 import { IoMdLogIn, IoMdCall } from "react-icons/io";
@@ -7,6 +7,7 @@ import { FaHome, FaInfoCircle, FaHiking, FaCalendarAlt, FaSuitcase, FaHotel, } f
 import { PiStudentBold } from "react-icons/pi";
 import { IoMdSearch } from "react-icons/io";
 import { FaBars, FaTimes } from "react-icons/fa"; // Menu icons
+import LoginSignup from "../user/LoginSignup";
 
 const Navbar = () => {
   
@@ -19,6 +20,9 @@ const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false); // State for menu toggle
   const [scrolling, setScrolling] = useState(false); // State to track scroll
   const [logoSrc, setLogoSrc] = useState(tgalogo); // State for logo source
+  const [isModalOpen, setModalOpen] = useState(false); // State for the modal
+
+  
 
   const location = useLocation(); // Get current route
   const isCustomPage = location.pathname === "/aboutus"
@@ -26,7 +30,9 @@ const Navbar = () => {
     || location.pathname === "/events"
     || location.pathname === "/packages"
     || location.pathname === "/hotels"
-    || location.pathname === "/termsandconditions";  //Check if it's About or Contact page
+    || location.pathname === "/termsandconditions"
+    || location.pathname === "/login"
+    || location.pathname === "/bookingdetails";
 
     
 
@@ -125,9 +131,9 @@ const Navbar = () => {
             <div className="flex items-center cursor-pointer mt-[2px] text-xs">
               <IoMdLogIn />
             </div>
-            <a href="/" className="font-medium">
+            <button onClick={() => setModalOpen(true)}  className="font-medium">
               Login
-            </a>
+            </button>
           </div>
            {/* Menu Icon */}
            <button
@@ -195,7 +201,7 @@ const Navbar = () => {
             <div className="flex items-center cursor-pointer mt-[2px] text-xs">
               <IoMdLogIn />
             </div>
-            <a href="/" className="font-medium">
+            <a href="/TGA.com/login" className="font-medium">
               Login
             </a>
           </div>
@@ -236,7 +242,10 @@ const Navbar = () => {
           ))}
         </div>
       </div>
+       {/* Login/Signup Modal */}
+       {isModalOpen && <LoginSignup onClose={() => setModalOpen(false)} />}
     </div>
+    
   );
 };
 

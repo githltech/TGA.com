@@ -8,6 +8,8 @@ import Events from './pages/Events';
 import Packages from './pages/Packages';
 import Hotels from './pages/Hotels';
 import TermsAndConditions from './pages/termsAndConditions/TermsAndConditions';
+import BookingDetails from './pages/booking/BookingDetails';
+//import LoginSignup from './user/LoginSignup';
 
 const App = () =>
  {
@@ -22,6 +24,8 @@ const App = () =>
         <Route path='/packages' element = {<Packages/>}/>
         <Route path='/hotels' element = {<Hotels/>}/>
         <Route path='/termsandconditions' element = {<TermsAndConditions/>}/>
+        <Route path='/bookingdetails' element = {<BookingDetails/>}/>
+        {/* <Route path='/TGA.com/login' element = {<LoginSignup/>}/> */}
       </Routes>
     </Router>
     </>

@@ -37,7 +37,7 @@ export default {
         },
         fontWeight: {
           light1: 400,
-          h3fontwgt:400,  // Define custom font-weights
+          h3fontwgt:500,  // Define custom font-weights
           regular1: 600,
           bold1: 700,
           extrabold1: 800,

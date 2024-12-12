@@ -67,11 +67,11 @@ const PerfectDestination = () => {
                 className=" p-2"
               >
                 {/* Review Header */}
-                <div className="flex items-center relative overflow-hidden group cursor-pointer">
+                <div className="flex items-center rounded-md relative overflow-hidden group cursor-pointer">
              <img
               src={data.img}
              alt={data.name}
-             className="w-full h-80 object-cover object-center rounded-md transition-transform duration-300 group-hover:scale-110"
+             className="w-full h-80 object-cover object-center transition-transform duration-300 group-hover:scale-110"
               />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center transition">
             <span className="text-gray-200 text-xs uppercase font-semibold">{data.imgtitle}</span>
