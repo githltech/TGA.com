@@ -1,7 +1,9 @@
 import { useState } from "react";
 import profilelogo from '../images/Profile.png'
+import { Link } from "react-router-dom";
 
 const LoginSignup = ({ onClose }) => {
+  
     const [isLogin, setIsLogin] = useState(true);
     const [avatarPreview, setAvatarPreview] = useState(profilelogo);
 
@@ -84,6 +86,9 @@ const LoginSignup = ({ onClose }) => {
                 placeholder="Password"
                 className="p-2 block w-full border rounded border-gray-300 focus:outline-none focus:border-primary sm:text-sm"
               />
+            </div>
+            <div className="">
+                <Link to="/"></Link>
             </div>
            </div>
 

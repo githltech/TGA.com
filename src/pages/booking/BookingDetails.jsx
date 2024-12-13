@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import Layout from '../../components/layout/Layout';
+import WhyTga from '../../components/WhyTga';
 
 const faqs = [
     {
@@ -62,6 +63,24 @@ const faqs = [
         "We really appreciate the tour we had recently with Thrillophilia this is our first-time experience and we were glad that it went out as we expected from it which is greatly recommended while working around our budget...",
       rating: "5.0/5",
     },
+    {
+      id: 3,
+      name: "Adhrit Mahajan",
+      date: "02 Jan 2019",
+      booked: "Dubai Luxurious Retreat | Sky-High Views and Desert Dunes",
+      review:
+        "We really appreciate the tour we had recently with Thrillophilia this is our first-time experience and we were glad that it went out as we expected from it which is greatly recommended while working around our budget...",
+      rating: "5.0/5",
+    },
+    {
+      id: 4,
+      name: "Aagam Rana",
+      date: "12 Jun 2021",
+      booked: "Dubai Luxurious Retreat | Sky-High Views and Desert Dunes",
+      review:
+        "We really appreciate the tour we had recently with Thrillophilia this is our first-time experience and we were glad that it went out as we expected from it which is greatly recommended while working around our budget...",
+      rating: "5.0/5",
+    },
   ];
 
   const ratingData = [
@@ -72,6 +91,113 @@ const faqs = [
     { stars: 1, percentage: 1, count: "156" },
   ];
 
+
+  const reviewswithimg = [
+    {
+      name: "Nethala Vijay Venkata Rathnam",
+      reviewDate: "02 Jun 2023",
+      booking: "Romantic Escape to Dubai | Love Amidst the Dunes",
+      description:
+        "Dear all, thank you for all the services you and your team provided during our stay in Dubai. This was my 1st trip to Dubai, and we really enjoyed our trip. Except for the day tour which was not satisfactory, remaining all went well. Thanks to driver Waseem, Ayub, Rehmat. Pick-up was always on time.",
+      rating: 5.0,
+      images: [
+        {
+           src: "https://media1.thrillophilia.com/filestore/0ngg6o4e68yfnt4xrlfhmldv5g9y_bbafe06dc9924f01b5eda8afbc52f716.jpg?w=200&dpr=1.5", 
+           alt: "Image 1"
+           },
+        { 
+          src: "https://media1.thrillophilia.com/filestore/qmt3lozxzdx5iq53srrhz8bms0nb_330B95E6-3D93-489F-9484-10DEC879A6F6.jpeg?w=200&dpr=1.5",
+           alt: "Image 2"
+           },
+        {
+           src: "https://media1.thrillophilia.com/filestore/w0nhg8xt782ruytsmhqvl3g5t5zo_IMG20230530171244.jpg?w=200&dpr=1.5",
+            alt: "Image 3" 
+          },
+        { 
+          src: "https://media1.thrillophilia.com/filestore/0ngg6o4e68yfnt4xrlfhmldv5g9y_bbafe06dc9924f01b5eda8afbc52f716.jpg?w=200&dpr=1.5",
+           alt: "Image 4"
+           },
+        { 
+          src: "https://media1.thrillophilia.com/filestore/ajuyhcw2nrxk5ppw8adu2whhsr1t_IMG-20230927-WA0041.jpg?w=200&dpr=1.5",
+           alt: "Image 5" 
+          },
+          { 
+            src: "https://media1.thrillophilia.com/filestore/ajuyhcw2nrxk5ppw8adu2whhsr1t_IMG-20230927-WA0041.jpg?w=200&dpr=1.5",
+             alt: "Image 5" 
+            },
+      ],
+     
+    },
+    {
+      name: "Vinaya Arasu",
+      reviewDate: "04 Oct 2023",
+      booking: "Wonders of Dubai | Journey through Jewels of the Emirates",
+      description:
+        "A mesmerizing trip to Dubai was very well organized by the thrillophilia team. Our heartfelt thanks to Destination Expert Chirayu Sharma and Yash for their continuous support for our memorable trip. Itinerary was well-planned and executed by the team.",
+      rating: 5.0,
+      images: [
+        { 
+          src: "https://media1.thrillophilia.com/filestore/xqqaw3x7kd5wtndtm3bf92qi9klp_IMG20230316195303.jpg?w=200&dpr=1.5",
+           alt: "Image 6"
+           },
+        {
+           src: "https://media1.thrillophilia.com/filestore/8uj2doehpdxha854n28ecgq6gj70_IMG20230316193728.jpg?w=200&dpr=1.5",
+            alt: "Image 7"
+           },
+        { 
+          src: "https://media1.thrillophilia.com/filestore/vosksm0c4b4apcuctlh30k0o5phb_IMG20230316193617.jpg?w=200&dpr=1.5"
+          , alt: "Image 8"
+         },
+        {
+           src: "https://media1.thrillophilia.com/filestore/txja786rbmtj2ijbva9zd5qfqaet_IMG20230316184106.jpg?w=200&dpr=1.5",
+            alt: "Image 9" 
+          },
+        {
+           src: "https://media1.thrillophilia.com/filestore/vodqfz1420v7m46zjirr1rz2np60_WhatsApp%20Image%202023-11-22%20at%209.10.53%20PM.jpeg?w=200&dpr=1.5",
+            alt: "Image 10"
+           },
+           {
+            src: "https://media1.thrillophilia.com/filestore/vodqfz1420v7m46zjirr1rz2np60_WhatsApp%20Image%202023-11-22%20at%209.10.53%20PM.jpeg?w=200&dpr=1.5",
+             alt: "Image 10"
+            },
+      ],
+    },
+    {
+      name: "Bipin Arasu",
+      reviewDate: "04 Oct 2023",
+      booking: "Wonders of Dubai | Journey through Jewels of the Emirates",
+      description:
+        "A mesmerizing trip to Dubai was very well organized by the thrillophilia team. Our heartfelt thanks to Destination Expert Chirayu Sharma and Yash for their continuous support for our memorable trip. Itinerary was well-planned and executed by the team.",
+      rating: 5.0,
+      images: [
+        { 
+          src: "https://media1.thrillophilia.com/filestore/95pyxfuem57lhbh3ahfeiafbhgg6_IMG_4103.jpeg?w=200&dpr=1.5",
+           alt: "Image 6"
+           },
+        {
+           src: "https://media1.thrillophilia.com/filestore/nlzey4eo4rk0dy960aef1v5h1tmd_IMG_4077.jpeg?w=200&dpr=1.5",
+            alt: "Image 7"
+           },
+        { 
+          src: "https://media1.thrillophilia.com/filestore/nm4wqh3ca0sui4adfmfkfyrgkdeu_IMG_4074.jpeg?w=200&dpr=1.5"
+          , alt: "Image 8"
+         },
+        {
+           src: "https://media1.thrillophilia.com/filestore/8i0umm3n6l1qkmzpxpf53mpsap8h_5E5A145E-222C-4179-A896-B066B145B966.jpeg?w=200&dpr=1.5",
+            alt: "Image 9" 
+          },
+        {
+           src: "https://media1.thrillophilia.com/filestore/vodqfz1420v7m46zjirr1rz2np60_WhatsApp%20Image%202023-11-22%20at%209.10.53%20PM.jpeg?w=200&dpr=1.5",
+            alt: "Image 10"
+           },
+           {
+            src: "https://media1.thrillophilia.com/filestore/8i0umm3n6l1qkmzpxpf53mpsap8h_5E5A145E-222C-4179-A896-B066B145B966.jpeg?w=200&dpr=1.5",
+             alt: "Image 10"
+            },
+      ],
+    },
+  ];
+  
 
 
 const BookingDetails = () => {
@@ -312,7 +438,55 @@ const BookingDetails = () => {
         ))}
       </div>
     </div>
+
+    <div className="py-6">
+      {reviewswithimg.map((review, index) => (
+        <div
+          key={index}
+          className="border rounded-lg shadow-md p-4 mb-6 bg-white"
+        >
+          {/* Reviewer Details */}
+          <div className="flex items-center mb-4">
+            <div className=" mr-4">
+              <img src="https://media1.thrillophilia.com/filestore/7jep0tyhv760imw424ri5rqemzor_profile_image.jpg?w=400&h=300&dpr=2" alt="" className='w-12 h-12 rounded-full' />
+            </div>
+            <div>
+              <h3 className="text-lg font-medium text-gray-800">{review.name}</h3>
+              <p className="text-sm text-gray-500">Reviewed: {review.reviewDate}</p>
+            </div>
+          </div>
+
+          {/* Booking Info */}
+          <p className="mb-2 text-sm">
+            Booked:{" "}
+            <a
+              href="#"
+              className="text-blue-500 underline hover:text-blue-700"
+            >
+              {review.booking}
+            </a>
+          </p>
+
+          {/* Description */}
+          <p className="text-sm text-gray-700">{review.description}</p>
+          
+
+          {/* Images */}
+          <div className="flex mt-4 overflow-x-auto scrollbar-hide w-full">
+            {review.images.map((img, idx) => (
+              <img
+                key={idx}
+                src={img.src}
+                alt={img.alt}
+                className="w-44 h-40 object-cover rounded-md mr-2"
+              />
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
+    </div>
+    <WhyTga/>
    </Layout>
   );
 };
