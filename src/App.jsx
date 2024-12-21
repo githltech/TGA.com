@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home/Home';
 import Aboutus from './pages/aboutus/Aboutus';
 import Trecks_Tours from './pages/Trecks_Tours';
@@ -9,7 +9,12 @@ import Packages from './pages/Packages';
 import Hotels from './pages/Hotels';
 import TermsAndConditions from './pages/termsAndConditions/TermsAndConditions';
 import BookingDetails from './pages/booking/BookingDetails';
-//import LoginSignup from './user/LoginSignup';
+import Profile from './user/Profile';
+import ForgotUserPassword from './user/ForgotUserPassword';
+import ResetUserPassword from './user/ResetUserPassword';
+import ProtectedRoute from './route/ProtectedRoute';
+import UpdateUserProfile from './user/UpdateUserProfile';
+import UpdateUserPassword from './user/UpdateUserPassword';
 
 const App = () =>
  {
@@ -25,7 +30,44 @@ const App = () =>
         <Route path='/hotels' element = {<Hotels/>}/>
         <Route path='/termsandconditions' element = {<TermsAndConditions/>}/>
         <Route path='/bookingdetails' element = {<BookingDetails/>}/>
-        {/* <Route path='/TGA.com/login' element = {<LoginSignup/>}/> */}
+
+        <Route
+            path="/account"
+            element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            }
+          />
+        
+        <Route
+           path='/password/forgot' 
+           element = {
+           <ForgotUserPassword/>}
+           />
+
+        <Route
+            path='/password/reset/:token'
+            element = {
+            <ResetUserPassword/>
+          }/>
+
+        <Route path='/password/update' element = {
+            <ProtectedRoute>
+              <UpdateUserPassword/>
+            </ProtectedRoute>
+          }/>
+
+
+        <Route path='/me/update' element = {
+            <ProtectedRoute>
+              <UpdateUserProfile/>
+            </ProtectedRoute>
+          }
+          />
+        
+
+
       </Routes>
     </Router>
     </>

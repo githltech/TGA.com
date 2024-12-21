@@ -8,21 +8,24 @@ import { PiStudentBold } from "react-icons/pi";
 import { IoMdSearch } from "react-icons/io";
 import { FaBars, FaTimes } from "react-icons/fa"; // Menu icons
 import LoginSignup from "../user/LoginSignup";
+import {logout} from '../actions/UserAction';
+import { useDispatch,useSelector } from "react-redux";
+import userlogo from '../images/Profile.png'
+import { useAlert } from "react-alert";
+import { useModal } from "../context/ModelContext";
 
 const Navbar = () => {
   
+  const alert = useAlert();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-  const baseText = "Search for"; // Static base text
-  const additionalTexts = [" treks", " Destinations", " Explore"];
-  const [displayedText, setDisplayedText] = useState(baseText); // Full placeholder text
-  const [currentIndex, setCurrentIndex] = useState(0); // Index of current additional text
-  const [charIndex, setCharIndex] = useState(0); // Character index for typewriter effect
-  const [isMenuOpen, setMenuOpen] = useState(false); // State for menu toggle
-  const [scrolling, setScrolling] = useState(false); // State to track scroll
-  const [logoSrc, setLogoSrc] = useState(tgalogo); // State for logo source
-  const [isModalOpen, setModalOpen] = useState(false); // State for the modal
 
-  
+  const {user } = useSelector(
+    (state) => state.user
+  );
+
+  const { isModalOpen, openModal, closeModal } = useModal();
 
   const location = useLocation(); // Get current route
   const isCustomPage = location.pathname === "/aboutus"
@@ -31,12 +34,28 @@ const Navbar = () => {
     || location.pathname === "/packages"
     || location.pathname === "/hotels"
     || location.pathname === "/termsandconditions"
-    || location.pathname === "/login"
+    || location.pathname === "/account"
     || location.pathname === "/bookingdetails";
+ 
 
+  const baseText = "Search for"; // Static base text
+  const additionalTexts = [" treks", " Destinations", " Explore"];
+
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [displayedText, setDisplayedText] = useState(baseText); // Full placeholder text
+  const [currentIndex, setCurrentIndex] = useState(0); // Index of current additional text
+  const [charIndex, setCharIndex] = useState(0); // Character index for typewriter effect
+  const [isMenuOpen, setMenuOpen] = useState(false); // State for menu toggle
+  const [scrolling, setScrolling] = useState(false); // State to track scroll
+  const [logoSrc, setLogoSrc] = useState(tgalogo); // State for logo source
+  // const [isModalOpen, setModalOpen] = useState(false); // State for the modal
+
+  const handleLogout = () => {
+    dispatch(logout());
+    alert.success("Logout Successfully");
+    openModal();
     
-
-  const navigate = useNavigate();
+  };
 
   useEffect(() => {
     const typeInterval = setInterval(() => {
@@ -125,16 +144,62 @@ const Navbar = () => {
               <IoMdCall className="animate-bounce text-xl sm:text-lg" />
             </div>
           </a>
-
-          {/* Login Button */}
-          <div className="flex items-center gap-1 text-white bg-primary px-3 py-2 rounded-md hover:bg-secordary duration-500 text-xs">
+          {user ? (
+            <div className="relative">
+            {/* Avatar and Name */}
+            <button
+              className="flex items-center space-x-2 "
+              onClick={() => setDropdownOpen((prev) => !prev)}
+            >
+              <img
+                src={user.avatar && user.avatar.url ? user.avatar.url : userlogo}
+                alt="Avatar"
+                className="w-5 h-5 rounded-full"
+              />
+              <span className="font-medium text-xs capitalize">{user.name.split(" ")[0]}</span>
+            </button>
+  
+            {/* Dropdown Menu */}
+            {dropdownOpen && (
+              <div className="absolute right-0 mt-2 bg-white  text-gray-700 shadow-lg rounded w-40 text-xs">
+                <ul>
+                  <li className="border-b hover:bg-gray-100">
+                    <Link to="/account" className="block px-4 py-2">
+                      My Account
+                    </Link>
+                  </li>
+                  <li className="border-b hover:bg-gray-100">
+                    <Link to="/my-orders" className="block px-4 py-2">
+                      My Orders
+                    </Link>
+                  </li>
+                  <li className="hover:bg-gray-100">
+                    <button
+                      onClick={handleLogout}
+                      className="block px-4 py-2 w-full text-left"
+                    >
+                      Logout
+                    </button>
+                    {isModalOpen && <LoginSignup onClose={closeModal} />}
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+          ) : (
+            <>
+              {/* Login Button */}
+              <div className="flex items-center gap-1 text-white bg-primary px-3 py-2 rounded-md hover:bg-secordary duration-500 text-xs">
             <div className="flex items-center cursor-pointer mt-[2px] text-xs">
               <IoMdLogIn />
             </div>
-            <button onClick={() => setModalOpen(true)}  className="font-medium">
+            <button onClick={openModal}  className="font-medium">
               Login
             </button>
           </div>
+            </>
+          )}
+
            {/* Menu Icon */}
            <button
             onClick={() => setMenuOpen(!isMenuOpen)}
@@ -195,16 +260,62 @@ const Navbar = () => {
               <IoMdCall className="animate-bounce text-xl sm:text-lg" />
             </div>
           </a>
-          
-          {/* Login Button */}
+          {user ? (
+              <div className="relative">
+              {/* Avatar and Name */}
+              <button
+                className="flex items-center space-x-2 "
+                onClick={() => setDropdownOpen((prev) => !prev)}
+              >
+                <img
+                  src={user.avatar && user.avatar.url ? user.avatar.url : userlogo}
+                  alt="Avatar"
+                  className="w-5 h-5 rounded-full"
+                />
+                <span className="font-medium text-xs capitalize">{user.name.split(" ")[0]}</span>
+              </button>
+    
+              {/* Dropdown Menu */}
+              {dropdownOpen && (
+                <div className="absolute right-0 mt-2 bg-white shadow-lg rounded w-40 text-xs">
+                  <ul>
+                    <li className="border-b hover:bg-gray-100">
+                      <Link to="/account" className="block px-4 py-2">
+                        My Account
+                      </Link>
+                    </li>
+                    <li className="border-b hover:bg-gray-100">
+                      <Link to="/my-orders" className="block px-4 py-2">
+                        My Orders
+                      </Link>
+                    </li>
+                    <li className="hover:bg-gray-100">
+                      <button
+                        onClick={handleLogout}
+                        className="block px-4 py-2 w-full text-left"
+                      >
+                        Logout
+                      </button>
+                      {isModalOpen && <LoginSignup onClose={closeModal} />}
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </div>
+  
+          ) : (
+            <>
+            {/* Login Button */}
           <div className="flex items-center gap-1 text-white bg-primary px-3 py-2 rounded-md hover:bg-secordary duration-500 text-xs">
             <div className="flex items-center cursor-pointer mt-[2px] text-xs">
               <IoMdLogIn />
             </div>
-            <a href="/TGA.com/login" className="font-medium">
+            <button onClick={openModal}  className="font-medium">
               Login
-            </a>
+            </button>
           </div>
+            </>
+          )}
         </div>
       </div>
       </div>

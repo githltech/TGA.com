@@ -7,7 +7,7 @@ const Layout = ({children,navbarStyle}) => {
   return (
     <>
 
-    <Navbar navbarStyle={navbarStyle}/>
+    <Navbar navbarStyle={navbarStyle} />
     <div className="min-h-screen">
         {children}
     </div>

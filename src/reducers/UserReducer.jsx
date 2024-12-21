@@ -39,6 +39,7 @@ import {
     USER_DETAILS_SUCCESS,
     USER_DETAILS_FAIL,
     CLEAR_ERRORS,
+    CLEAR_MESSAGE,
   } from "../constants/UserConstant";
   
   export const userReducer = (state = { user: {} }, action) => {
@@ -57,7 +58,8 @@ import {
           ...state,
           loading: false,
           isAuthenticatedUser: true,
-          user: action.payload,
+          user: action.payload.user,
+          message:action.payload.message,
         };
   
       case LOGOUT_SUCCESS:
@@ -97,6 +99,12 @@ import {
           ...state,
           error: null,
         };
+
+        case CLEAR_MESSAGE: // Clear the message in state
+      return {
+        ...state,
+        message: null,
+      };
   
       default:
         return state;
@@ -201,6 +209,12 @@ import {
         return {
           ...state,
           error: null,
+        };
+
+        case CLEAR_MESSAGE: // Add CLEAR_MESSAGE action
+        return {
+          ...state,
+          message: null,
         };
   
       default:

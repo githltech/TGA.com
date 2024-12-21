@@ -28,7 +28,7 @@ const PictureGallery = () => {
     <div className="bg-white py-16 px-6 lg:px-24">
       {/* Heading */}
       <h2 className="text-left text-3xl font-bold mb-10">
-        Thrillophilia <span className="text-primary">Picture Gallery</span>
+        TGA <span className="text-primary">Picture Gallery</span>
       </h2>
 
       {/* Gallery Container */}

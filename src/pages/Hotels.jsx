@@ -1,278 +1,304 @@
-import React, { useRef } from 'react';
-import Slider from 'react-slick';
-import { IoIosArrowBack, IoIosArrowForward, IoMdCall } from 'react-icons/io';
-import { IoStar } from "react-icons/io5";
+import React,{useState} from 'react';
+//import { FaShoppingCart } from "react-icons/fa";
+import { FaUser } from "react-icons/fa6";
+import { FaMountain,FaWifi,FaRegClock,FaGamepad,FaWarehouse,FaShower,FaKey,FaTv,FaUsers, FaLightbulb,FaHotTub,FaGlassWhiskey,FaCoffee,FaUtensils,FaBed,} from "react-icons/fa";
 import Layout from '../components/layout/Layout';
+import { useAlert } from 'react-alert';
+
 
 
 const Hotels = () => {
-  const nestedSlidersRef = useRef([]);
-
-  const handleNestedLeftClick = (index) => {
-    if (nestedSlidersRef.current[index]) {
-      nestedSlidersRef.current[index].slickPrev();
-    }
-  };
-
-  const handleNestedRightClick = (index) => {
-    if (nestedSlidersRef.current[index]) {
-      nestedSlidersRef.current[index].slickNext();
-    }
-  };
-
-  const cardData = [
+  const [showMore, setShowMore] = useState(false);
+  const [rooms, setRooms] = useState([
     {
       id: 1,
-      imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
-      title: 'Dubai Highlights | Skyline And Sandscapes emirates',
-      images: [
-        'https://media1.thrillophilia.com/filestore/4cgc0ibn1rqwvli84izupxwe45nv_shutterstock_2384596901%20(1).jpg?w=360&dpr=2',
-        'https://media1.thrillophilia.com/filestore/3olu266q85xcvi788yawu7fji10c_dl.beatsnoop.com-3000-HSMA1tjOPa.jpg?w=340&dpr=2',
-        'https://media1.thrillophilia.com/filestore/l9eo0e0yn5eu58zpb9nxgfazhc08_shutterstock_1215376537.jpg?w=340&dpr=2',
-      ],
-      reviews: '1.6k',
-      rating: <IoStar/>,
-      outofrating:'1.3',
-      days: '5 days & 4 nights',
-      price: 45000,
-      originalPrice: 74002,
-      saveprice: '6,454',
+      image:"https://img.cdn.zostel.com/zostel/gallery/images/wiS7YrZ6Q7mbBgsha3D-qA/superior-8-bed-mixed-dorm-20210224122208.jpg",
+      name: "Superior 10 Bed Mixed Dorm (Ensuite)",
+      price: 949,
+      description:
+        "A bed in a mixed dormitory with private lockers, a mountain view, and a shared en-suite washroom.",
+      quantity: 0,
     },
     {
       id: 2,
-      imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
-      title: 'Escape To Dubai | Flights Inclusive Deal emirates',
-      images: [
-        'https://media1.thrillophilia.com/filestore/a80q5lgmzgf01th4v7ja6li4w9hl_shutterstock_366363635.jpg?w=340&dpr=2',
-        'https://media1.thrillophilia.com/filestore/0hdjtmduamliielzcvdsepune779_dubai%20skyline.jpg?w=340&dpr=2',
-        'https://media1.thrillophilia.com/filestore/mp4pf1xwonv6hklph4ktqmt5bnej_shutterstock_2261215111.jpg?w=340&dpr=2',
-      ],
-      reviews: '1.2k',
-      rating: <IoStar/>,
-      outofrating:'1.7',
-      days: '7 days & 6 nights',
-      price: 68550,
-      originalPrice: 124761,
-      saveprice: '19,454',
+      image:"https://img.cdn.zostel.com/zostel/gallery/images/YMhikrxFSA-yVxD5KY7x_w/private-suite-2-double-bed-20201112104711.jpg",
+      name: "4 Bed Mixed Dorm",
+      price: 849,
+      description:
+        "A bed in a mixed dormitory with private lockers, a mountain view, and a shared washroom outside.",
+      quantity: 0,
     },
     {
       id: 3,
-      imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
-      title: 'Discovering Dubai | A Journey To The Golden Emirates',
-      images: [
-        'https://media1.thrillophilia.com/filestore/c4ptxkldlkubiw14mh90eb2dspl5_shutterstock_1071877145.jpg?w=340&dpr=2',
-        'https://media1.thrillophilia.com/filestore/fcfvegglkeiuyjxdt9r18pxapf67_shutterstock_2386280701%20(1).jpg?w=340&dpr=2',
-        'https://media1.thrillophilia.com/filestore/n35qyh6yu8dr5dzqtmv48kze6wib_shutterstock_2338754375.jpg?w=340&dpr=2',
-      ],
-      reviews: '1.8k',
-      rating: <IoStar/>,
-      outofrating:'1.0',
-      days: '7 days & 6 nights',
-      price: 86000,
-      originalPrice: 111836,
-      saveprice: '12,454',
+      image:"https://img.cdn.zostel.com/zostel/gallery/images/zCESBcehSlK4_fRKDLgwpg/deluxe-private-room-20201112104703.jpg",
+      name: "Deluxe 8 Bed Mixed Dorm",
+      price: 799,
+      description:
+        "A bed in a mixed dormitory with private lockers, a mountain view, and a shared washroom.",
+      quantity: 0,
     },
-
     {
-        id: 4,
-        imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
-        title: 'Discovering Dubai | A Journey To The Golden Emirates',
-        images: [
-          'https://media1.thrillophilia.com/filestore/bcouye8teeznrzitmgpvnmfvrywh_Aquaventure-Lifestyle-WaterparkHeroFamilyRideOverlookingResort.webp?w=340&dpr=2',
-          'https://media1.thrillophilia.com/filestore/jo81ugbjxtme6npfzvlbxsq5jaqp_AYA%20Family%2010%20(1).jpg?w=340&dpr=2',
-          'https://media1.thrillophilia.com/filestore/hs37gc38mryythrm842o5a0aslcb_shutterstock_2042237531.jpg?w=340&dpr=2',
-        ],
-        reviews: '1.3k',
-        rating: <IoStar/>,
-        outofrating:'1.9',
-        days: '7 days & 6 nights',
-        price: 96000,
-        originalPrice: 11836,
-        saveprice: '11,494',
-      },
-      {
-        id: 5,
-        imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
-        title: 'Dubai Highlights | Skyline And Sandscapes emirates',
-        images: [
-          'https://media1.thrillophilia.com/filestore/4cgc0ibn1rqwvli84izupxwe45nv_shutterstock_2384596901%20(1).jpg?w=360&dpr=2',
-          'https://media1.thrillophilia.com/filestore/3olu266q85xcvi788yawu7fji10c_dl.beatsnoop.com-3000-HSMA1tjOPa.jpg?w=340&dpr=2',
-          'https://media1.thrillophilia.com/filestore/l9eo0e0yn5eu58zpb9nxgfazhc08_shutterstock_1215376537.jpg?w=340&dpr=2',
-        ],
-        reviews: '1.6k',
-        rating: <IoStar/>,
-        outofrating:'1.3',
-        days: '5 days & 4 nights',
-        price: 45000,
-        originalPrice: 74002,
-        saveprice: '6,454',
-      },
+      id: 4,
+      image:"https://img.cdn.zostel.com/zostel/gallery/images/6cB0ysm6QYe-QsEvvtlzig/deluxe-8-bed-mixed-dorm-20210224122552.jpg",
+      name: "Private Suite - 2 Double Bed",
+      price: 4799,
+      description:
+        "A spacious en-suite room suited for 4 with 2 double beds and a mountain view.",
+      quantity: 0,
+    },
+    {
+      id: 5,
+      image:"https://img.cdn.zostel.com/zostel/gallery/images/6cB0ysm6QYe-QsEvvtlzig/deluxe-8-bed-mixed-dorm-20210224122552.jpg",
+      name: "Private Suite - 2 Double Bed",
+      price: 1799,
+      description:
+        "A spacious en-suite room suited for 4 with 2 double beds and a mountain view.",
+      quantity: 0,
+    },
+    {
+      id: 6,
+      image:"https://img.cdn.zostel.com/zostel/gallery/images/6cB0ysm6QYe-QsEvvtlzig/deluxe-8-bed-mixed-dorm-20210224122552.jpg",
+      name: "Private Suite - 2 Double Bed",
+      price: 2799,
+      description:
+        "A spacious en-suite room suited for 4 with 2 double beds and a mountain view.",
+      quantity: 0,
+    },
+  ]);
 
-      {
-        id: 6,
-        imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
-        title: 'Dubai Highlights | Skyline And Sandscapes emirates',
-        images: [
-          'https://media1.thrillophilia.com/filestore/4cgc0ibn1rqwvli84izupxwe45nv_shutterstock_2384596901%20(1).jpg?w=360&dpr=2',
-          'https://media1.thrillophilia.com/filestore/3olu266q85xcvi788yawu7fji10c_dl.beatsnoop.com-3000-HSMA1tjOPa.jpg?w=340&dpr=2',
-          'https://media1.thrillophilia.com/filestore/l9eo0e0yn5eu58zpb9nxgfazhc08_shutterstock_1215376537.jpg?w=340&dpr=2',
-        ],
-        reviews: '1.6k',
-        rating: <IoStar/>,
-        outofrating:'1.3',
-        days: '5 days & 4 nights',
-        price: 45000,
-        originalPrice: 74002,
-        saveprice: '6,454',
-      },
+  const alert = useAlert();
 
-      {
-        id: 7,
-        imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
-        title: 'Dubai Highlights | Skyline And Sandscapes emirates',
-        images: [
-          'https://media1.thrillophilia.com/filestore/4cgc0ibn1rqwvli84izupxwe45nv_shutterstock_2384596901%20(1).jpg?w=360&dpr=2',
-          'https://media1.thrillophilia.com/filestore/3olu266q85xcvi788yawu7fji10c_dl.beatsnoop.com-3000-HSMA1tjOPa.jpg?w=340&dpr=2',
-          'https://media1.thrillophilia.com/filestore/l9eo0e0yn5eu58zpb9nxgfazhc08_shutterstock_1215376537.jpg?w=340&dpr=2',
-        ],
-        reviews: '1.6k',
-        rating: <IoStar/>,
-        outofrating:'1.3',
-        days: '5 days & 4 nights',
-        price: 45000,
-        originalPrice: 74002,
-        saveprice: '6,454',
-      },
+  // Toggle show more or less
+  const toggleShowMore = () => setShowMore(!showMore);
 
-      {
-        id: 8,
-        imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
-        title: 'Dubai Highlights | Skyline And Sandscapes emirates',
-        images: [
-          'https://media1.thrillophilia.com/filestore/4cgc0ibn1rqwvli84izupxwe45nv_shutterstock_2384596901%20(1).jpg?w=360&dpr=2',
-          'https://media1.thrillophilia.com/filestore/3olu266q85xcvi788yawu7fji10c_dl.beatsnoop.com-3000-HSMA1tjOPa.jpg?w=340&dpr=2',
-          'https://media1.thrillophilia.com/filestore/l9eo0e0yn5eu58zpb9nxgfazhc08_shutterstock_1215376537.jpg?w=340&dpr=2',
-        ],
-        reviews: '1.6k',
-        rating: <IoStar/>,
-        outofrating:'1.3',
-        days: '5 days & 4 nights',
-        price: 45000,
-        originalPrice: 74002,
-        saveprice: '6,454',
-      },
-
-      {
-        id: 9,
-        imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
-        title: 'Dubai Highlights | Skyline And Sandscapes emirates',
-        images: [
-          'https://media1.thrillophilia.com/filestore/4cgc0ibn1rqwvli84izupxwe45nv_shutterstock_2384596901%20(1).jpg?w=360&dpr=2',
-          'https://media1.thrillophilia.com/filestore/3olu266q85xcvi788yawu7fji10c_dl.beatsnoop.com-3000-HSMA1tjOPa.jpg?w=340&dpr=2',
-          'https://media1.thrillophilia.com/filestore/l9eo0e0yn5eu58zpb9nxgfazhc08_shutterstock_1215376537.jpg?w=340&dpr=2',
-        ],
-        reviews: '1.6k',
-        rating: <IoStar/>,
-        outofrating:'1.3',
-        days: '5 days & 4 nights',
-        price: 45000,
-        originalPrice: 74002,
-        saveprice: '6,454',
-      },
-  ];
-
-  
-
-  const nestedSliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 400,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-   
+  const updateQuantity = (id, increment = true) => {
+    setRooms((prevRooms) =>
+      prevRooms.map((room) =>
+        room.id === id
+          ? {
+              ...room,
+              quantity: increment
+                ? room.quantity + 1
+                : Math.max(0, room.quantity - 1),
+            }
+          : room
+      )
+    );
   };
 
+  const cartItems = rooms.filter((room) => room.quantity > 0);
+
+  // Calculate totals
+  const totalPrice = cartItems.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
+  const tax = Math.round(totalPrice * 0.12); // Example tax: 12%
+  const totalWithTax = totalPrice + tax;
+
+  const galleryData = [
+    {
+      title: "Cultural Events",
+      image:
+        "https://media1.thrillophilia.com/about_us_media/instagram_posts/1_Pic.jpeg?w=300&dpr=1.5",
+    },
+    {
+      title: "Outings",
+      image:
+        "https://media1.thrillophilia.com/about_us_media/instagram_posts/2_Pic.jpeg?w=300&dpr=1.5",
+    },
+    {
+      title: "Outings",
+      image:
+        "https://media1.thrillophilia.com/about_us_media/instagram_posts/2_Pic.jpeg?w=300&dpr=1.5",
+    },
+    
+  ];
+
+  const amenities = [
+    { icon: <FaMountain />, text: "Mountain View" },
+    { icon: <FaWifi />, text: "Free Wi-Fi" },
+    { icon: <FaRegClock />, text: "24/7 Reception" },
+    { icon: <FaGamepad />, text: "In-house Activities" },
+    { icon: <FaWarehouse />, text: "Storage Facility" },
+    { icon: <FaShower />, text: "Shower" },
+    { icon: <FaKey />, text: "Lockers" },
+    { icon: <FaTv />, text: "Common Television" },
+    { icon: <FaUsers />, text: "Common hangout area" },
+    { icon: <FaLightbulb />, text: "Bedside Lamps" },
+    // { icon: <FaTowel />, text: "Towels on rent" },
+    { icon: <FaHotTub />, text: "Hot water" },
+    { icon: <FaGlassWhiskey />, text: "Water Dispenser" },
+    { icon: <FaCoffee />, text: "Cafe" },
+    { icon: <FaUtensils />, text: "Breakfast (Extra)" },
+    { icon: <FaBed />, text: "Linen Included" },
+  ];
+  
+
+  
   return (
    <Layout>
-     <div className="relative w-full py-6 px-4 lg:px-24 mt-16 lg:mt-32">
-   <div className="flex items-center justify-between px-4 py-4">
-   <h1 className="text-lg font-bold uppercase">Hotels <span className='flex flex-col border-b-2 border-primary w-10'></span> </h1>
-   <a href="/" className="text-primary font-normal flex items-center gap-2">View All
-   <IoIosArrowForward className='text-white bg-primary rounded-full p-2' size={26}/>
-   </a>
-   </div>
-   
-   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
-   {cardData.map((card,index) => (
-        <div key={card.id} className="px-4">
-          <div className="bg-white transition duration-300 cursor-pointer">
-            {/* Nested Slider */}
-            <div className="relative">
-            <h1 className="text-[12px]  text-center text-white font-semibold bg-primary py-1 rounded-t-lg">{card.imgtext}</h1>
-              <Slider  ref={(el) => (nestedSlidersRef.current[index] = el)} {...nestedSliderSettings}>
-                {card.images.map((image, imgIndex) => (
-                  <img
-                    key={imgIndex}
-                    src={image}
-                    alt={`Slide ${imgIndex + 1}`}
-                    className="w-full h-80  object-cover bg-center rounded-b-xl"
-                  />
-                ))}
-              </Slider>
-               <button
-                className=" absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg focus:outline-none"
-                onClick={() => handleNestedLeftClick(index)}
-              >
-                <IoIosArrowBack size={10} />
-              </button>
-              <button
-                className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg  focus:outline-none"
-                onClick={() => handleNestedRightClick(index)}
-              >
-                <IoIosArrowForward size={10} />
-              </button>
-            </div>
+     <div className="relative w-full py-6 px-4 mt-16 lg:mt-32">
 
-            {/* Card Content */}
-            <div className="mt-2 bg-gray-50 rounded-t-xl">
-            <div className="flex items-center text-xs justify-between h-10">
-            <p className=" text-gray-500 text-[15px] font-light1">{card.days}</p>
-                <p className="flex items-center gap-2 text-green-500 text-lg font-semibold">{card.rating}
-                <span className='text-green-600 text-sm font-bold'>{card.outofrating}</span>
-                 <span className="text-sm text-gray-500">({card.reviews})</span>
-                  </p>
-              </div>
-              <h3 className="text-[#202020] font-museo font-light1 text-[15px] h-10">{card.title}</h3>
-              <p className="mt-6 text-xs font-bold px-2">5D <span className='font-medium text-gray-500'>Dubai</span></p>
-              <div className="flex gap-2 items-center h-10">
-                <span className="text-lg font-bold text-gray-800">
-                  INR {card.price.toLocaleString()}{' '}
-                  <span className="line-through text-gray-600 text-sm font-normal">
-                    INR {card.originalPrice.toLocaleString()}
-                  </span>
-                </span>
-                <span className="bg-blue-100 text-green-700 text-[10px] font-semibold mt-1">
-                  save INR {card.saveprice}
-                </span>
-              </div>
-              <div className="flex justify-between items-center mt-2 gap-4">
-                <a
-                  href="tel:91 92055 15652"
-                  className="text-primary px-4 py-[15px] rounded-md border border-primary"
-                >
-                  <IoMdCall className="animate-bounce" />
-                </a>
-                <a href='/' className="bg-primary font-semibold hover:bg-secordary text-white px-4 py-[15px] rounded-md text-sm w-full m-auto text-center">
-                  Avail This Offer
-                </a>
-              </div>
+      {/* Gallery Container */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
+        {/* Main Large Image */}
+        <div className="lg:col-span-2 row-span-3 relative group overflow-hidden">
+          <img
+            src="https://img.cdn.zostel.com/zostel/gallery/images/8OZJ7ErDTN-oTXNypnFdtw/zostel-bir-20-20201105103914.jpg?w=1280"
+            alt="Main Gallery"
+            className="w-full h-full object-cover object-center  transform group-hover:scale-105 transition-transform duration-300" 
+          />
+        </div>
+
+        {/* Smaller Images */}
+        {galleryData.map((item, index) => (
+          <div
+            key={index}
+            className="relative group overflow-hidden"
+          >
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-full lg:h-36 h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-50 transition-opacity duration-300"></div>
+            <div className="absolute bottom-4 left-4 text-white font-semibold text-sm group-hover:text-primary transition-colors duration-300">
+              {item.title} &rarr;
             </div>
           </div>
+        ))}
+      </div>
+
+
+      {/* booking cart section */}
+      <div className="mt-10">
+      {/* Header Section */}
+      <div className="mb-6">
+        <h1 className="text-4xl font-bold text-primary">Zostel Plus Bir</h1>
+        <p className="font-sans text-sm font-regular text-[#4d585b]  mt-4">
+          {showMore
+            ? `There's a butterfly in Bir; it's us. Basking in the sunshine by daytime and glowing under the stars by dusk, Zostel Plus Bir hides away from the town's uproar. Your resting pad in the mountains overlooks an iconic expanse of forested mountains and rustic fields. Make the most of our teeming-with-life common areas while working, playing, and unwinding. The leaf-shaped cafe, the sunset tree deck, and the dainty streams around the hostel only add to your pleasures. On a usual day here, you’ll go paragliding, hike to waterfalls, and explore the town’s cafes and monasteries.`
+            : `There's a butterfly in Bir; it's us. Basking in the sunshine by daytime and glowing under the stars by dusk, Zostel Plus Bir hides away from the town's uproar. Your resting pad in the mountains overlooks an iconic expanse of forested mountains...`}
+          <button
+            className="text-primary ml-2 underline"
+            onClick={toggleShowMore}
+          >
+            {showMore ? "Show Less" : "Show More"}
+          </button>
+        </p>
+      </div>
+
+     {/* Main Section */}
+     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Room Cards */}
+        <div className="col-span-2 space-y-4">
+          {rooms.map((room) => (
+            <div
+              key={room.id}
+              className="flex flex-col  md:flex-row justify-between items-center rounded border shadow-lg hover:-translate-y-2 transition-all duration-500"
+            >
+               {/* Room Image */}
+               <img
+               src={room.image}
+               alt={room.name}
+               className="w-full h-60 md:h-40 md:w-40 object-cover rounded"
+                />
+              <div className="flex-1 p-4">
+                <h3 className="text-lg font-medium">{room.name}</h3>
+                <div className="flex items-center gap-2">
+                <FaUser className="" />  {/* Room Icon */}
+                <span>x 1</span>
+                </div>
+                <p className="text-sm text-gray-500 mt-2">{room.description}</p>
+                <p className=" font-bold mt-2">
+                  ₹{room.price} / <span className='text-xs text-gray-800'> night</span>
+                </p>
+              </div>
+              <div className="flex items-center space-x-2 px-4 pb-3">
+                <button
+                  className="bg-gray-300 px-3 py-1 rounded"
+                  onClick={() => updateQuantity(room.id, false)}
+                  disabled={room.quantity === 0}
+                >
+                  -
+                </button>
+                <span className="px-1">{room.quantity}</span>
+                <button
+                  className="bg-primary text-white px-3 py-1 rounded hover:bg-secordary"
+                  onClick={() => {
+                    updateQuantity(room.id, true);
+                    alert.success("Room added to cart!");
+                  }}
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-   </div>
-  </div>
+
+        {/* Booking Summary */}
+        <div className="bg-white p-4 rounded shadow-lg border max-h-fit">
+        <h2 className="text-2xl font-bold text-primary flex items-center space-x-2">
+    <span>Booking</span>
+    <span className='text-black font-bold'>Summery</span>
+  </h2>
+          
+          {cartItems.length > 0 ? (
+            <>
+              <ul className="mt-4 space-y-4">
+                {cartItems.map((item) => (
+                  <li key={item.id} className="flex justify-between">
+                    <span>
+                      {item.name} x {item.quantity}
+                    </span>
+                    <span>₹{item.price * item.quantity}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="border-t border-gray-200 mt-4 pt-4 space-y-4">
+                <div className="flex justify-between text-gray-600">
+                  <span>Tax:</span>
+                  <span>₹{tax}</span>
+                </div>
+                <div className="flex justify-between text-gray-800 font-semibold">
+                  <span>Total:</span>
+                  <span>₹{totalWithTax}</span>
+                </div>
+              </div>
+              <button className="bg-primary text-white w-full mt-4 py-2 rounded hover:bg-secordary">
+                Book Now
+              </button>
+            </>
+          ) : (
+            <>
+           <div className="text-center">
+            <img src="https://book.zostel.com/static/media/gray-zobu.018014d9.svg" alt="" className="h-40 w-32 text-center m-auto animate-pulse" text />
+            
+            <p className="text-gray-500 mt-4">No rooms selected yet.</p>
+           </div>
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+    
+
+    {/* amenities section */}
+    <div className="py-10 rounded-md">
+      <h2 className="text-2xl font-bold mb-4">Amenities</h2>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-y-2 gap-x-6">
+        {amenities.map((amenity, index) => (
+          <div key={index} className="flex items-center space-x-2 text-gray-700">
+            <div className="text-primary text-md">{amenity.icon}</div>
+            <span className="text-sm font-medium">{amenity.text}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    </div>
    </Layout>
   );
 };

@@ -61,7 +61,7 @@ const Timeline = () => {
     <div className="relative bg-gray-100 py-16 px-16 lg:px-24">
       {/* Heading */}
       <h2 className="text-left text-4xl font-bold">
-        Thrillophilia's <span className="text-primary">Journey</span>
+        TGA <span className="text-primary">Journey</span>
       </h2>
       <h3 className="text-[15px] text-[#515151] font-sans font-medium mb-8">Traversing the Path of Adventure, One Remarkable Memory at a Time.</h3>
 
