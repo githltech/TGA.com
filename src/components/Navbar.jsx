@@ -156,7 +156,7 @@ const Navbar = () => {
                 alt="Avatar"
                 className="w-5 h-5 rounded-full"
               />
-              <span className="font-medium text-xs capitalize">{user.name.split(" ")[0]}</span>
+              <span className="font-medium text-xs capitalize">{user.name}</span>
             </button>
   
             {/* Dropdown Menu */}
@@ -272,7 +272,7 @@ const Navbar = () => {
                   alt="Avatar"
                   className="w-5 h-5 rounded-full"
                 />
-                <span className="font-medium text-xs capitalize">{user.name.split(" ")[0]}</span>
+                <span className="font-medium text-xs capitalize">{user.name}</span>
               </button>
     
               {/* Dropdown Menu */}
