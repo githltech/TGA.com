@@ -1,0 +1,85 @@
+{
+  "hash": "7eca6de3",
+  "configHash": "1a0461e0",
+  "lockfileHash": "89746c01",
+  "browserHash": "aa7cfc26",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "02f86fc5",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "feeba082",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "641e6e38",
+      "needsInterop": false
+    },
+    "react-icons/fa": {
+      "src": "../../node_modules/react-icons/fa/index.mjs",
+      "file": "react-icons_fa.js",
+      "fileHash": "ad395185",
+      "needsInterop": false
+    },
+    "react-countup": {
+      "src": "../../node_modules/react-countup/build/index.js",
+      "file": "react-countup.js",
+      "fileHash": "581ed15e",
+      "needsInterop": true
+    },
+    "react-intersection-observer": {
+      "src": "../../node_modules/react-intersection-observer/dist/index.mjs",
+      "file": "react-intersection-observer.js",
+      "fileHash": "511565a5",
+      "needsInterop": false
+    },
+    "react-slick": {
+      "src": "../../node_modules/react-slick/lib/index.js",
+      "file": "react-slick.js",
+      "fileHash": "0e43d359",
+      "needsInterop": true
+    },
+    "react-icons/io5": {
+      "src": "../../node_modules/react-icons/io5/index.mjs",
+      "file": "react-icons_io5.js",
+      "fileHash": "da6c102e",
+      "needsInterop": false
+    },
+    "react-icons/md": {
+      "src": "../../node_modules/react-icons/md/index.mjs",
+      "file": "react-icons_md.js",
+      "fileHash": "ee741d66",
+      "needsInterop": false
+    },
+    "react-icons/io": {
+      "src": "../../node_modules/react-icons/io/index.mjs",
+      "file": "react-icons_io.js",
+      "fileHash": "e177e762",
+      "needsInterop": false
+    },
+    "react-icons/pi": {
+      "src": "../../node_modules/react-icons/pi/index.mjs",
+      "file": "react-icons_pi.js",
+      "fileHash": "9901deca",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-YUNTBJI6": {
+      "file": "chunk-YUNTBJI6.js"
+    },
+    "chunk-AU5YGS7K": {
+      "file": "chunk-AU5YGS7K.js"
+    },
+    "chunk-45FXRYJS": {
+      "file": "chunk-45FXRYJS.js"
+    }
+  }
+}
