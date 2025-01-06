@@ -21,6 +21,7 @@ import UpdateUser from './admin/UpdateUser';
 import StudentPrograms from './pages/StudentPrograms';
 import ScrollToTop from './components/ScrollToTop';
 import OffBeatCorporates from './pages/OffBeatCorporates';
+import CreatePackage from './admin/CreatePackage';
 
 const App = () =>{
   // const {isAuthenticatedUser} = useSelector((state)=>state.user);
@@ -92,6 +93,12 @@ const App = () =>{
              <ProtectedRoute isAdmin={true}>
                <UpdateUser/>
             </ProtectedRoute>
+        }/>
+
+           <Route path='/admin/package' element = {
+             <ProtectedRoute isAdmin={true}>
+              <CreatePackage/>
+             </ProtectedRoute>
         }/>
           
        

@@ -50,7 +50,7 @@ import {
       const config = { headers: { "Content-Type": "application/json" },withCredentials: true, };
   
       const { data } = await axios.post(
-        `${BASE_URL}/api/auth/login`,
+        `${BASE_URL}/login`,
         { email, password },
         config
       );
@@ -68,7 +68,7 @@ import {
   
       const config = { headers: { 'Content-Type': 'multipart/form-data' },withCredentials: true };
   
-      const { data } = await axios.post(`${BASE_URL}/api/auth/register`, userData, config);
+      const { data } = await axios.post(`${BASE_URL}/register`, userData, config);
   
       dispatch({ type: REGISTER_USER_SUCCESS, payload:{user:data.user ,message:"Register Successfull!"} });
     } catch (error) {
@@ -88,7 +88,7 @@ import {
         withCredentials: true, 
     };
   
-      const { data } = await axios.get(`${BASE_URL}/api/auth/me`,config);
+      const { data } = await axios.get(`${BASE_URL}/me`,config);
   
       dispatch({ type: LOAD_USER_SUCCESS, payload: data.user });
     } catch (error) {
@@ -100,7 +100,7 @@ import {
   export const logout = () => async (dispatch) => {
     try {
 
-      await axios.get(`${BASE_URL}/api/auth/logout`);
+      await axios.get(`${BASE_URL}/logout`);
   
       dispatch({ type: LOGOUT_SUCCESS });
       localStorage.removeItem("token");
@@ -120,7 +120,7 @@ import {
      },
      withCredentials: true, 
      };
-      const { data } = await axios.put(`${BASE_URL}/api/auth/me/update`, userData, config);
+      const { data } = await axios.put(`${BASE_URL}/me/update`, userData, config);
       console.log("profiledata",data);
   
       dispatch({ type: UPDATE_PROFILE_SUCCESS, payload: data.user });
@@ -145,7 +145,7 @@ import {
    };
   
       const { data } = await axios.put(
-        `${BASE_URL}/api/auth/password/update`,
+        `${BASE_URL}/password/update`,
         passwords,
         config
       );
@@ -166,7 +166,7 @@ import {
   
       const config = { headers: { "Content-Type": "application/json" }, withCredentials: true, };
   
-      const { data } = await axios.post(`${BASE_URL}/api/auth/password/forgot`, email, config);
+      const { data } = await axios.post(`${BASE_URL}/password/forgot`, email, config);
   
       dispatch({ type: FORGOT_PASSWORD_SUCCESS, payload: data.message });
     } catch (error) {
@@ -185,7 +185,7 @@ import {
       const config = { headers: { "Content-Type": "application/json" } , withCredentials: true,};
   
       const { data } = await axios.put(
-        `${BASE_URL}/api/auth/password/reset/${token}`,
+        `${BASE_URL}/password/reset/${token}`,
         passwords,
         config
       );
@@ -208,7 +208,7 @@ import {
         withCredentials: true, 
     };
 
-      const { data } = await axios.get(`${BASE_URL}/api/auth/admin/users`,config);
+      const { data } = await axios.get(`${BASE_URL}/admin/users`,config);
   
       dispatch({ type: ALL_USERS_SUCCESS, payload: data.users });
     } catch (error) {
@@ -225,7 +225,7 @@ import {
         withCredentials: true, 
     };
 
-      const { data } = await axios.get(`${BASE_URL}/api/auth/admin/user/${id}`,config);
+      const { data } = await axios.get(`${BASE_URL}/admin/user/${id}`,config);
   
       dispatch({ type: USER_DETAILS_SUCCESS, payload: data.user });
     } catch (error) {
@@ -243,7 +243,7 @@ import {
       withCredentials: true, 
      };
   
-      const { data } = await axios.put(`${BASE_URL}/api/auth/admin/user/${id}`,userData,config);
+      const { data } = await axios.put(`${BASE_URL}/admin/user/${id}`,userData,config);
   
       dispatch({ type: UPDATE_USER_SUCCESS, payload: data.success });
     } catch (error) {
@@ -263,7 +263,7 @@ import {
         withCredentials: true, 
     };
 
-      const { data } = await axios.delete(`${BASE_URL}/api/auth/admin/user/${id}`,config);
+      const { data } = await axios.delete(`${BASE_URL}/admin/user/${id}`,config);
   
       dispatch({ type: DELETE_USER_SUCCESS, payload: data });
     } catch (error) {

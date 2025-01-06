@@ -3,6 +3,7 @@ import {thunk} from "redux-thunk";
 import {composeWithDevTools} from 'redux-devtools-extension';
 // import { ProductDetailsReducer, ProductReducer, deleteProductReducer, newProductReducer, newReviewReducer } from "../reducers/ProductReducer";
 import { allUsersReducer, forgotPasswordReducer, profileReducer, userDetailsReducer, userReducer } from "../reducers/UserReducer";
+import packageReducer from './packageSlice';
 // import { cartReducer } from "../reducers/CartReducer";
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'; // defaults to localStorage
@@ -23,6 +24,10 @@ const reducer = combineReducers({
   user:userReducer,
   profile:profileReducer,
   forgotPassword:forgotPasswordReducer,
+  allUsers:allUsersReducer,
+  userDetails:userDetailsReducer,
+  packages: packageReducer,
+
 //   cart:cartReducer,
 //   newOrder:newOrderReducer,
 //   myOrders:myOrdersReducer,
@@ -32,8 +37,7 @@ const reducer = combineReducers({
 //   deleteProduct:deleteProductReducer,
 //   allOrders:allOrdersReducer,
 //   orderadmin:ordersReducer,
-  allUsers:allUsersReducer,
-  userDetails:userDetailsReducer,
+  
 });
 
 

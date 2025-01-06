@@ -39,14 +39,14 @@ const Sidebar = () => {
           className="flex items-center space-x-2 hover:bg-black text-sm font-bold1 p-2 rounded-md cursor-pointer hover:shadow-2xl hover:shadow-pink-50"
         >
           {isProductsOpen ? <ExpandMoreIcon /> : <ImportExportIcon />}
-          <span className="">Hotels</span>
+          <span className="">Packages</span>
         </div>
         {isProductsOpen && (
           <div className="ml-4 space-y-2">
             <Link to="/admin/products" className="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-md hover:shadow-2xl hover:shadow-purple-300 text-xs">
               <PostAddIcon /> <span>All</span>
             </Link>
-            <Link to="/admin/product" className="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-md hover:shadow-2xl hover:shadow-purple-300 text-xs">
+            <Link to="/admin/package" className="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-md hover:shadow-2xl hover:shadow-purple-300 text-xs">
               <AddIcon /> <span>Create</span>
             </Link>
           </div>
