@@ -14,12 +14,12 @@ const ExpPackagesCart = () => {
 
   const dispatch = useDispatch();
 
-  const {packages,error,loading} = useSelector((state) => state.packages);
+  // const {packages,error,loading} = useSelector((state) => state.packages);
 
 
-  useEffect(() => {
-    dispatch(getPackages());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getPackages());
+  // }, [dispatch]);
 
 
 
@@ -59,85 +59,85 @@ const ExpPackagesCart = () => {
   };
 
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
 
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
+  // if (error) {
+  //   return <div>Error: {error}</div>;
+  // }
   
-  // const cardData = [
-  //   {
-  //     id: 1,
-  //     imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
-  //     title: 'Dubai Highlights | Skyline And Sandscapes emirates',
-  //     images: [
-  //       'https://media1.thrillophilia.com/filestore/pjvcwc900zb7p5gzc6ombi9mk4tf_shutterstock_162648617.jpg?w=340&dpr=2',
-  //       'https://media1.thrillophilia.com/filestore/4198kp1pmkidn9oep2g08o7pulcj_dhwbcetzxz1t6vkrigpx0h3t6sau_jyawxhl05bgvmdqmb76jy7ro0ao0_sonamarg.jpg?w=340&dpr=2',
-  //       'https://media1.thrillophilia.com/filestore/g7go9zedkikurqyzcynluvk9bvpm_shutterstock_2044050407%20(2).jpg?w=340&dpr=2',
-  //     ],
-  //     reviews: '1.6k',
-  //     rating: <IoStar/>,
-  //     outofrating:"1.9",
-  //     days: '5 days & 4 nights',
-  //     price: 45000,
-  //     originalPrice: 74002,
-  //     saveprice: '6,454',
-  //   },
-  //   {
-  //     id: 2,
-  //     imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
-  //     title: 'Escape To Dubai | Flights Inclusive Deal emirates',
-  //     images: [
-  //       "https://media1.thrillophilia.com/filestore/g7go9zedkikurqyzcynluvk9bvpm_shutterstock_2044050407%20(2).jpg?w=340&dpr=2",
-  //       "https://media1.thrillophilia.com/filestore/0hdjtmduamliielzcvdsepune779_dubai%20skyline.jpg?w=340&dpr=2",
-  //       "https://media1.thrillophilia.com/filestore/mp4pf1xwonv6hklph4ktqmt5bnej_shutterstock_2261215111.jpg?w=340&dpr=2"
-  //     ],
-  //     reviews: '1.2k',
-  //     rating: <IoStar/>,
-  //     outofrating:"4.9",
-  //     days: '7 days & 6 nights',
-  //     price: 68550,
-  //     originalPrice: 124761,
-  //     saveprice: '19,454',
-  //   },
-  //   {
-  //     id: 3,
-  //     imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
-  //     title: 'Discovering Dubai | A Journey To The Golden Emirates',
-  //     images: [
-  //       "https://media1.thrillophilia.com/filestore/8xtcwkg4c17tt1t85xtoqlog6j99_shutterstock_1282523707.jpg?w=340&dpr=2",
-  //       "https://media1.thrillophilia.com/filestore/fcfvegglkeiuyjxdt9r18pxapf67_shutterstock_2386280701%20(1).jpg?w=340&dpr=2",
-  //       "https://media1.thrillophilia.com/filestore/n35qyh6yu8dr5dzqtmv48kze6wib_shutterstock_2338754375.jpg?w=340&dpr=2"
-  //     ],
-  //     reviews: '1.8k',
-  //     rating: <IoStar/>,
-  //     outofrating:"3.2",
-  //     days: '7 days & 6 nights',
-  //     price: 86000,
-  //     originalPrice: 111836,
-  //     saveprice: '12,454',
-  //   },
+  const cardData = [
+    {
+      id: 1,
+      imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
+      title: 'Dubai Highlights | Skyline And Sandscapes emirates',
+      images: [
+        'https://media1.thrillophilia.com/filestore/pjvcwc900zb7p5gzc6ombi9mk4tf_shutterstock_162648617.jpg?w=340&dpr=2',
+        'https://media1.thrillophilia.com/filestore/4198kp1pmkidn9oep2g08o7pulcj_dhwbcetzxz1t6vkrigpx0h3t6sau_jyawxhl05bgvmdqmb76jy7ro0ao0_sonamarg.jpg?w=340&dpr=2',
+        'https://media1.thrillophilia.com/filestore/g7go9zedkikurqyzcynluvk9bvpm_shutterstock_2044050407%20(2).jpg?w=340&dpr=2',
+      ],
+      reviews: '1.6k',
+      rating: <IoStar/>,
+      outofrating:"1.9",
+      days: '5 days & 4 nights',
+      price: 45000,
+      originalPrice: 74002,
+      saveprice: '6,454',
+    },
+    {
+      id: 2,
+      imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
+      title: 'Escape To Dubai | Flights Inclusive Deal emirates',
+      images: [
+        "https://media1.thrillophilia.com/filestore/g7go9zedkikurqyzcynluvk9bvpm_shutterstock_2044050407%20(2).jpg?w=340&dpr=2",
+        "https://media1.thrillophilia.com/filestore/0hdjtmduamliielzcvdsepune779_dubai%20skyline.jpg?w=340&dpr=2",
+        "https://media1.thrillophilia.com/filestore/mp4pf1xwonv6hklph4ktqmt5bnej_shutterstock_2261215111.jpg?w=340&dpr=2"
+      ],
+      reviews: '1.2k',
+      rating: <IoStar/>,
+      outofrating:"4.9",
+      days: '7 days & 6 nights',
+      price: 68550,
+      originalPrice: 124761,
+      saveprice: '19,454',
+    },
+    {
+      id: 3,
+      imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
+      title: 'Discovering Dubai | A Journey To The Golden Emirates',
+      images: [
+        "https://media1.thrillophilia.com/filestore/8xtcwkg4c17tt1t85xtoqlog6j99_shutterstock_1282523707.jpg?w=340&dpr=2",
+        "https://media1.thrillophilia.com/filestore/fcfvegglkeiuyjxdt9r18pxapf67_shutterstock_2386280701%20(1).jpg?w=340&dpr=2",
+        "https://media1.thrillophilia.com/filestore/n35qyh6yu8dr5dzqtmv48kze6wib_shutterstock_2338754375.jpg?w=340&dpr=2"
+      ],
+      reviews: '1.8k',
+      rating: <IoStar/>,
+      outofrating:"3.2",
+      days: '7 days & 6 nights',
+      price: 86000,
+      originalPrice: 111836,
+      saveprice: '12,454',
+    },
 
-  //   {
-  //       id: 4,
-  //       imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
-  //       title: 'Discovering Dubai | A Journey To The Golden Emirates',
-  //       images: [
-  //         "https://media1.thrillophilia.com/filestore/lwss8ni7r0dzbph2vv3n3vq45trh_shutterstock_776833903%20(1).jpg?w=340&dpr=2",
-  //         "https://media1.thrillophilia.com/filestore/jo81ugbjxtme6npfzvlbxsq5jaqp_AYA%20Family%2010%20(1).jpg?w=340&dpr=2",
-  //         "https://media1.thrillophilia.com/filestore/hs37gc38mryythrm842o5a0aslcb_shutterstock_2042237531.jpg?w=340&dpr=2"
-  //       ],
-  //       reviews: '1.3k',
-  //       rating: <IoStar/>,
-  //       outofrating:"3.9",
-  //       days: '7 days & 6 nights',
-  //       price: 96000,
-  //       originalPrice: 11836,
-  //       saveprice: '11,494',
-  //     },
-  // ];
+    {
+        id: 4,
+        imgtext:`THRILL FEST | | get up to 3 International Trips Free!`,
+        title: 'Discovering Dubai | A Journey To The Golden Emirates',
+        images: [
+          "https://media1.thrillophilia.com/filestore/lwss8ni7r0dzbph2vv3n3vq45trh_shutterstock_776833903%20(1).jpg?w=340&dpr=2",
+          "https://media1.thrillophilia.com/filestore/jo81ugbjxtme6npfzvlbxsq5jaqp_AYA%20Family%2010%20(1).jpg?w=340&dpr=2",
+          "https://media1.thrillophilia.com/filestore/hs37gc38mryythrm842o5a0aslcb_shutterstock_2042237531.jpg?w=340&dpr=2"
+        ],
+        reviews: '1.3k',
+        rating: <IoStar/>,
+        outofrating:"3.9",
+        days: '7 days & 6 nights',
+        price: 96000,
+        originalPrice: 11836,
+        saveprice: '11,494',
+      },
+  ];
 
   const parentSliderSettings = {
     dots: false,
@@ -194,7 +194,7 @@ const ExpPackagesCart = () => {
    </a>
    </div>
     <Slider ref={sliderRef} {...parentSliderSettings}>
-      {packages.map((card,index) => (
+      {cardData.map((card,index) => (
         <div key={card.id} className="px-4">
           <div className="bg-white transition duration-300 cursor-pointer">
             {/* Nested Slider */}
